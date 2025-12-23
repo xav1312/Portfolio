@@ -35,7 +35,8 @@
               </q-card-section>
               <q-card-actions align="right">
                 <q-btn flat color="primary" label="Voir plus" to="/project/mutuacy" />
-                <q-btn flat color="secondary" label="GitHub" type="a" href="https://github.com" target="_blank" @click.stop />
+                <!-- Lien GitHub Spécifique -->
+                <q-btn flat color="secondary" label="GitHub" type="a" href="https://github.com/votre-pseudo/mutuacy" target="_blank" @click.stop />
               </q-card-actions>
             </q-card>
           </div>
@@ -58,7 +59,8 @@
               </q-card-section>
               <q-card-actions align="right">
                 <q-btn flat color="primary" label="Voir plus" to="/project/inscription-esiea" />
-                <q-btn flat color="secondary" label="GitHub" type="a" href="https://github.com" target="_blank" @click.stop />
+                <!-- Lien GitHub Spécifique -->
+                <q-btn flat color="secondary" label="GitHub" type="a" href="https://github.com/votre-pseudo/inscription-esiea" target="_blank" @click.stop />
               </q-card-actions>
             </q-card>
           </div>
@@ -66,7 +68,7 @@
           <!-- Projet 3 : NASA Python -->
           <div class="col-12 col-md-4">
             <q-card class="bg-white my-card cursor-pointer" @click="$router.push('/project/nasa-python')">
-              <q-img src="images/Nasa-main.png" :ratio="16 / 9">
+              <q-img src="images/nasa-python-main.jpg" :ratio="16 / 9">
                 <template v-slot:error>
                   <div class="absolute-full flex flex-center bg-grey-3 text-grey-8">
                     Image manquante
@@ -81,7 +83,8 @@
               </q-card-section>
               <q-card-actions align="right">
                 <q-btn flat color="primary" label="Voir plus" to="/project/nasa-python" />
-                <q-btn flat color="secondary" label="GitHub" type="a" href="https://github.com" target="_blank" @click.stop />
+                <!-- Lien GitHub Spécifique -->
+                <q-btn flat color="secondary" label="GitHub" type="a" href="https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah" target="_blank" @click.stop />
               </q-card-actions>
             </q-card>
           </div>

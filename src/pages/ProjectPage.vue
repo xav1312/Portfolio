@@ -167,7 +167,7 @@ const projectsData = {
       "Logiciel Python qui récupère les données des exoplanètes observées par la NASA pour en concevoir une visualisation 3D",
     features: ['Récuperation de données par API', 'Récuperation des cartes de températures et d\'altitudes', 'Export PDF des bulletins', 'Récuperation des données atmosphériques et d\'hydrogènes', 'Conception des biomes et visualisation 3D'],
     technologies: ['Python','API Requests', 'PyVista','SciPy', 'OpenSimpex'],
-    githubLink: null,
+    githubLink: 'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah.git',
     liveLink: null,
     gallery: [
         'images/Nasa-1.png',

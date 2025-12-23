@@ -29,7 +29,7 @@
                   color="secondary"
                   label="GitHub"
                   type="a"
-                  href="https://github.com"
+                  href="https://github.com/votre-pseudo/mutuacy"
                   target="_blank"
                   @click.stop
                 />
@@ -63,7 +63,7 @@
                   color="secondary"
                   label="GitHub"
                   type="a"
-                  href="https://github.com"
+                  href="https://github.com/votre-pseudo/inscription-esiea"
                   target="_blank"
                   @click.stop
                 />
@@ -95,7 +95,7 @@
                   color="secondary"
                   label="GitHub"
                   type="a"
-                  href="https://github.com"
+                  href="https://github.com/votre-pseudo/nasa-python"
                   target="_blank"
                   @click.stop
                 />
