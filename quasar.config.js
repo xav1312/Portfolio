@@ -44,7 +44,11 @@ export default defineConfig((/* ctx */) => {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      // publicPath: '/',
+      // IMPORTANT : Mettez ici le nom de votre dépôt GitHub entre slashes
+      // Si votre repo s'appelle "portfolio", mettez '/portfolio/'
+      // Si c'est un repo utilisateur (username.github.io), mettez '/'
+      publicPath: '/Portfolio/',
+
       // analyze: true,
       // env: {},
       // rawDefine: {}

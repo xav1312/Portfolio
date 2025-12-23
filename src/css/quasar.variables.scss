@@ -12,14 +12,18 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary: #1976d2;
-$secondary: #26a69a;
-$accent: #9c27b0;
+// Palette "Cozy" : Marron, Beige, Noir
 
-$dark: #1d1d1d;
-$dark-page: #121212;
+$primary   : #4E342E; // Marron foncé (Brown-900)
+$secondary : #8D6E63; // Marron moyen (Brown-400)
+$accent    : #D7CCC8; // Beige clair (Brown-100)
 
-$positive: #21ba45;
-$negative: #c10015;
-$info: #31ccec;
-$warning: #f2c037;
+$dark      : #1D1D1D; // Noir doux
+$dark-page : #121212; // Fond très sombre pour le mode sombre
+
+$positive  : #558B2F; // Vert olive
+$negative  : #C62828; // Rouge brique
+$info      : #5D4037; // Marron informatif
+$warning   : #FFB74D; // Orange doux
+
+// Vous pouvez utiliser ces variables partout dans votre SCSS
