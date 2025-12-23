@@ -65,7 +65,7 @@ export const projectsData: Record<string, Project> = {
       "Logiciel développé en Java pour permettre aux enseignants de gérer les notes, les moyennes et les bulletins des élèves de manière efficace.Et de permettre aux étudiants de voir leur notes et leur bulletin",
     features: ['Calcul automatique des moyennes', 'Gestion des coefficients', 'Export PDF des bulletins', 'Interface graphique Swing/JavaFX'],
     technologies: ['Python','API Requests', 'PyVista','SciPy', 'OpenSimpex'],
-    githubLink: 'https://github.com/votre-pseudo/nasa-python',
+    githubLink: 'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
     liveLink: null,
     gallery: [
         'images/Nasa-1.png',

@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { Box, Typography, Button, Grid, Chip, Card, CardContent, Container } from '@mui/material';
+import { Box, Typography, Button, Grid, Chip, Container, Paper } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CodeIcon from '@mui/icons-material/Code';
 import LaunchIcon from '@mui/icons-material/Launch';
@@ -26,75 +26,45 @@ export default function ProjectDetail() {
       <Button
         startIcon={<ArrowBackIcon />}
         onClick={() => navigate(-1)}
-        sx={{ mb: 2 }}
+        sx={{ mb: 4 }}
+        color="inherit"
       >
         Retour
       </Button>
 
-      <Typography variant="h3" color="primary" sx={{ mb: 1 }}>
-        {project.title}
-      </Typography>
-      <Typography variant="h6" color="secondary" sx={{ mb: 4 }}>
-        {project.subtitle}
-      </Typography>
-
-      <Box
-        component="img"
-        src={project.image}
-        alt={project.title}
-        sx={{
-          width: '100%',
-          maxHeight: 500,
-          objectFit: 'cover',
-          borderRadius: 3,
-          boxShadow: 3,
-          mb: 6,
-        }}
-      />
-
-      <Grid container spacing={6}>
-        <Grid item xs={12} md={8}>
-          <Typography variant="h5" color="primary" sx={{ mb: 2 }}>
-            À propos du projet
-          </Typography>
-          <Typography variant="body1" sx={{ whiteSpace: 'pre-line', mb: 4 }}>
-            {project.description}
-          </Typography>
-
-          <Typography variant="h6" color="primary" sx={{ mb: 2 }}>
-            Fonctionnalités clés
-          </Typography>
-          <ul>
-            {project.features.map((feature, index) => (
-              <li key={index}>
-                <Typography variant="body1">{feature}</Typography>
-              </li>
-            ))}
-          </ul>
-        </Grid>
-
-        <Grid item xs={12} md={4}>
-          <Card variant="outlined">
-            <CardContent>
-              <Typography variant="h6" color="primary" sx={{ mb: 2 }}>
-                Technologies
+      {/* En-tête du projet */}
+      <Grid container spacing={4} sx={{ mb: 6 }}>
+          <Grid item xs={12} md={6}>
+              <Box
+                component="img"
+                src={project.image}
+                alt={project.title}
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  maxHeight: 400,
+                  objectFit: 'cover',
+                  borderRadius: 4,
+                  boxShadow: 3,
+                }}
+              />
+          </Grid>
+          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Typography variant="h3" color="primary" sx={{ mb: 2, fontWeight: 'bold' }}>
+                {project.title}
               </Typography>
-              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 3 }}>
-                {project.technologies.map((tech) => (
-                  <Chip key={tech} label={tech} color="secondary" icon={<CodeIcon />} />
-                ))}
-              </Box>
-
-              <Typography variant="h6" color="primary" sx={{ mb: 2 }}>
-                Liens
+              <Typography variant="h5" color="text.secondary" sx={{ mb: 3, fontWeight: 300 }}>
+                {project.subtitle}
               </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+
+              <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
                 {project.githubLink && (
                   <Button
                     variant="outlined"
                     startIcon={<CodeIcon />}
                     href={project.githubLink}
                     target="_blank"
+                    size="large"
                   >
                     Voir le code
                   </Button>
@@ -106,13 +76,47 @@ export default function ProjectDetail() {
                     href={project.liveLink}
                     target="_blank"
                     disableElevation
+                    size="large"
                   >
                     Voir le site
                   </Button>
                 )}
               </Box>
-            </CardContent>
-          </Card>
+          </Grid>
+      </Grid>
+
+      <Grid container spacing={6}>
+        <Grid item xs={12} md={8}>
+          <Typography variant="h5" color="primary" sx={{ mb: 3, fontWeight: 'bold' }}>
+            À propos du projet
+          </Typography>
+          <Typography variant="body1" sx={{ whiteSpace: 'pre-line', mb: 4, fontSize: '1.1rem', lineHeight: 1.8, color: 'text.primary' }}>
+            {project.description}
+          </Typography>
+
+          <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'bold' }}>
+            Fonctionnalités clés
+          </Typography>
+          <Box component="ul" sx={{ pl: 2 }}>
+            {project.features.map((feature, index) => (
+              <li key={index} style={{ marginBottom: '8px' }}>
+                <Typography variant="body1">{feature}</Typography>
+              </li>
+            ))}
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Paper elevation={0} sx={{ p: 3, bgcolor: 'background.paper', borderRadius: 4, border: '1px solid', borderColor: 'divider' }}>
+              <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'bold' }}>
+                Technologies
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                {project.technologies.map((tech) => (
+                  <Chip key={tech} label={tech} color="secondary" variant="filled" />
+                ))}
+              </Box>
+          </Paper>
         </Grid>
       </Grid>
 
