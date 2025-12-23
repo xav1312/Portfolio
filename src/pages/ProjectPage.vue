@@ -153,22 +153,27 @@ const projectsData = {
     liveLink: null,
     // J'ajoute des images ici pour que la galerie s'affiche
     gallery: [
-        'images/esiea-1.jpg', // Placeholder
-        'images/esiea-2.jpg', 'images/inscription-esiea-main.jpg'// Placeholder
+        'images/esiea-1.jpg',
+        'images/esiea-2.jpg',
+        'images/inscription-esiea-main.jpg'
     ],
   },
 
-  'gestion-notes-java': {
-    title: 'Gestion des Notes en Java',
+  'nasa-python': {
+    title: 'Visualisation d\'exoplanètes par Python',
     subtitle: 'Application Desktop de gestion scolaire',
-    image: 'images/gestion-notes-java-main.jpg',
+    image: 'images/Nasa-main.png',
     description:
-      "Logiciel développé en Java pour permettre aux enseignants de gérer les notes, les moyennes et les bulletins des élèves de manière efficace.Et de permettre aux étudiants de voir leur notes et leur bulletin",
-    features: ['Calcul automatique des moyennes', 'Gestion des coefficients', 'Export PDF des bulletins', 'Interface graphique Swing/JavaFX'],
-    technologies: ['Java', 'PostgreSQL','JDBC'],
+      "Logiciel Python qui récupère les données des exoplanètes observées par la NASA pour en concevoir une visualisation 3D",
+    features: ['Récuperation de données par API', 'Récuperation des cartes de températures et d\'altitudes', 'Export PDF des bulletins', 'Récuperation des données atmosphériques et d\'hydrogènes', 'Conception des biomes et visualisation 3D'],
+    technologies: ['Python','API Requests', 'PyVista','SciPy', 'OpenSimpex'],
     githubLink: null,
     liveLink: null,
-    gallery: [],
+    gallery: [
+        'images/Nasa-1.png',
+        'images/Nasa-2.png',
+        'images/Nasa-main.png'
+    ],
   },
 }
 
