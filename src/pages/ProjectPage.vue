@@ -127,7 +127,7 @@ const projectsData = {
       'Fonctionnalité clé 3',
       'Interface utilisateur intuitive',
     ],
-    technologies: ['Flutter', 'Dart', 'Dart', ''],
+    technologies: ['Flutter', 'Dart', 'Dart', 'Supabase'],
     githubLink: 'https://github.com/votre-pseudo/mutuacy',
     liveLink: 'https://mutuacy.com',
     gallery: [
@@ -143,10 +143,10 @@ const projectsData = {
     description:
       "Application web permettant de gérer le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle simplifie la collecte des documents et le suivi des dossiers administratifs. Elle permet aux administrateurs de gérer les inscriptions des étudiants ainsi que la création des comptes sur la plateforme",
     features: [
-      'Formulaire multi-étapes',
-      'Upload de documents sécurisé',
-      'Validation administrative',
-      'Notifications par email',
+      'Dashboard admin',
+      'Upload de documents sur une Base de données',
+      'Processus d\'inscription',
+      'Message de validation d\'enregistrement des infos',
     ],
     technologies: ['Vue.js', 'Supabase', 'Quasar', 'Cypress'],
     githubLink: 'https://github.com',
@@ -154,7 +154,7 @@ const projectsData = {
     // J'ajoute des images ici pour que la galerie s'affiche
     gallery: [
         'images/esiea-1.jpg', // Placeholder
-        'images/esiea-2.jpg'  // Placeholder
+        'images/esiea-2.jpg', 'images/inscription-esiea-main.jpg'// Placeholder
     ],
   },
 
