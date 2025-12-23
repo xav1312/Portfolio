@@ -22,6 +22,11 @@
           class="rounded-borders shadow-3 q-mb-xl"
           style="max-height: 500px; object-fit: cover"
         >
+          <template v-slot:error>
+            <div class="absolute-full flex flex-center bg-grey-3 text-grey-8">
+              Image non trouvée. Placez vos images dans le dossier public/images/
+            </div>
+          </template>
           <div class="absolute-bottom text-subtitle2 text-center bg-primary-transparent">
             Aperçu du projet
           </div>
@@ -116,59 +121,59 @@
 import { defineComponent, computed } from 'vue'
 import { useRoute } from 'vue-router'
 
-// Données simulées des projets (Idéalement, cela viendrait d'un fichier séparé ou d'une API)
+// =========================================================================
+// DONNÉES DES PROJETS
+// =========================================================================
 const projectsData = {
-  'projet-alpha': {
-    title: 'Projet Alpha',
-    subtitle: 'Une application web révolutionnaire',
-    image: 'https://cdn.quasar.dev/img/parallax2.jpg',
-    description: `Ceci est une description détaillée du Projet Alpha.
-
-    Il a été conçu pour répondre à un besoin spécifique de gestion de tâches complexes. L'interface utilisateur a été pensée pour être intuitive tout en offrant des fonctionnalités avancées.
-
-    J'ai travaillé sur ce projet en tant que développeur principal, en charge de l'architecture front-end et de l'intégration des API.`,
+  'mutuacy': {
+    title: 'Mutuacy',
+    subtitle: 'Plateforme de mutualisation et d\'échange',
+    image: 'images/mutuacy-main.jpg',
+    description: `Décrivez ici le projet Mutuacy en détail.`,
     features: [
-      'Authentification sécurisée',
-      'Tableau de bord en temps réel',
-      'Exportation de données PDF/Excel',
-      'Mode sombre automatique',
+      'Fonctionnalité clé 1',
+      'Fonctionnalité clé 2',
+      'Fonctionnalité clé 3',
+      'Interface utilisateur intuitive',
     ],
-    technologies: ['Vue.js', 'Quasar', 'Firebase', 'Node.js'],
-    githubLink: 'https://github.com',
-    liveLink: 'https://google.com',
+    technologies: ['Vue.js', 'Quasar', 'Node.js', 'Express'],
+    githubLink: 'https://github.com/votre-pseudo/mutuacy',
+    liveLink: 'https://mutuacy.com',
     gallery: [
-      'https://cdn.quasar.dev/img/parallax1.jpg',
-      'https://cdn.quasar.dev/img/mountains.jpg',
+      'images/mutuacy-1.jpg',
+      'images/mutuacy-2.jpg',
     ],
   },
-  'projet-beta': {
-    title: 'Projet Beta',
-    subtitle: 'Application mobile cross-platform',
-    image: 'https://cdn.quasar.dev/img/parallax1.jpg',
+
+  'inscription-esiea': {
+    title: 'Inscription ESIEA',
+    subtitle: 'Plateforme de gestion des inscriptions',
+    image: 'images/inscription-esiea-main.jpg', // À ajouter dans public/images/
     description:
-      "Le Projet Beta est une application mobile permettant aux utilisateurs de suivre leur activité physique. Elle utilise les capteurs du téléphone pour compter les pas et calculer les calories brûlées.",
+      "Application web permettant de gérer le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle simplifie la collecte des documents et le suivi des dossiers administratifs.",
     features: [
-      'Géolocalisation GPS',
-      'Graphiques interactifs',
-      'Notifications push',
-      'Partage sur les réseaux sociaux',
+      'Formulaire multi-étapes',
+      'Upload de documents sécurisé',
+      'Validation administrative',
+      'Notifications par email',
     ],
-    technologies: ['Cordova', 'Vue.js', 'Chart.js'],
+    technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'], // Adaptez selon vos technos
     githubLink: 'https://github.com',
     liveLink: null,
     gallery: [],
   },
-  'projet-gamma': {
-    title: 'Projet Gamma',
-    subtitle: 'Site vitrine corporate',
-    image: 'https://cdn.quasar.dev/img/mountains.jpg',
+
+  'gestion-notes-java': {
+    title: 'Gestion des Notes en Java',
+    subtitle: 'Application Desktop de gestion scolaire',
+    image: 'images/gestion-notes-java-main.jpg', // À ajouter dans public/images/
     description:
-      "Refonte complète du site web d'une entreprise locale pour améliorer sa visibilité en ligne et son référencement naturel (SEO).",
-    features: ['Design Responsive', 'Optimisation SEO', 'Formulaire de contact dynamique', 'Blog intégré'],
-    technologies: ['HTML5', 'Sass', 'JavaScript', 'WordPress'],
+      "Logiciel de bureau développé en Java pour permettre aux enseignants de gérer les notes, les moyennes et les bulletins des élèves de manière efficace.",
+    features: ['Calcul automatique des moyennes', 'Gestion des coefficients', 'Export PDF des bulletins', 'Interface graphique Swing/JavaFX'],
+    technologies: ['Java', 'Swing', 'MySQL', 'JDBC'], // Adaptez selon vos technos
     githubLink: null,
-    liveLink: 'https://google.com',
-    gallery: ['https://cdn.quasar.dev/img/parallax2.jpg'],
+    liveLink: null,
+    gallery: [],
   },
 }
 
@@ -176,17 +181,18 @@ export default defineComponent({
   name: 'ProjectPage',
   setup() {
     const route = useRoute()
-    // Récupère l'ID du projet depuis l'URL (ex: /project/projet-alpha -> id = projet-alpha)
     const projectId = route.params.id
 
-    // Trouve les données du projet correspondant
     const project = computed(() => {
       return (
         projectsData[projectId] || {
           title: 'Projet introuvable',
+          subtitle: '',
           description: "Ce projet n'existe pas ou a été supprimé.",
+          image: '',
           technologies: [],
           features: [],
+          gallery: []
         }
       )
     })

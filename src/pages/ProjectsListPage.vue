@@ -1,48 +1,48 @@
 <template>
   <q-page class="q-pa-md">
-    <!-- Section Introduction -->
-    <div class="row justify-center q-my-xl">
-      <div class="col-12 col-md-8 text-center">
-        <h1 class="text-h3 text-primary q-mb-md" style="font-weight: 300">
-          Bienvenue sur mon Portfolio
-        </h1>
-        <p class="text-h5 text-secondary">
-          Raconter mon histoire professionnelle et mettre en avant mes réalisations.
-        </p>
-      </div>
-    </div>
-
-    <!-- Section Projets (Aperçu) -->
-    <div class="row justify-center q-my-xl">
+    <div class="row justify-center">
       <div class="col-12 col-md-10">
-        <h2 class="text-h4 q-mb-lg text-center text-primary">Mes Projets Récents</h2>
+        <h1 class="text-h3 text-primary text-center q-mb-xl">Tous mes Projets</h1>
+
         <div class="row q-col-gutter-md">
           <!-- Projet 1 : Mutuacy -->
           <div class="col-12 col-md-4">
-            <q-card class="bg-white my-card cursor-pointer" @click="$router.push('/project/mutuacy')">
+            <q-card
+              class="bg-white my-card cursor-pointer"
+              @click="$router.push('/project/mutuacy')"
+            >
               <q-img src="images/mutuacy-main.jpg" :ratio="16 / 9">
                 <template v-slot:error>
                   <div class="absolute-full flex flex-center bg-grey-3 text-grey-8">
                     Image manquante
                   </div>
                 </template>
-                <div class="absolute-bottom text-h6 text-white bg-primary-transparent">
-                  Mutuacy
-                </div>
+                <div class="absolute-bottom text-h6 text-white bg-primary-transparent">Mutuacy</div>
               </q-img>
               <q-card-section>
                 Plateforme de mutualisation et d'échange. Un projet complet réalisé avec Vue.js.
               </q-card-section>
               <q-card-actions align="right">
                 <q-btn flat color="primary" label="Voir plus" to="/project/mutuacy" />
-                <q-btn flat color="secondary" label="GitHub" type="a" href="https://github.com" target="_blank" @click.stop />
+                <q-btn
+                  flat
+                  color="secondary"
+                  label="GitHub"
+                  type="a"
+                  href="https://github.com"
+                  target="_blank"
+                  @click.stop
+                />
               </q-card-actions>
             </q-card>
           </div>
 
           <!-- Projet 2 : Inscription ESIEA -->
           <div class="col-12 col-md-4">
-            <q-card class="bg-white my-card cursor-pointer" @click="$router.push('/project/inscription-esiea')">
+            <q-card
+              class="bg-white my-card cursor-pointer"
+              @click="$router.push('/project/inscription-esiea')"
+            >
               <q-img src="images/inscription-esiea-main.jpg" :ratio="16 / 9">
                 <template v-slot:error>
                   <div class="absolute-full flex flex-center bg-grey-3 text-grey-8">
@@ -58,14 +58,25 @@
               </q-card-section>
               <q-card-actions align="right">
                 <q-btn flat color="primary" label="Voir plus" to="/project/inscription-esiea" />
-                <q-btn flat color="secondary" label="GitHub" type="a" href="https://github.com" target="_blank" @click.stop />
+                <q-btn
+                  flat
+                  color="secondary"
+                  label="GitHub"
+                  type="a"
+                  href="https://github.com"
+                  target="_blank"
+                  @click.stop
+                />
               </q-card-actions>
             </q-card>
           </div>
 
           <!-- Projet 3 : Gestion des Notes en Java -->
           <div class="col-12 col-md-4">
-            <q-card class="bg-white my-card cursor-pointer" @click="$router.push('/project/gestion-notes-java')">
+            <q-card
+              class="bg-white my-card cursor-pointer"
+              @click="$router.push('/project/gestion-notes-java')"
+            >
               <q-img src="images/gestion-notes-java-main.jpg" :ratio="16 / 9">
                 <template v-slot:error>
                   <div class="absolute-full flex flex-center bg-grey-3 text-grey-8">
@@ -76,12 +87,18 @@
                   Gestion des Notes
                 </div>
               </q-img>
-              <q-card-section>
-                Application Desktop Java pour la gestion scolaire.
-              </q-card-section>
+              <q-card-section> Application Desktop Java pour la gestion scolaire. </q-card-section>
               <q-card-actions align="right">
                 <q-btn flat color="primary" label="Voir plus" to="/project/gestion-notes-java" />
-                <q-btn flat color="secondary" label="GitHub" type="a" href="https://github.com" target="_blank" @click.stop />
+                <q-btn
+                  flat
+                  color="secondary"
+                  label="GitHub"
+                  type="a"
+                  href="https://github.com"
+                  target="_blank"
+                  @click.stop
+                />
               </q-card-actions>
             </q-card>
           </div>
@@ -95,21 +112,20 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'IndexPage',
+  name: 'ProjectsListPage',
 })
 </script>
 
 <style scoped>
 .my-card {
   transition: transform 0.3s;
-  border-radius: 8px; /* Coins légèrement arrondis pour la douceur */
+  border-radius: 8px;
 }
 .my-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(78, 52, 46, 0.2); /* Ombre marron légère */
+  box-shadow: 0 4px 15px rgba(78, 52, 46, 0.2);
 }
 
-/* Fond semi-transparent marron pour les titres sur images */
 .bg-primary-transparent {
   background-color: rgba(78, 52, 46, 0.7);
 }

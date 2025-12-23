@@ -4,8 +4,8 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
-      // Route dynamique pour les pages de projet
-      // :id sera remplacé par l'identifiant du projet (ex: projet-alpha)
+      { path: 'about', component: () => import('pages/AboutPage.vue') },
+      { path: 'projects', component: () => import('pages/ProjectsListPage.vue') }, // Nouvelle route
       { path: 'project/:id', component: () => import('pages/ProjectPage.vue') },
     ],
   },

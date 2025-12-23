@@ -14,6 +14,7 @@
       <q-list>
         <q-item-label header> Navigation </q-item-label>
 
+        <!-- J'ajoute la prop 'internal' pour les liens internes -->
         <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
       </q-list>
     </q-drawer>
@@ -33,25 +34,29 @@ const linksList = [
     title: 'Accueil',
     caption: 'Présentation',
     icon: 'home',
-    link: '/#/',
+    link: '/', // Chemin interne propre
+    internal: true, // Marqueur pour dire que c'est une navigation interne
   },
   {
     title: 'Mes Projets',
     caption: 'Réalisations',
     icon: 'work',
-    link: '/#/projects', // Nous créerons cette route ou section plus tard
+    link: '/projects',
+    internal: true,
   },
   {
     title: 'Mon Parcours',
     caption: 'Expérience',
     icon: 'history',
-    link: '/#/about',
+    link: '/about',
+    internal: true,
   },
   {
     title: 'Contact',
     caption: 'Me contacter',
     icon: 'mail',
     link: 'mailto:votre.email@example.com',
+    internal: false,
   },
 ]
 
