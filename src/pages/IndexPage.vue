@@ -3,6 +3,9 @@
     <!-- Section Introduction -->
     <div class="row justify-center q-my-xl">
       <div class="col-12 col-md-8 text-center">
+        <!-- Nom Prénom -->
+        <div class="text-h4 text-primary q-mb-sm text-weight-bold">Xavier Petilaire-Bellet</div>
+
         <h1 class="text-h3 text-primary q-mb-md" style="font-weight: 300">
           Bienvenue sur mon Portfolio
         </h1>
@@ -84,7 +87,7 @@
               <q-card-actions align="right">
                 <q-btn flat color="primary" label="Voir plus" to="/project/nasa-python" />
                 <!-- Lien GitHub Spécifique -->
-                <q-btn flat color="secondary" label="GitHub" type="a" href="https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah" target="_blank" @click.stop />
+                <q-btn flat color="secondary" label="GitHub" type="a" href="https://github.com/votre-pseudo/nasa-python" target="_blank" @click.stop />
               </q-card-actions>
             </q-card>
           </div>
