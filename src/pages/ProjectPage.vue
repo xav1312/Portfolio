@@ -99,19 +99,9 @@
           </div>
         </div>
 
-        <!-- Galerie d'images supplémentaires (Optionnel) -->
-        <div v-if="project.gallery && project.gallery.length > 0" class="q-mt-xl">
-          <h2 class="text-h5 text-primary q-mb-md">Galerie</h2>
-          <div class="row q-col-gutter-md">
-            <div
-              v-for="(img, index) in project.gallery"
-              :key="index"
-              class="col-12 col-sm-6 col-md-4"
-            >
-              <q-img :src="img" :ratio="16 / 9" class="rounded-borders shadow-1" />
-            </div>
-          </div>
-        </div>
+        <!-- Utilisation du composant Galerie -->
+        <ProjectGallery :images="project.gallery" />
+
       </div>
     </div>
   </q-page>
@@ -120,6 +110,7 @@
 <script>
 import { defineComponent, computed } from 'vue'
 import { useRoute } from 'vue-router'
+import ProjectGallery from 'components/ProjectGallery.vue'
 
 // =========================================================================
 // DONNÉES DES PROJETS
@@ -127,7 +118,7 @@ import { useRoute } from 'vue-router'
 const projectsData = {
   'mutuacy': {
     title: 'Mutuacy',
-    subtitle: 'Plateforme de mutualisation et d\'échange',
+    subtitle: 'Plateforme d\'informations sur les mutuelles et les soins qu\'elles donnent.',
     image: 'images/mutuacy-main.jpg',
     description: `Décrivez ici le projet Mutuacy en détail.`,
     features: [
@@ -136,7 +127,7 @@ const projectsData = {
       'Fonctionnalité clé 3',
       'Interface utilisateur intuitive',
     ],
-    technologies: ['Vue.js', 'Quasar', 'Node.js', 'Express'],
+    technologies: ['Flutter', 'Dart', 'Dart', ''],
     githubLink: 'https://github.com/votre-pseudo/mutuacy',
     liveLink: 'https://mutuacy.com',
     gallery: [
@@ -148,29 +139,33 @@ const projectsData = {
   'inscription-esiea': {
     title: 'Inscription ESIEA',
     subtitle: 'Plateforme de gestion des inscriptions',
-    image: 'images/inscription-esiea-main.jpg', // À ajouter dans public/images/
+    image: 'images/inscription-esiea-main.jpg',
     description:
-      "Application web permettant de gérer le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle simplifie la collecte des documents et le suivi des dossiers administratifs.",
+      "Application web permettant de gérer le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle simplifie la collecte des documents et le suivi des dossiers administratifs. Elle permet aux administrateurs de gérer les inscriptions des étudiants ainsi que la création des comptes sur la plateforme",
     features: [
       'Formulaire multi-étapes',
       'Upload de documents sécurisé',
       'Validation administrative',
       'Notifications par email',
     ],
-    technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'], // Adaptez selon vos technos
+    technologies: ['Vue.js', 'Supabase', 'Quasar', 'Cypress'],
     githubLink: 'https://github.com',
     liveLink: null,
-    gallery: [],
+    // J'ajoute des images ici pour que la galerie s'affiche
+    gallery: [
+        'images/esiea-1.jpg', // Placeholder
+        'images/esiea-2.jpg'  // Placeholder
+    ],
   },
 
   'gestion-notes-java': {
     title: 'Gestion des Notes en Java',
     subtitle: 'Application Desktop de gestion scolaire',
-    image: 'images/gestion-notes-java-main.jpg', // À ajouter dans public/images/
+    image: 'images/gestion-notes-java-main.jpg',
     description:
-      "Logiciel de bureau développé en Java pour permettre aux enseignants de gérer les notes, les moyennes et les bulletins des élèves de manière efficace.",
+      "Logiciel développé en Java pour permettre aux enseignants de gérer les notes, les moyennes et les bulletins des élèves de manière efficace.Et de permettre aux étudiants de voir leur notes et leur bulletin",
     features: ['Calcul automatique des moyennes', 'Gestion des coefficients', 'Export PDF des bulletins', 'Interface graphique Swing/JavaFX'],
-    technologies: ['Java', 'Swing', 'MySQL', 'JDBC'], // Adaptez selon vos technos
+    technologies: ['Java', 'PostgreSQL','JDBC'],
     githubLink: null,
     liveLink: null,
     gallery: [],
@@ -179,6 +174,9 @@ const projectsData = {
 
 export default defineComponent({
   name: 'ProjectPage',
+  components: {
+    ProjectGallery
+  },
   setup() {
     const route = useRoute()
     const projectId = route.params.id
