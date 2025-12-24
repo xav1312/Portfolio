@@ -21,7 +21,6 @@ import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import HistoryIcon from '@mui/icons-material/History';
 import MailIcon from '@mui/icons-material/Mail';
-import CodeIcon from '@mui/icons-material/Code';
 import Footer from '../components/Footer';
 
 const drawerWidth = 240;
@@ -104,9 +103,6 @@ export default function MainLayout() {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             Mon Portfolio
           </Typography>
-          <IconButton color="inherit" href="https://github.com" target="_blank">
-            <CodeIcon />
-          </IconButton>
         </Toolbar>
       </AppBar>
 
