@@ -19,14 +19,9 @@ export const projectsData: Record<string, Project> = {
     title: 'Mutuacy',
     subtitle: 'Plateforme d\'informations sur les mutuelles et les soins qu\'elles donnent.',
     image: 'images/mutuacy-main.png',
-    description: `Décrivez ici le projet Mutuacy en détail.`,
-    creationProcess: `Expliquez ici comment vous avez abordé ce projet.
-
-    Par exemple :
-    - Analyse des besoins : J'ai commencé par étudier le marché des mutuelles...
-    - Conception : J'ai réalisé des maquettes Figma pour valider l'UX...
-    - Développement : J'ai choisi Flutter pour sa portabilité...
-    - Tests : J'ai mis en place des tests unitaires pour garantir la fiabilité...`,
+    description: `Applications qui renseigne sur les soins remboursées proposés par les mutuelles.`,
+    creationProcess: `Nous étions un groupe de 6 pour ce projet avec comme phase amenant la v1
+    1. `,
     features: [
       'Fonctionnalité clé 1',
       'Fonctionnalité clé 2',
