@@ -34,7 +34,7 @@ export const projectsData: Record<string, Project> = {
       'Interface utilisateur intuitive',
     ],
     technologies: ['Flutter', 'Dart', 'Supabase'],
-    githubLink: 'https://github.com/votre-pseudo/mutuacy',
+    githubLink: 'https://github.com/Pirodax/cap_projet_app',
     liveLink: 'https://mutuacy.com',
     gallery: [
       'images/mutuacy-1.jpg',
@@ -82,7 +82,7 @@ export const projectsData: Record<string, Project> = {
     interactiveViz: 'exoplanet_viz.html',
     features: ['Calcul automatique des moyennes', 'Gestion des coefficients', 'Export PDF des bulletins', 'Interface graphique Swing/JavaFX'],
     technologies: ['Python','API Requests', 'PyVista','SciPy', 'OpenSimpex'],
-    githubLink: 'https://github.com/votre-pseudo/nasa-python',
+    githubLink: 'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
     liveLink: null,
     gallery: [
         'images/Nasa-1.png',
