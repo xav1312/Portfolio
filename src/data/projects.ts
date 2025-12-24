@@ -5,7 +5,7 @@ export interface Project {
   image: string;
   description: string;
   creationProcess?: string;
-  interactiveViz?: string;
+  interactiveViz?: string; // Nouveau champ pour le fichier HTML interactif
   features: string[];
   technologies: string[];
   githubLink: string | null;
@@ -17,45 +17,46 @@ export const projectsData: Record<string, Project> = {
   'mutuacy': {
     id: 'mutuacy',
     title: 'Mutuacy',
-    subtitle: 'Plateforme d\'informations sur les mutuelles et les soins qu\'elles proposent.',
-    image: 'images/mutuacy-main.jpg',
-    description: `Mutuacy est une application conçue pour simplifier l'accès aux informations sur les mutuelles de santé. Elle permet aux utilisateurs de comparer les offres et de comprendre les détails des remboursements.`,
-    creationProcess: `Pour ce projet, j'ai adopté une approche centrée sur l'utilisateur :
+    subtitle: 'Plateforme d\'informations sur les mutuelles et les soins qu\'elles donnent.',
+    image: 'images/mutuacy-main.png',
+    description: `Décrivez ici le projet Mutuacy en détail.`,
+    creationProcess: `Expliquez ici comment vous avez abordé ce projet.
 
-    - Analyse : Étude comparative des solutions existantes et identification des points de friction.
-    - Conception : Création de wireframes et maquettes haute fidélité pour assurer une navigation fluide.
-    - Développement : Choix de Flutter pour garantir une expérience native sur iOS et Android avec une base de code unique.
-    - Backend : Utilisation de Supabase pour une gestion performante des données en temps réel.`,
+    Par exemple :
+    - Analyse des besoins : J'ai commencé par étudier le marché des mutuelles...
+    - Conception : J'ai réalisé des maquettes Figma pour valider l'UX...
+    - Développement : J'ai choisi Flutter pour sa portabilité...
+    - Tests : J'ai mis en place des tests unitaires pour garantir la fiabilité...`,
     features: [
-      'Comparateur d\'offres',
-      'Détails des remboursements',
-      'Recherche filtrée',
+      'Fonctionnalité clé 1',
+      'Fonctionnalité clé 2',
+      'Fonctionnalité clé 3',
       'Interface utilisateur intuitive',
     ],
     technologies: ['Flutter', 'Dart', 'Supabase'],
-    githubLink: 'https://github.com/votre-pseudo/mutuacy',
-    liveLink: 'https://mutuacy.com',
+    githubLink: 'https://github.com/Pirodax/cap_projet_app',
+    liveLink: null,
     gallery: [
-      'images/mutuacy-1.jpg',
-      'images/mutuacy-2.jpg',
+      'images/mutuacy-main.png'
     ],
   },
 
   'inscription-esiea': {
     id: 'inscription-esiea',
     title: 'Inscription ESIEA',
-    subtitle: 'Plateforme de gestion des inscriptions étudiantes',
+    subtitle: 'Plateforme de gestion des inscriptions',
     image: 'images/inscription-esiea-main.jpg',
     description:
-      "Cette application web optimise le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle digitalise la collecte des documents administratifs et facilite le suivi des dossiers par l'administration. Elle offre également aux administrateurs des outils pour gérer les comptes étudiants et valider les inscriptions.",
-    creationProcess: `Ce projet a été réalisé dans un contexte académique pour répondre à un besoin réel de digitalisation.
+      "Application web permettant de gérer le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle simplifie la collecte des documents et le suivi des dossiers administratifs. Elle permet aux administrateurs de gérer les inscriptions des étudiants ainsi que la création des comptes sur la plateforme",
+    creationProcess: `Ce projet a été réalisé dans le cadre d'un stage/projet académique.
 
-    Le défi technique principal résidait dans la gestion sécurisée des documents personnels (RGPD). J'ai structuré l'architecture autour de Supabase pour bénéficier de ses règles de sécurité robustes (RLS) et de son stockage fiable. L'interface a été pensée pour guider l'étudiant étape par étape afin de réduire les erreurs de saisie.`,
+    Le défi principal était de gérer de manière sécurisée un grand nombre de documents administratifs. J'ai opté pour Supabase pour le stockage et l'authentification afin de garantir la sécurité des données.`,
     features: [
-      'Tableau de bord administrateur',
-      'Téléversement sécurisé de documents',
-      'Suivi du processus d\'inscription',
-      'Confirmation automatique par email',
+      'Dashboard admin',
+      'Upload de documents sur une Base de données',
+      'Processus d\'inscription',
+      'Renseignement de coordonnées',
+      'Message de validation d\'enregistrement des infos',
     ],
     technologies: ['Vue.js', 'Supabase', 'Quasar', 'Cypress'],
     githubLink: 'https://github.com/votre-pseudo/inscription-esiea',
@@ -69,18 +70,18 @@ export const projectsData: Record<string, Project> = {
 
   'nasa-python': {
     id: 'nasa-python',
-    title: 'Visualisation d\'Exoplanètes',
-    subtitle: 'Exploration de données spatiales en 3D avec Python',
+    title: 'Visualisation d\'exoplanètes par Python',
+    subtitle: 'Application Desktop de gestion scolaire',
     image: 'images/Nasa-main.png',
     description:
-      "Ce projet est une application de visualisation scientifique permettant d'explorer les données de la NASA sur les exoplanètes. Elle génère des rendus 3D interactifs pour mieux comprendre la répartition et les caractéristiques des planètes découvertes hors de notre système solaire.",
-    creationProcess: `Passionné par l'astronomie et la data science, j'ai voulu combiner les deux.
-
-    J'ai commencé par extraire et nettoyer les données brutes via l'API de la NASA (Exoplanet Archive). Ensuite, j'ai utilisé la bibliothèque PyVista pour transformer ces données tabulaires en une scène 3D immersive. L'objectif était de rendre ces données abstraites visuellement compréhensibles et manipulables.`,
+      "Logiciel développé en Java pour permettre aux enseignants de gérer les notes, les moyennes et les bulletins des élèves de manière efficace.Et de permettre aux étudiants de voir leur notes et leur bulletin",
+    creationProcess: `Ce projet a été réalisé dans le cadre d'un challenge technique. Durant toute une semaine mon binôme s'est attelé à concevoir des calculs de conversion entre plusieurs unités et plusieurs valeurs afin de visualiser ces exoplanètes
+    Nous avons  utilisé l'API de la NASA pour récupérer des données réelles sur les exoplanètes, puis nous nous sommes servis de PyVista pour créer des visualisations 3D interactives.Comme vous pouvez le voir ci-dessus`,
+    // Ajoutez ici le nom de votre fichier HTML (sans public/)
     interactiveViz: 'exoplanet_viz.html',
-    features: ['Récupération de données via API', 'Nettoyage et traitement de données (Pandas)', 'Visualisation 3D interactive', 'Génération de rapports HTML'],
-    technologies: ['Python','API Requests', 'PyVista','SciPy', 'Pandas'],
-    githubLink: 'https://github.com/votre-pseudo/nasa-python',
+    features: ['Calcul automatique des moyennes', 'Gestion des coefficients', 'Export PDF des bulletins', 'Interface graphique Swing/JavaFX'],
+    technologies: ['Python','API Requests', 'PyVista','SciPy', 'OpenSimpex'],
+    githubLink: 'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
     liveLink: null,
     gallery: [
         'images/Nasa-1.png',
