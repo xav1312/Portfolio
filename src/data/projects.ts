@@ -4,7 +4,8 @@ export interface Project {
   subtitle: string;
   image: string;
   description: string;
-  creationProcess?: string; // Nouveau champ optionnel
+  creationProcess?: string;
+  interactiveViz?: string; // Nouveau champ pour le fichier HTML interactif
   features: string[];
   technologies: string[];
   githubLink: string | null;
@@ -77,6 +78,8 @@ export const projectsData: Record<string, Project> = {
     creationProcess: `J'ai voulu explorer les capacités de Python pour le traitement de données scientifiques.
 
     J'ai utilisé l'API de la NASA pour récupérer des données réelles sur les exoplanètes, puis j'ai utilisé PyVista pour créer des visualisations 3D interactives.`,
+    // Ajoutez ici le nom de votre fichier HTML (sans public/)
+    interactiveViz: 'exoplanet_viz.html',
     features: ['Calcul automatique des moyennes', 'Gestion des coefficients', 'Export PDF des bulletins', 'Interface graphique Swing/JavaFX'],
     technologies: ['Python','API Requests', 'PyVista','SciPy', 'OpenSimpex'],
     githubLink: 'https://github.com/votre-pseudo/nasa-python',

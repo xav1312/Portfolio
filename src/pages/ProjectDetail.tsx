@@ -4,6 +4,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CodeIcon from '@mui/icons-material/Code';
 import LaunchIcon from '@mui/icons-material/Launch';
 import EngineeringIcon from '@mui/icons-material/Engineering';
+import PublicIcon from '@mui/icons-material/Public';
 import { projectsData } from '../data/projects';
 import ProjectGallery from '../components/ProjectGallery';
 
@@ -96,7 +97,41 @@ export default function ProjectDetail() {
             {project.description}
           </Typography>
 
-          {/* Processus de Création (Nouvelle Section) */}
+          {/* Visualisation Interactive (Nouvelle Section) */}
+          {project.interactiveViz && (
+            <Box sx={{ mb: 6 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 1 }}>
+                    <PublicIcon color="primary" />
+                    <Typography variant="h5" color="primary" sx={{ fontWeight: 'bold' }}>
+                        Visualisation 3D Interactive
+                    </Typography>
+                </Box>
+                <Paper
+                    elevation={3}
+                    sx={{
+                        width: '100%',
+                        height: '500px',
+                        overflow: 'hidden',
+                        borderRadius: 4,
+                        border: '1px solid',
+                        borderColor: 'divider'
+                    }}
+                >
+                    <iframe
+                        src={project.interactiveViz}
+                        title="Visualisation 3D"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 'none' }}
+                    />
+                </Paper>
+                <Typography variant="caption" color="text.secondary" sx={{ mt: 1, display: 'block', textAlign: 'center' }}>
+                    Utilisez votre souris pour tourner, zoomer et explorer la scène.
+                </Typography>
+            </Box>
+          )}
+
+          {/* Processus de Création */}
           {project.creationProcess && (
             <Box sx={{ mb: 6, p: 3, bgcolor: 'background.default', borderRadius: 4, borderLeft: '4px solid', borderColor: 'secondary.main' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 1 }}>
