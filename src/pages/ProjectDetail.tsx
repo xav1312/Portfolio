@@ -3,6 +3,7 @@ import { Box, Typography, Button, Grid, Chip, Container, Paper } from '@mui/mate
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CodeIcon from '@mui/icons-material/Code';
 import LaunchIcon from '@mui/icons-material/Launch';
+import EngineeringIcon from '@mui/icons-material/Engineering';
 import { projectsData } from '../data/projects';
 import ProjectGallery from '../components/ProjectGallery';
 
@@ -87,12 +88,28 @@ export default function ProjectDetail() {
 
       <Grid container spacing={6}>
         <Grid item xs={12} md={8}>
+          {/* Description Principale */}
           <Typography variant="h5" color="primary" sx={{ mb: 3, fontWeight: 'bold' }}>
             À propos du projet
           </Typography>
-          <Typography variant="body1" sx={{ whiteSpace: 'pre-line', mb: 4, fontSize: '1.1rem', lineHeight: 1.8, color: 'text.primary' }}>
+          <Typography variant="body1" sx={{ whiteSpace: 'pre-line', mb: 6, fontSize: '1.1rem', lineHeight: 1.8, color: 'text.primary' }}>
             {project.description}
           </Typography>
+
+          {/* Processus de Création (Nouvelle Section) */}
+          {project.creationProcess && (
+            <Box sx={{ mb: 6, p: 3, bgcolor: 'background.default', borderRadius: 4, borderLeft: '4px solid', borderColor: 'secondary.main' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 1 }}>
+                    <EngineeringIcon color="secondary" />
+                    <Typography variant="h5" color="secondary" sx={{ fontWeight: 'bold' }}>
+                        Processus de création
+                    </Typography>
+                </Box>
+                <Typography variant="body1" sx={{ whiteSpace: 'pre-line', fontSize: '1.05rem', lineHeight: 1.8, color: 'text.secondary' }}>
+                    {project.creationProcess}
+                </Typography>
+            </Box>
+          )}
 
           <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'bold' }}>
             Fonctionnalités clés

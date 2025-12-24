@@ -22,6 +22,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import HistoryIcon from '@mui/icons-material/History';
 import MailIcon from '@mui/icons-material/Mail';
 import CodeIcon from '@mui/icons-material/Code';
+import Footer from '../components/Footer';
 
 const drawerWidth = 240;
 
@@ -39,6 +40,14 @@ export default function MainLayout() {
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const scrollToContact = () => {
+    const footer = document.getElementById('contact-footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+      if (isMobile) setMobileOpen(false);
+    }
   };
 
   const drawer = (
@@ -62,7 +71,8 @@ export default function MainLayout() {
           </ListItem>
         ))}
         <ListItem disablePadding>
-            <ListItemButton component="a" href="mailto:votre.email@example.com">
+            {/* Bouton Contact modifié pour scroller */}
+            <ListItemButton onClick={scrollToContact}>
                 <ListItemIcon><MailIcon /></ListItemIcon>
                 <ListItemText primary="Contact" secondary="Me contacter" />
             </ListItemButton>
@@ -72,7 +82,7 @@ export default function MainLayout() {
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', minHeight: '100vh' }}> {/* minHeight pour que le footer soit en bas */}
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -134,12 +144,26 @@ export default function MainLayout() {
         </Drawer>
       </Box>
 
+      {/* Conteneur principal qui prend toute la largeur restante */}
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { md: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{
+            flexGrow: 1,
+            width: { md: `calc(100% - ${drawerWidth}px)` },
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh'
+        }}
       >
         <Toolbar /> {/* Spacer for AppBar */}
-        <Outlet />
+
+        {/* Contenu de la page */}
+        <Box sx={{ flexGrow: 1, p: 3 }}>
+            <Outlet />
+        </Box>
+
+        {/* Footer ajouté ici */}
+        <Footer />
       </Box>
     </Box>
   );

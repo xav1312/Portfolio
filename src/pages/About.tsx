@@ -1,7 +1,7 @@
 import { Box, Typography, Container, Chip, Grid, Paper } from '@mui/material';
-import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
 import CodeIcon from '@mui/icons-material/Code';
+import PublicIcon from '@mui/icons-material/Public'; // Pour l'international
 
 export default function About() {
   return (
@@ -11,60 +11,49 @@ export default function About() {
           Mon Parcours
         </Typography>
 
-        {/* Expériences */}
+        {/* Formation & Expériences */}
         <Typography variant="h5" color="secondary" sx={{ mb: 4 }}>
-          Expériences Professionnelles
+          Formation & Expériences
         </Typography>
 
         <Box sx={{ mb: 6 }}>
-            <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2 }}>
-                <Box sx={{ color: 'primary.main' }}><WorkIcon fontSize="large" /></Box>
+            {/* ESIEA */}
+            <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2, textAlign: 'left' }}>
+                <Box sx={{ color: 'primary.main', mt: 0.5 }}><SchoolIcon fontSize="large" /></Box>
                 <Box>
-                    <Typography variant="h6">Développeur Full Stack (Stage)</Typography>
-                    <Typography variant="subtitle2" color="text.secondary">Entreprise XYZ, Paris</Typography>
-                    <Typography variant="body2" sx={{ mt: 1 }}>
-                        Développement d'une application web de gestion interne. Utilisation de Vue.js et Node.js. Collaboration avec une équipe de 5 personnes en méthode Agile.
-                    </Typography>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Étudiant ingénieur Majeure Software Engineering</Typography>
+                    <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 500 }}>ESIEA</Typography>
+                    <Typography variant="subtitle2" color="text.secondary">2023 - Aujourd'hui</Typography>
                 </Box>
             </Paper>
 
-            <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2 }}>
-                <Box sx={{ color: 'secondary.main' }}><CodeIcon fontSize="large" /></Box>
+            {/* Heriot-Watt */}
+            <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2, textAlign: 'left' }}>
+                <Box sx={{ color: 'secondary.main', mt: 0.5 }}><PublicIcon fontSize="large" /></Box>
                 <Box>
-                    <Typography variant="h6">Projet Freelance</Typography>
-                    <Typography variant="subtitle2" color="text.secondary">Client ABC</Typography>
-                    <Typography variant="body2" sx={{ mt: 1 }}>
-                        Création d'un site vitrine pour un artisan local. Design, intégration et mise en ligne.
-                    </Typography>
-                </Box>
-            </Paper>
-        </Box>
-
-        {/* Formation */}
-        <Typography variant="h5" color="secondary" sx={{ mb: 4 }}>
-          Formation
-        </Typography>
-
-        <Box sx={{ mb: 6 }}>
-            <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2 }}>
-                <Box sx={{ color: 'primary.main' }}><SchoolIcon fontSize="large" /></Box>
-                <Box>
-                    <Typography variant="h6">Master Ingénierie du Logiciel</Typography>
-                    <Typography variant="subtitle2" color="text.secondary">École Supérieure d'Informatique</Typography>
-                    <Typography variant="body2" sx={{ mt: 1 }}>
-                        Spécialisation en développement web et mobile. Projets de groupe et apprentissage des bonnes pratiques (Clean Code, TDD).
-                    </Typography>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Semestre d'études en Écosse</Typography>
+                    <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 500 }}>Heriot-Watt University</Typography>
+                    <Typography variant="subtitle2" color="text.secondary">01/2024 - 06/2024</Typography>
                 </Box>
             </Paper>
 
-            <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2 }}>
-                <Box sx={{ color: 'primary.main' }}><SchoolIcon fontSize="large" /></Box>
+            {/* Prépa */}
+            <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2, textAlign: 'left' }}>
+                <Box sx={{ color: 'primary.main', mt: 0.5 }}><SchoolIcon fontSize="large" /></Box>
                 <Box>
-                    <Typography variant="h6">Baccalauréat Scientifique</Typography>
-                    <Typography variant="subtitle2" color="text.secondary">Lycée Exemple</Typography>
-                    <Typography variant="body2" sx={{ mt: 1 }}>
-                        Option Mathématiques. Mention Bien.
-                    </Typography>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Classe préparatoire MP Option Informatique</Typography>
+                    <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 500 }}>Lycée Général et Technologique de Baimbridge</Typography>
+                    <Typography variant="subtitle2" color="text.secondary">2021 - 2023</Typography>
+                </Box>
+            </Paper>
+
+            {/* Bac */}
+            <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2, textAlign: 'left' }}>
+                <Box sx={{ color: 'primary.main', mt: 0.5 }}><SchoolIcon fontSize="large" /></Box>
+                <Box>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Bac Général (Spécialités : Maths et Physique-Chimie)</Typography>
+                    <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 500 }}>Lycée Général et Technologique de Baimbridge</Typography>
+                    <Typography variant="subtitle2" color="text.secondary">2021</Typography>
                 </Box>
             </Paper>
         </Box>
@@ -74,7 +63,7 @@ export default function About() {
           Mes Compétences
         </Typography>
         <Grid container spacing={2} justifyContent="center">
-            {['JavaScript', 'React', 'TypeScript', 'HTML5', 'CSS3', 'SQL', 'Git', 'Node.js'].map((skill) => (
+            {['JavaScript', 'React', 'TypeScript', 'Vue.js', 'Python', 'Java', 'SQL', 'Git', 'C'].map((skill) => (
                 <Grid item key={skill}>
                     <Chip
                         label={skill}
