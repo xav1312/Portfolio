@@ -15,6 +15,7 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
+  Avatar
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
@@ -70,7 +71,6 @@ export default function MainLayout() {
           </ListItem>
         ))}
         <ListItem disablePadding>
-            {/* Bouton Contact modifié pour scroller */}
             <ListItemButton onClick={scrollToContact}>
                 <ListItemIcon><MailIcon /></ListItemIcon>
                 <ListItemText primary="Contact" secondary="Me contacter" />
@@ -81,7 +81,7 @@ export default function MainLayout() {
   );
 
   return (
-    <Box sx={{ display: 'flex', minHeight: '100vh' }}> {/* minHeight pour que le footer soit en bas */}
+    <Box sx={{ display: 'flex', minHeight: '100vh' }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -100,9 +100,21 @@ export default function MainLayout() {
           >
             <MenuIcon />
           </IconButton>
+
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             Mon Portfolio
           </Typography>
+
+          {/* Logo à droite (remplace le bouton Code) */}
+          {/* Utilisation de import.meta.env.BASE_URL pour gérer le chemin GitHub Pages */}
+          <Avatar
+            src={`${import.meta.env.BASE_URL}flavicon.png`}
+            alt="Logo"
+            sx={{ width: 40, height: 40, cursor: 'pointer' }}
+            variant="rounded"
+            component={RouterLink} // Rend le logo cliquable pour revenir à l'accueil
+            to="/"
+          />
         </Toolbar>
       </AppBar>
 
@@ -111,13 +123,12 @@ export default function MainLayout() {
         sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
         aria-label="mailbox folders"
       >
-        {/* Mobile Drawer */}
         <Drawer
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: 'block', md: 'none' },
@@ -127,7 +138,6 @@ export default function MainLayout() {
           {drawer}
         </Drawer>
 
-        {/* Desktop Drawer */}
         <Drawer
           variant="permanent"
           sx={{
@@ -140,7 +150,6 @@ export default function MainLayout() {
         </Drawer>
       </Box>
 
-      {/* Conteneur principal qui prend toute la largeur restante */}
       <Box
         component="main"
         sx={{
@@ -151,14 +160,12 @@ export default function MainLayout() {
             minHeight: '100vh'
         }}
       >
-        <Toolbar /> {/* Spacer for AppBar */}
+        <Toolbar />
 
-        {/* Contenu de la page */}
         <Box sx={{ flexGrow: 1, p: 3 }}>
             <Outlet />
         </Box>
 
-        {/* Footer ajouté ici */}
         <Footer />
       </Box>
     </Box>
