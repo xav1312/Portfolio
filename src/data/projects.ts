@@ -28,10 +28,11 @@ export const projectsData: Record<string, Project> = {
     5. Conception du code contenant les fonctionnaliés les plus importantes et basiques.
     6. Tests de ces fonctionnalités.`,
     features: [
-      'Fonctionnalité clé 1',
-      'Fonctionnalité clé 2',
-      'Fonctionnalité clé 3',
+      'Créer un compte et pouvoir se connecter',
+      'Afficher la liste des soins et le remboursement proposé',
+      'Simuler le coût d\'un soin',
       'Interface utilisateur intuitive',
+      'Accéder à un fil d\'actualité sur les nouveaux soins remboursés',
     ],
     technologies: ['Flutter', 'Dart', 'Supabase'],
     githubLink: 'https://github.com/Pirodax/cap_projet_app',
