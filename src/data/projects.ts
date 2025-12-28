@@ -20,7 +20,7 @@ export const projectsData: Record<string, Project> = {
     subtitle: 'Plateforme d\'informations sur les mutuelles et les soins qu\'elles donnent.',
     image: 'images/mutuacy-main.png',
     description: `Applications qui renseigne sur les soins remboursées proposés par les mutuelles.`,
-    creationProcess: `Nous étions un groupe de 6 pour ce projet avec comme phase amenant la v1.
+    creationProcess: `Nous étions un groupe de 6 pour ce projet avec comme phases amenant à la première version :
     1. Voir les problèmes qui peuvent êtres résolues dans le domaine de la santé.
     2. Voir de quel façon une personne peut accéder à la grille des soins proposés par sa mutuelle.
     3. Concevoir le design d'un affichage intuitif des soins pour le rendre compréhensible au plus grand nombre.
@@ -48,8 +48,8 @@ export const projectsData: Record<string, Project> = {
     subtitle: 'Plateforme de gestion des inscriptions',
     image: 'images/inscription-esiea-main.jpg',
     description:
-      "Application web permettant de gérer le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle simplifie la collecte des documents et le suivi des dossiers administratifs. Elle permet aux administrateurs de gérer les inscriptions des étudiants ainsi que la création des comptes sur la plateforme",
-    creationProcess: `Ce projet a été réalisé dans le cadre d'un stage/projet académique.
+      "Application web permettant de gérer le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle simplifie la collecte des documents et le suivi des dossiers administratifs. Elle permet aux administrateurs de gérer les inscriptions des étudiants ainsi que la création des comptes sur la plateforme.",
+    creationProcess: `Ce projet a été réalisé dans le cadre d'un projet académique.
 
     Le défi principal était de gérer de manière sécurisée un grand nombre de documents administratifs. J'ai opté pour Supabase pour le stockage et l'authentification afin de garantir la sécurité des données.`,
     features: [
@@ -80,7 +80,7 @@ export const projectsData: Record<string, Project> = {
     Nous avons  utilisé l'API de la NASA pour récupérer des données réelles sur les exoplanètes, puis nous nous sommes servis de PyVista pour créer des visualisations 3D interactives.Comme vous pouvez le voir ci-dessus`,
     // Ajoutez ici le nom de votre fichier HTML (sans public/)
     interactiveViz: 'exoplanet_viz.html',
-    features: ['Calcul automatique des moyennes', 'Gestion des coefficients', 'Export PDF des bulletins', 'Interface graphique Swing/JavaFX'],
+    features: ['Récuperer et lister les exoplanètes observées par la NASA', 'Génerer une carte d\'altitude', 'Calculer les différentes températures', 'Génerer l\'hydrosphère et l\'atmosphère','Déterminer les biomes', 'Génerer une visualisation 3D'],
     technologies: ['Python','API Requests', 'PyVista','SciPy', 'OpenSimpex'],
     githubLink: 'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
     liveLink: null,
