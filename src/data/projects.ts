@@ -75,7 +75,7 @@ export const projectsData: Record<string, Project> = {
     subtitle: 'Application Desktop de gestion scolaire',
     image: 'images/Nasa-main.png',
     description:
-      "Logiciel développé en Java pour permettre aux enseignants de gérer les notes, les moyennes et les bulletins des élèves de manière efficace.Et de permettre aux étudiants de voir leur notes et leur bulletin",
+      "Logiciel développé en Python pour permettre à l'utilisateur de visualiser en 3D des exoplanètes ayant été observées par la NASA",
     creationProcess: `Ce projet a été réalisé dans le cadre d'un challenge technique. Durant toute une semaine mon binôme s'est attelé à concevoir des calculs de conversion entre plusieurs unités et plusieurs valeurs afin de visualiser ces exoplanètes
     Nous avons  utilisé l'API de la NASA pour récupérer des données réelles sur les exoplanètes, puis nous nous sommes servis de PyVista pour créer des visualisations 3D interactives.Comme vous pouvez le voir ci-dessus`,
     // Ajoutez ici le nom de votre fichier HTML (sans public/)
