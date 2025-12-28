@@ -20,8 +20,13 @@ export const projectsData: Record<string, Project> = {
     subtitle: 'Plateforme d\'informations sur les mutuelles et les soins qu\'elles donnent.',
     image: 'images/mutuacy-main.png',
     description: `Applications qui renseigne sur les soins remboursées proposés par les mutuelles.`,
-    creationProcess: `Nous étions un groupe de 6 pour ce projet avec comme phase amenant la v1
-    1. `,
+    creationProcess: `Nous étions un groupe de 6 pour ce projet avec comme phase amenant la v1.
+    1. Voir les problèmes qui peuvent êtres résolues dans le domaine de la santé.
+    2. Voir de quel façon une personne peut accéder à la grille des soins proposés par sa mutuelle.
+    3. Concevoir le design d'un affichage intuitif des soins pour le rendre compréhensible au plus grand nombre.
+    4. Répartition des différentes pages entre les membres du groupe.
+    5. Conception du code contenant les fonctionnaliés les plus importantes et basiques.
+    6. Tests de ces fonctionnalités.`,
     features: [
       'Fonctionnalité clé 1',
       'Fonctionnalité clé 2',
