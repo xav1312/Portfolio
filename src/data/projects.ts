@@ -72,7 +72,7 @@ export const projectsData: Record<string, Project> = {
   'nasa-python': {
     id: 'nasa-python',
     title: 'Visualisation d\'exoplanètes par Python',
-    subtitle: 'Application Desktop de gestion scolaire',
+    subtitle: 'Génerateur de Visualisation 3D d\'exoplanètes',
     image: 'images/Nasa-main.png',
     description:
       "Logiciel développé en Python pour permettre à l'utilisateur de visualiser en 3D des exoplanètes ayant été observées par la NASA",
