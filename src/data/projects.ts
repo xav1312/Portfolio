@@ -85,6 +85,7 @@ export const projectsData: Record<string, Project> = {
     githubLink: 'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
     liveLink: null,
     gallery: [
+      'images/Nasa-main.png',
         'images/Nasa-1.png',
         'images/Nasa-2.png'
     ],
