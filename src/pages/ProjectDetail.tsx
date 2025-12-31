@@ -103,7 +103,7 @@ export default function ProjectDetail() {
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 1 }}>
                     <PublicIcon color="primary" />
                     <Typography variant="h5" color="primary" sx={{ fontWeight: 'bold' }}>
-                        Visualisation 3D Interactive
+                        Visualisation 3D Interactive de l'exoplanète GJ 3470b
                     </Typography>
                 </Box>
                 <Paper
