@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Box, Typography, Button, Grid, Chip, Container, Paper } from '@mui/material';
+import { Box, Typography, Button, Grid, Chip, Container, Paper, Avatar } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CodeIcon from '@mui/icons-material/Code';
 import LaunchIcon from '@mui/icons-material/Launch';
@@ -8,6 +8,7 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import PublicIcon from '@mui/icons-material/Public';
 import { projectsData } from '../data/projects';
 import ProjectGallery from '../components/ProjectGallery';
+import { getTechLogo } from '../utils/techLogos';
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
@@ -170,9 +171,22 @@ export default function ProjectDetail() {
                 Technologies
               </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                {project.technologies.map((tech) => (
-                  <Chip key={tech} label={tech} color="secondary" variant="filled" />
-                ))}
+                {project.technologies.map((tech) => {
+                  const logo = getTechLogo(tech);
+                  return (
+                    <Chip
+                      key={tech}
+                      label={tech}
+                      variant="outlined"
+                      sx={{
+                        borderRadius: 2,
+                        bgcolor: 'white',
+                        '& .MuiChip-avatar': { width: 20, height: 20 }
+                      }}
+                      avatar={logo ? <Avatar src={logo} alt={tech} sx={{ bgcolor: 'transparent' }} /> : <CodeIcon />}
+                    />
+                  );
+                })}
               </Box>
           </Paper>
         </Grid>

@@ -1,7 +1,19 @@
-import { Box, Typography, Container, Chip, Grid, Paper } from '@mui/material';
+import { Box, Typography, Container, Chip, Grid, Paper, Avatar } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
-import CodeIcon from '@mui/icons-material/Code';
-import PublicIcon from '@mui/icons-material/Public'; // Pour l'international
+import PublicIcon from '@mui/icons-material/Public';
+
+// Mapping des compétences vers leurs logos (URLs CDN)
+const skills = [
+  { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+  { name: 'Vue.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
+  { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+  { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+  { name: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' }, // PostgreSQL comme repère SQL
+  { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+  { name: 'C', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
+];
 
 export default function About() {
   return (
@@ -63,13 +75,22 @@ export default function About() {
           Mes Compétences
         </Typography>
         <Grid container spacing={2} justifyContent="center">
-            {['JavaScript', 'React', 'TypeScript', 'Vue.js', 'Python', 'Java', 'SQL', 'Git', 'C'].map((skill) => (
-                <Grid item key={skill}>
+            {skills.map((skill) => (
+                <Grid item key={skill.name}>
                     <Chip
-                        label={skill}
-                        color="secondary"
-                        sx={{ fontSize: '1.1rem', py: 2.5, px: 1 }}
-                        icon={<CodeIcon />}
+                        label={skill.name}
+                        variant="outlined"
+                        sx={{
+                            fontSize: '1.1rem',
+                            py: 3,
+                            px: 1,
+                            borderRadius: 3,
+                            border: '1px solid #e0e0e0',
+                            backgroundColor: 'white',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+                            '& .MuiChip-avatar': { width: 28, height: 28 } // Taille du logo
+                        }}
+                        avatar={<Avatar src={skill.logo} alt={skill.name} sx={{ bgcolor: 'transparent' }} />}
                     />
                 </Grid>
             ))}
