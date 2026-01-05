@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Typography, Button, Grid, Chip, Container, Paper } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -11,6 +12,11 @@ import ProjectGallery from '../components/ProjectGallery';
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+
+  // Scroll automatique vers le haut quand on arrive sur la page ou change de projet
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const project = id ? projectsData[id] : null;
 
