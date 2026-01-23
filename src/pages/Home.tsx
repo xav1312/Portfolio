@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Skills from '../components/Skills';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -13,35 +15,57 @@ export default function Home() {
   return (
     <Container maxWidth="lg">
       {/* Section Introduction (Hero) */}
-      <Box
-        sx={{
-          textAlign: 'center',
-          py: 10,
-          px: 2,
-          background: 'linear-gradient(180deg, rgba(239,235,233,0) 0%, rgba(239,235,233,0.5) 100%)',
-          borderRadius: 4,
-          mb: 8
-        }}
+      {/* Section Introduction (Hero) */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        <Typography variant="h5" color="secondary" sx={{ fontWeight: 'bold', mb: 2, letterSpacing: 1 }}>
-          XAVIER PETILAIRE-BELLET
-        </Typography>
-        <Typography variant="h2" color="primary" sx={{ mb: 3 }}>
-          Bienvenue sur mon Portfolio
-        </Typography>
-        <Typography variant="h5" color="text.secondary" sx={{ maxWidth: '800px', mx: 'auto', lineHeight: 1.6 }}>
-          Raconter mon histoire professionnelle et mettre en avant mes réalisations.
-        </Typography>
+        <Box
+          sx={{
+            textAlign: 'center',
+            py: 12,
+            px: 2,
+            background: (theme) => 
+              theme.palette.mode === 'light' 
+              ? 'linear-gradient(135deg, rgba(239,235,233,0.4) 0%, rgba(215,204,200,0.2) 100%)'
+              : 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+            borderRadius: 8,
+            mb: 8,
+            boxShadow: 3
+          }}
+        >
+          <Typography variant="h5" color="secondary" sx={{ fontWeight: 'bold', mb: 2, letterSpacing: 2, textTransform: 'uppercase' }}>
+            Xavier Petilaire-Bellet
+          </Typography>
+          <Typography variant="h2" color="primary" sx={{ mb: 3, fontWeight: 800 }}>
+            Bienvenue sur mon Portfolio
+          </Typography>
+          <Typography variant="h5" color="text.secondary" sx={{ maxWidth: '700px', mx: 'auto', lineHeight: 1.6, mb: 4 }}>
+            Ingénieur passionné par le développement web, le design et l'innovation.
+          </Typography>
 
-        <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', gap: 2 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
             <Button variant="contained" color="primary" size="large" onClick={() => navigate('/projects')}>
-                Voir mes projets
+              Voir mes projets
             </Button>
             <Button variant="outlined" color="primary" size="large" onClick={() => navigate('/about')}>
-                Mon parcours
+              Mon parcours
             </Button>
+          </Box>
         </Box>
-      </Box>
+      </motion.div>
+
+      {/* Section Compétences */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <Box sx={{ mb: 8 }}>
+          <Skills />
+        </Box>
+      </motion.div>
 
       {/* Section Projets Récents */}
       <Box sx={{ my: 8 }}>
@@ -54,10 +78,22 @@ export default function Home() {
             </Button>
         </Box>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={4} component={motion.div} initial="hidden" animate="visible" variants={{
+          visible: { transition: { staggerChildren: 0.1 } }
+        }}>
           {recentProjects.map((project) => (
             // Changement ici : md={6} au lieu de md={4} pour avoir 2 cartes par ligne (plus grandes)
-            <Grid item xs={12} md={6} key={project.id}>
+            <Grid 
+              item 
+              xs={12} 
+              md={6} 
+              key={project.id}
+              component={motion.div}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 }
+              }}
+            >
               <Card
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column', cursor: 'pointer' }}
                 onClick={() => navigate(`/project/${project.id}`)}

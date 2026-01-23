@@ -1,43 +1,40 @@
-# Porfolio (portfolio)
+# Portfolio
 
 Portfolio de Xavier Petilaire-Bellet
 
-## Install the dependencies
+Built with **React**, **TypeScript**, **Vite** and **Material UI**.
+
+## Project Setup
+
+### Install dependencies
 
 ```bash
-yarn
-# or
 npm install
+# or
+yarn
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Start the app in development mode
 
 ```bash
-quasar dev
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### Build the app for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
 ```
 
 ### Lint the files
 
 ```bash
-yarn lint
-# or
 npm run lint
 ```
-
-### Format the files
-
-```bash
-yarn format
-# or
-npm run format
-```
-
-### Build the app for production
-
-```bash
-quasar build
-```
-
-### Customize the configuration
-
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

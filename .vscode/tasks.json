@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Dev Server",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "VITE v.* ready in",
+          "endsPattern": "Local:.*http"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "server"
+      }
+    },
+    {
+      "label": "Open in Safari",
+      "type": "shell",
+      "command": "open -a Safari http://localhost:5173",
+      "group": "none",
+      "dependsOn": "Run Dev Server",
+      "problemMatcher": []
+    }
+  ]
+}

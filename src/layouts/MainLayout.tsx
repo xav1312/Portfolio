@@ -22,6 +22,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import HistoryIcon from '@mui/icons-material/History';
 import MailIcon from '@mui/icons-material/Mail';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { useColorMode } from '../context/ColorModeContext';
 import Footer from '../components/Footer';
 
 const drawerWidth = 240;
@@ -34,6 +37,7 @@ const menuItems = [
 
 export default function MainLayout() {
   const theme = useTheme();
+  const colorMode = useColorMode();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
@@ -104,6 +108,10 @@ export default function MainLayout() {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             Mon Portfolio
           </Typography>
+
+          <IconButton sx={{ ml: 1, mr: 2 }} onClick={colorMode.toggleColorMode} color="inherit">
+            {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
 
           {/* Logo à droite (remplace le bouton Code) */}
           {/* Utilisation de import.meta.env.BASE_URL pour gérer le chemin GitHub Pages */}
