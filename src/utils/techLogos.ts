@@ -21,6 +21,12 @@ export const techLogos: Record<string, string> = {
   'Vue.js 3': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
   'Quasar Framework': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/quasar/quasar-original.svg',
   'Supabase (Auth & DB)': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg',
+  'PyVista': 'https://raw.githubusercontent.com/pyvista/pyvista/main/doc/_static/pyvista_logo_sm.png',
+  'SciPy': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit/scikit-original.svg', // Logo SciPy souvent associé à Scikit ou générique Python scientifique
+  'OpenSimplex': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', // Fallback Python
+  'NASA API': 'https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg',
+  'Clean Architecture': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg', // Fallback Flutter
+  'Riverpod': 'https://raw.githubusercontent.com/rrousselGit/riverpod/master/resources/icon.png',
 };
 
 // Fonction helper pour récupérer le logo (ou une icône par défaut si non trouvé)

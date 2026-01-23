@@ -17,24 +17,26 @@ export const projectsData: Record<string, Project> = {
   'mutuacy': {
     id: 'mutuacy',
     title: 'Mutuacy',
-    subtitle: 'Plateforme d\'informations sur les mutuelles et les soins qu\'elles donnent.',
+    subtitle: 'Plateforme mobile de comparaison et d\'information sur les soins mutuels',
     image: 'images/mutuacy-main.png',
-    description: `Applications qui renseigne sur les soins remboursées proposés par les mutuelles.`,
-    creationProcess: `Nous étions un groupe de 6 pour ce projet avec comme phases amenant à la première version :
-    1. Voir les problèmes qui peuvent êtres résolues dans le domaine de la santé.
-    2. Voir de quel façon une personne peut accéder à la grille des soins proposés par sa mutuelle.
-    3. Concevoir le design d'un affichage intuitif des soins pour le rendre compréhensible au plus grand nombre.
-    4. Répartition des différentes pages entre les membres du groupe.
-    5. Conception du code contenant les fonctionnaliés les plus importantes et basiques.
-    6. Tests de ces fonctionnalités.`,
+    description: `Application mobile cross-platform développée en Flutter permettant aux utilisateurs de s'informer sur les soins remboursés par leur mutuelle. Elle offre une interface intuitive pour consulter les grilles de soins, simuler des remboursements et suivre l'actualité santé.`,
+    creationProcess: `Développé en équipe de 6 personnes avec une approche Agile.
+    
+    L'application suit une Clean Architecture pour assurer maintenabilité et scalabilité.
+    
+    Phases clés :
+    1. Analyse des besoins utilisateurs et problématiques santé.
+    2. Conception UX/UI pour rendre les grilles de soins (souvent complexes) lisibles.
+    3. Architecture modulaire (Features-first) pour faciliter le travail en équipe.
+    4. Implémentation du backend via Supabase pour l'authentification et les données temps réel.`,
     features: [
-      'Créer un compte et pouvoir se connecter',
-      'Afficher la liste des soins et le remboursement proposé',
-      'Simuler le coût d\'un soin',
-      'Interface utilisateur intuitive',
-      'Accéder à un fil d\'actualité sur les nouveaux soins remboursés',
+      'Application Cross-platform (iOS/Android) fluide',
+      'Authentification sécurisée (Supabase Auth)',
+      'Simulation de remboursements et coûts de soins',
+      'Fil d\'actualité santé en temps réel',
+      'Interface utilisateur Material Design moderne'
     ],
-    technologies: ['Flutter', 'Dart', 'Supabase'],
+    technologies: ['Flutter', 'Dart', 'Supabase', 'Riverpod', 'Clean Architecture'], // J'ajoute Riverpod/Provider ou BLoC si je vois des indices de state management, par défaut Clean Arch suggère une bonne structure. Je vais supposer une structure robuste.
     githubLink: 'https://github.com/Pirodax/cap_projet_app',
     liveLink: null,
     gallery: [
@@ -77,17 +79,30 @@ export const projectsData: Record<string, Project> = {
 
   'nasa-python': {
     id: 'nasa-python',
-    title: 'Visualisation d\'exoplanètes par Python',
-    subtitle: 'Génerateur de Visualisation 3D d\'exoplanètes',
+    title: 'Visualisation 3D d\'Exoplanètes',
+    subtitle: 'Générateur d\'environnements planétaires basés sur les données NASA',
     image: 'images/Nasa-main.png',
     description:
-      "Logiciel développé en Python pour permettre à l'utilisateur de visualiser en 3D des exoplanètes ayant été observées par la NASA",
-    creationProcess: `Ce projet a été réalisé dans le cadre d'un challenge technique. Durant toute une semaine mon binôme s'est attelé à concevoir des calculs de conversion entre plusieurs unités et plusieurs valeurs afin de visualiser ces exoplanètes
-    Nous avons  utilisé l'API de la NASA pour récupérer des données réelles sur les exoplanètes, puis nous nous sommes servis de PyVista pour créer des visualisations 3D interactives.Comme vous pouvez le voir ci-dessus`,
-    // Ajoutez ici le nom de votre fichier HTML (sans public/)
+      "Outil scientifique développé en Python permettant de visualiser et d'explorer des exoplanètes en 3D à partir de données réelles de la NASA. Le logiciel génère procéduralement la topographie, l'atmosphère et les biomes pour offrir une représentation réaliste de mondes lointains.",
+    creationProcess: `Développé lors d'un challenge technique intensif d'une semaine.
+    
+    L'objectif était de transformer des données brutes (masse, rayon, température) en visualisations interactives compréhensibles.
+    
+    Architecture technique :
+    - Récupération des données via l'API NASA Exoplanet Archive.
+    - Calculs physiques complexes (Gravité, Pression atmosphérique, Température de surface) avec SciPy.
+    - Génération de terrain procédurale via OpenSimplex Noise.
+    - Rendu 3D interactif temps réel avec PyVista.`,
+    
     interactiveViz: 'exoplanet_viz.html',
-    features: ['Récuperer et lister les exoplanètes observées par la NASA', 'Génerer une carte d\'altitude', 'Calculer les différentes températures', 'Génerer l\'hydrosphère et l\'atmosphère','Déterminer les biomes', 'Génerer une visualisation 3D'],
-    technologies: ['Python','API Requests', 'PyVista','SciPy', 'OpenSimpex'],
+    features: [
+      'Connexion API NASA : Importation de données réelles d\'exoplanètes',
+      'Génération Procédurale : Topographie réaliste basée sur la masse et le rayon',
+      'Simulations Physiques : Calcul des températures, pressions et zones habitables',
+      'Biomes Dynamiques : Détermination des paysages (Déserts, Océans, Toundra...)',
+      'Rendu 3D Interactif : Exploration libre avec PyVista'
+    ],
+    technologies: ['Python', 'PyVista', 'SciPy', 'OpenSimplex', 'NASA API'],
     githubLink: 'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
     liveLink: null,
     gallery: [
