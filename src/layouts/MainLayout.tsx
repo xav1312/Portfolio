@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Outlet, Link as RouterLink, useLocation } from 'react-router-dom';
+import { useState } from 'react'
+import { Outlet, Link as RouterLink, useLocation } from 'react-router-dom'
 import {
   AppBar,
   Box,
@@ -15,51 +15,46 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
-  Avatar
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import HomeIcon from '@mui/icons-material/Home';
-import WorkIcon from '@mui/icons-material/Work';
-import HistoryIcon from '@mui/icons-material/History';
-import MailIcon from '@mui/icons-material/Mail';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import { useColorMode } from '../context/ColorModeContext';
-import Footer from '../components/Footer';
+  Avatar,
+} from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu'
+import HomeIcon from '@mui/icons-material/Home'
+import WorkIcon from '@mui/icons-material/Work'
+import HistoryIcon from '@mui/icons-material/History'
+import MailIcon from '@mui/icons-material/Mail'
+import Brightness4Icon from '@mui/icons-material/Brightness4'
+import Brightness7Icon from '@mui/icons-material/Brightness7'
+import { useColorMode } from '../context/ColorModeContext'
+import Footer from '../components/Footer'
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 const menuItems = [
   { text: 'Accueil', icon: <HomeIcon />, path: '/' },
   { text: 'Mes Projets', icon: <WorkIcon />, path: '/projects' },
   { text: 'Mon Parcours', icon: <HistoryIcon />, path: '/about' },
-];
+]
 
 export default function MainLayout() {
-  const theme = useTheme();
-  const colorMode = useColorMode();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const location = useLocation();
+  const theme = useTheme()
+  const colorMode = useColorMode()
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const scrollToContact = () => {
-    const footer = document.getElementById('contact-footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
-      if (isMobile) setMobileOpen(false);
-    }
-  };
+    setMobileOpen(!mobileOpen)
+  }
 
   const drawer = (
     <div>
       <Toolbar />
       <List>
         <ListItem>
-            <ListItemText primary="Navigation" primaryTypographyProps={{ color: 'textSecondary', variant: 'overline' }} />
+          <ListItemText
+            primary="Navigation"
+            primaryTypographyProps={{ color: 'textSecondary', variant: 'overline' }}
+          />
         </ListItem>
         {menuItems.map((item) => (
           <ListItem key={item.text} disablePadding>
@@ -75,14 +70,21 @@ export default function MainLayout() {
           </ListItem>
         ))}
         <ListItem disablePadding>
-            <ListItemButton onClick={scrollToContact}>
-                <ListItemIcon><MailIcon /></ListItemIcon>
-                <ListItemText primary="Contact" secondary="Me contacter" />
-            </ListItemButton>
+          <ListItemButton
+            component={RouterLink}
+            to="/contact"
+            selected={location.pathname === '/contact'}
+            onClick={() => isMobile && setMobileOpen(false)}
+          >
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary="Contact" secondary="Me contacter" />
+          </ListItemButton>
         </ListItem>
       </List>
     </div>
-  );
+  )
 
   return (
     <Box sx={{ display: 'flex', minHeight: '100vh' }}>
@@ -161,21 +163,21 @@ export default function MainLayout() {
       <Box
         component="main"
         sx={{
-            flexGrow: 1,
-            width: { md: `calc(100% - ${drawerWidth}px)` },
-            display: 'flex',
-            flexDirection: 'column',
-            minHeight: '100vh'
+          flexGrow: 1,
+          width: { md: `calc(100% - ${drawerWidth}px)` },
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
         }}
       >
         <Toolbar />
 
         <Box sx={{ flexGrow: 1, p: 3 }}>
-            <Outlet />
+          <Outlet />
         </Box>
 
         <Footer />
       </Box>
     </Box>
-  );
+  )
 }
