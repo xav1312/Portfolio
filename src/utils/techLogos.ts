@@ -15,7 +15,12 @@ export const techLogos: Record<string, string> = {
   'Quasar': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/quasar/quasar-original.svg', // Vérifier si existe, sinon Vue
   'Cypress': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg',
   'Pandas': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg',
-  // Ajoutez d'autres technos ici si besoin
+  'Pinia': 'https://upload.wikimedia.org/wikipedia/commons/1/11/Pinia.png', // Logo officiel (non présent sur toutes les versions de devicon)
+  'Axios': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg',
+  // Variations pour correspondre aux données
+  'Vue.js 3': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
+  'Quasar Framework': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/quasar/quasar-original.svg',
+  'Supabase (Auth & DB)': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg',
 };
 
 // Fonction helper pour récupérer le logo (ou une icône par défaut si non trouvé)
@@ -23,7 +28,7 @@ export const getTechLogo = (techName: string): string | undefined => {
   // Recherche exacte
   if (techLogos[techName]) return techLogos[techName];
 
-  // Recherche insensible à la casse ou partielle si besoin (optionnel)
+  // Recherche insensible à la casse ou partielle
   const key = Object.keys(techLogos).find(k => k.toLowerCase() === techName.toLowerCase());
   return key ? techLogos[key] : undefined;
 };

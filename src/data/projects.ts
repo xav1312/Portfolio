@@ -48,19 +48,25 @@ export const projectsData: Record<string, Project> = {
     subtitle: 'Plateforme de gestion des inscriptions',
     image: 'images/inscription-esiea-main.jpg',
     description:
-      "Application web permettant de gérer le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle simplifie la collecte des documents et le suivi des dossiers administratifs. Elle permet aux administrateurs de gérer les inscriptions des étudiants ainsi que la création des comptes sur la plateforme.",
-    creationProcess: `Ce projet a été réalisé dans le cadre d'un projet académique.
-
-    Le défi principal était de gérer de manière sécurisée un grand nombre de documents administratifs. J'ai opté pour Supabase pour le stockage et l'authentification afin de garantir la sécurité des données.`,
+      "Application Fullstack web complexe permettant de digitaliser entièrement le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle propose une interface double : un portail étudiant pour la soumission des dossiers (documents, informations financières, bourse) et un dashboard complet pour l'administration (validation, suivi, comptabilité).",
+    creationProcess: `Ce projet académique ambitieux a été réalisé en méthode Agile sous forme de sprint.
+    
+    L'architecture repose sur une séparation des rôles (Admin/Étudiant) via Supabase Auth.
+    
+    Points clés :
+    - Formulaire Wizard en 6 étapes pour l'étudiant.
+    - Gestion de documents (Stockage sécurisé).
+    - Tests E2E avec Cypress.
+    - Interface avec Quasar Framework (Vue.js).`,
     features: [
-      'Dashboard admin',
-      'Upload de documents sur une Base de données',
-      'Processus d\'inscription',
-      'Renseignement de coordonnées',
-      'Message de validation d\'enregistrement des infos',
+      'Portail Étudiant : Wizard 6 étapes (Infos, Tuteurs, Documents, Bourse...)',
+      'Dashboard Admin : Gestion des inscriptions, documents et comptabilité',
+      'Gestion Documentaire : Upload et prévisualisation des pièces',
+      'Sécurité : Authentification et rôles (RBAC)',
+      'Tests : Couverture E2E avec Cypress'
     ],
-    technologies: ['Vue.js', 'Supabase', 'Quasar', 'Cypress'],
-    githubLink: 'https://github.com/votre-pseudo/inscription-esiea',
+    technologies: ['Vue.js 3', 'Quasar', 'Supabase', 'Pinia', 'Cypress'],
+    githubLink: 'https://gitlab.esiea.fr/fullstack-2025-paris-fr-doloirjulian-ogowann-fis-postickevin-datouoalain-petilairebelletxavier/fullstack-2025-paris-fr-doloirjulian-ogowannefis-postickevin-datouoalain-petilairebelletxavier.git',
     liveLink: null,
     gallery: [
         'images/esiea-1.jpg',

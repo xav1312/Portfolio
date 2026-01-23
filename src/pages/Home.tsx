@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Card, CardMedia, CardContent, CardActions, Button, Container, Chip } from '@mui/material';
+import { Box, Typography, Grid, Card, CardMedia, CardContent, CardActions, Button, Container, Chip, CardActionArea } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -95,42 +95,43 @@ export default function Home() {
               }}
             >
               <Card
-                sx={{ height: '100%', display: 'flex', flexDirection: 'column', cursor: 'pointer' }}
-                onClick={() => navigate(`/project/${project.id}`)}
+                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
               >
-                <Box sx={{ position: 'relative', overflow: 'hidden' }}>
-                    <CardMedia
-                    component="img"
-                    height="300" // J'augmente aussi la hauteur de l'image (était 220)
-                    image={project.image}
-                    alt={project.title}
-                    sx={{ transition: 'transform 0.5s', '&:hover': { transform: 'scale(1.05)' } }}
-                    />
-                    <Box
-                        sx={{
-                            position: 'absolute',
-                            bottom: 0,
-                            left: 0,
-                            width: '100%',
-                            background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
-                            color: 'white',
-                            p: 3, // Plus de padding
-                            pt: 8
-                        }}
-                    >
-                        <Typography variant="h5" sx={{ fontWeight: 'bold' }}>{project.title}</Typography>
+                <CardActionArea onClick={() => navigate(`/project/${project.id}`)} sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                    <Box sx={{ position: 'relative', overflow: 'hidden', width: '100%' }}>
+                        <CardMedia
+                        component="img"
+                        height="300" // J'augmente aussi la hauteur de l'image (était 220)
+                        image={project.image}
+                        alt={project.title}
+                        // La transition et le scale sont gérés par le thème maintenant
+                        />
+                        <Box
+                            sx={{
+                                position: 'absolute',
+                                bottom: 0,
+                                left: 0,
+                                width: '100%',
+                                background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
+                                color: 'white',
+                                p: 3, // Plus de padding
+                                pt: 8
+                            }}
+                        >
+                            <Typography variant="h5" sx={{ fontWeight: 'bold' }}>{project.title}</Typography>
+                        </Box>
                     </Box>
-                </Box>
-                <CardContent sx={{ flexGrow: 1, p: 3 }}>
-                  <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-                    {project.subtitle}
-                  </Typography>
-                  <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                      {project.technologies.slice(0, 4).map(tech => (
-                          <Chip key={tech} label={tech} size="medium" variant="outlined" />
-                      ))}
-                  </Box>
-                </CardContent>
+                    <CardContent sx={{ flexGrow: 1, p: 3, width: '100%' }}>
+                    <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+                        {project.subtitle}
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                        {project.technologies.slice(0, 4).map(tech => (
+                            <Chip key={tech} label={tech} size="medium" variant="outlined" />
+                        ))}
+                    </Box>
+                    </CardContent>
+                </CardActionArea>
                 <CardActions sx={{ justifyContent: 'space-between', px: 3, pb: 3 }}>
                   <Button size="large" endIcon={<ArrowForwardIcon />} onClick={(e) => {
                       e.stopPropagation();
