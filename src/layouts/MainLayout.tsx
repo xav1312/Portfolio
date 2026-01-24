@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Outlet, Link as RouterLink, useLocation } from 'react-router-dom'
 import {
   AppBar,
@@ -16,12 +17,15 @@ import {
   useMediaQuery,
   useTheme,
   Avatar,
+  Fab,
+  Tooltip,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import HomeIcon from '@mui/icons-material/Home'
 import WorkIcon from '@mui/icons-material/Work'
 import HistoryIcon from '@mui/icons-material/History'
 import MailIcon from '@mui/icons-material/Mail'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { useColorMode } from '../context/ColorModeContext'
@@ -41,6 +45,19 @@ export default function MainLayout() {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
@@ -93,7 +110,7 @@ export default function MainLayout() {
         position="fixed"
         sx={{
           zIndex: (theme) => theme.zIndex.drawer + 1,
-          bgcolor: 'primary.main',
+          bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#181818' : 'primary.main'), // Noir doux en dark mode
         }}
       >
         <Toolbar>
@@ -112,17 +129,25 @@ export default function MainLayout() {
           </Typography>
 
           <IconButton sx={{ ml: 1, mr: 2 }} onClick={colorMode.toggleColorMode} color="inherit">
-            {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={theme.palette.mode}
+                initial={{ y: -20, opacity: 0, rotate: -90 }}
+                animate={{ y: 0, opacity: 1, rotate: 0 }}
+                exit={{ y: 20, opacity: 0, rotate: 90 }}
+                transition={{ duration: 0.3 }}
+              >
+                {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+              </motion.div>
+            </AnimatePresence>
           </IconButton>
 
-          {/* Logo à droite (remplace le bouton Code) */}
-          {/* Utilisation de import.meta.env.BASE_URL pour gérer le chemin GitHub Pages */}
           <Avatar
             src={`${import.meta.env.BASE_URL}flavicon.png`}
             alt="Logo"
             sx={{ width: 40, height: 40, cursor: 'pointer' }}
             variant="rounded"
-            component={RouterLink} // Rend le logo cliquable pour revenir à l'accueil
+            component={RouterLink}
             to="/"
           />
         </Toolbar>
@@ -173,8 +198,83 @@ export default function MainLayout() {
         <Toolbar />
 
         <Box sx={{ flexGrow: 1, p: 3 }}>
-          <Outlet />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Outlet />
+            </motion.div>
+          </AnimatePresence>
         </Box>
+
+        {/* Scroll To Top Button */}
+        <AnimatePresence>
+          {showScrollTop && (
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              sx={{
+                position: 'fixed',
+                bottom: location.pathname !== '/contact' ? 120 : 32,
+                right: location.pathname !== '/contact' ? 48 : 32,
+                zIndex: 999,
+              }}
+            >
+              <Tooltip title="Retour en haut" placement="left" arrow>
+                <Fab
+                  size="small"
+                  color="primary"
+                  onClick={handleScrollTop}
+                  aria-label="scroll back to top"
+                  sx={{ boxShadow: 3 }}
+                >
+                  <KeyboardArrowUpIcon />
+                </Fab>
+              </Tooltip>
+            </Box>
+          )}
+        </AnimatePresence>
+
+        {/* Floating Action Button (FAB) - Contact */}
+        {location.pathname !== '/contact' && (
+          <Box
+            sx={{
+              position: 'fixed',
+              bottom: 32,
+              right: 32,
+              zIndex: 1000,
+            }}
+            component={motion.div}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Tooltip title="Me contacter" arrow placement="left">
+              <Fab
+                component={RouterLink}
+                to="/contact"
+                color="secondary"
+                size="large" // Taille standard 'large'
+                aria-label="contact"
+                sx={{
+                  width: 72, // Plus grand que le default (56px)
+                  height: 72,
+                  color: 'white',
+                  boxShadow: '0px 6px 24px rgba(0, 0, 0, 0.3)', // Ombre un peu plus prononcée
+                }}
+              >
+                <MailIcon sx={{ fontSize: 32 }} /> {/* Icône plus grande aussi */}
+              </Fab>
+            </Tooltip>
+          </Box>
+        )}
 
         <Footer />
       </Box>

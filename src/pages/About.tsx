@@ -3,6 +3,7 @@ import SchoolIcon from '@mui/icons-material/School'
 import PublicIcon from '@mui/icons-material/Public'
 import DownloadIcon from '@mui/icons-material/Download'
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects' // Pour les soft skills
+import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
 // Mapping des compétences vers leurs logos (URLs CDN Devicon)
 const skills = [
@@ -48,6 +49,8 @@ const softSkills = [
 ]
 
 export default function About() {
+  useDocumentTitle('Mon Parcours | Xavier Petilaire-Bellet')
+
   return (
     <Container maxWidth="md">
       <Box sx={{ textAlign: 'center', my: 6 }}>

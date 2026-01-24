@@ -13,8 +13,11 @@ import {
 import SendIcon from '@mui/icons-material/Send'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
+import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
 export default function Contact() {
+  useDocumentTitle('Contact | Xavier Petilaire-Bellet')
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

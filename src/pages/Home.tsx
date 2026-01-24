@@ -18,8 +18,10 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import DownloadIcon from '@mui/icons-material/Download'
 import Skills from '../components/Skills'
 import { motion } from 'framer-motion'
+import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
 export default function Home() {
+  useDocumentTitle('Accueil | Xavier Petilaire-Bellet')
   const navigate = useNavigate()
 
   // On prend les 3 premiers projets pour l'aperçu

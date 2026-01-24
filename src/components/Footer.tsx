@@ -1,7 +1,7 @@
-import { Box, Container, Typography, IconButton, Link, Grid } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
+import { Box, Container, Typography, IconButton, Link, Grid } from '@mui/material'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import EmailIcon from '@mui/icons-material/Email'
 
 export default function Footer() {
   return (
@@ -12,7 +12,8 @@ export default function Footer() {
         py: 6,
         px: 2,
         mt: 'auto',
-        backgroundColor: (theme) => theme.palette.primary.main,
+        backgroundColor: (theme) =>
+          theme.palette.mode === 'dark' ? '#181818' : theme.palette.primary.main,
         color: 'white',
       }}
     >
@@ -23,8 +24,8 @@ export default function Footer() {
               Xavier Petilaire-Bellet
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              Étudiant ingénieur passionné par le développement web et logiciel.
-              N'hésitez pas à me contacter pour discuter de projets ou d'opportunités.
+              Étudiant ingénieur passionné par le développement web et logiciel. N'hésitez pas à me
+              contacter pour discuter de projets ou d'opportunités.
             </Typography>
           </Grid>
 
@@ -75,5 +76,5 @@ export default function Footer() {
         </Box>
       </Container>
     </Box>
-  );
+  )
 }

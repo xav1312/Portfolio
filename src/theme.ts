@@ -27,15 +27,15 @@ const lightPalette = {
 // Palette "Nuit" (Dark)
 const darkPalette = {
   primary: {
-    main: '#D7CCC8', // Beige clair (inversé)
+    main: '#D7CCC8', // Beige clair (pour le texte)
     light: '#ffffff',
     dark: '#a69b97',
     contrastText: '#121212',
   },
   secondary: {
-    main: '#BCAAA4', // Marron désaturé
-    light: '#efdcd5',
-    dark: '#8c7b75',
+    main: '#D7CCC8', // Beige clair (pour les accents/boutons)
+    light: '#ffffff',
+    dark: '#a69b97',
     contrastText: '#121212',
   },
   background: {
@@ -68,6 +68,32 @@ export const getTheme = (mode: 'light' | 'dark') =>
       borderRadius: 16,
     },
     components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          body: {
+            scrollbarColor: mode === 'dark' ? '#6a4f4b #2b2b2b' : '#8D6E63 #f5f5f5',
+            '&::-webkit-scrollbar, & *::-webkit-scrollbar': {
+              width: '8px',
+              height: '8px',
+              backgroundColor: mode === 'dark' ? '#2b2b2b' : '#f5f5f5',
+            },
+            '&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb': {
+              borderRadius: 8,
+              backgroundColor: mode === 'dark' ? '#6a4f4b' : '#8D6E63',
+              minHeight: 24,
+            },
+            '&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus': {
+              backgroundColor: mode === 'dark' ? '#8D6E63' : '#6a4f4b',
+            },
+            '&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active': {
+              backgroundColor: mode === 'dark' ? '#8D6E63' : '#6a4f4b',
+            },
+            '&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner': {
+              backgroundColor: mode === 'dark' ? '#2b2b2b' : '#f5f5f5',
+            },
+          },
+        },
+      },
       MuiCard: {
         styleOverrides: {
           root: {
@@ -90,6 +116,10 @@ export const getTheme = (mode: 'light' | 'dark') =>
           root: {
             borderRadius: 8,
             padding: '8px 24px',
+            transition: 'transform 0.2s ease', // Animation fluide
+            '&:hover': {
+              transform: 'scale(1.05)', // Agrandissement léger
+            },
           },
           contained: {
             boxShadow: 'none',
