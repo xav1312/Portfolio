@@ -1,14 +1,23 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { ThemeProvider, CssBaseline } from '@mui/material'
+import { ThemeProvider, CssBaseline, Box, CircularProgress } from '@mui/material'
 import { getTheme } from './theme'
 import { ColorModeContext } from './context/ColorModeContext'
 import MainLayout from './layouts/MainLayout'
-import Home from './pages/Home'
-import ProjectList from './pages/ProjectList'
-import ProjectDetail from './pages/ProjectDetail'
-import About from './pages/About'
-import Contact from './pages/Contact'
+
+// Lazy Loading des pages
+const Home = lazy(() => import('./pages/Home'))
+const ProjectList = lazy(() => import('./pages/ProjectList'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const About = lazy(() => import('./pages/About'))
+const Contact = lazy(() => import('./pages/Contact'))
+
+// Composant de chargement simple
+const PageLoader = () => (
+  <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+    <CircularProgress color="secondary" />
+  </Box>
+)
 
 function App() {
   const [mode, setMode] = useState<'light' | 'dark'>('light')
@@ -29,15 +38,17 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Routes>
-          <Route path="/" element={<MainLayout />}>
-            <Route index element={<Home />} />
-            <Route path="projects" element={<ProjectList />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="project/:id" element={<ProjectDetail />} />
-          </Route>
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<Home />} />
+              <Route path="projects" element={<ProjectList />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="project/:id" element={<ProjectDetail />} />
+            </Route>
+          </Routes>
+        </Suspense>
       </ThemeProvider>
     </ColorModeContext.Provider>
   )
