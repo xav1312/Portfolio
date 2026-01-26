@@ -55,6 +55,7 @@ export const getTheme = (mode: 'light' | 'dark') =>
       ...(mode === 'light' ? lightPalette : darkPalette),
     },
     typography: {
+      htmlFontSize: 14, // Réduit l'échelle globale (dé-zoom par défaut)
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       h1: { fontFamily: '"Montserrat", sans-serif', fontWeight: 800, letterSpacing: '-0.02em' },
       h2: { fontFamily: '"Montserrat", sans-serif', fontWeight: 700, letterSpacing: '-0.01em' },
