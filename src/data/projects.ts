@@ -1,23 +1,23 @@
 export interface Project {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: string;
-  description: string;
-  creationProcess?: string;
-  interactiveViz?: string; // Nouveau champ pour le fichier HTML interactif
-  features: string[];
-  technologies: string[];
-  githubLink: string | null;
-  liveLink: string | null;
-  gallery: string[];
+  id: string
+  title: string
+  subtitle: string
+  image: string
+  description: string
+  creationProcess?: string
+  interactiveViz?: string // Nouveau champ pour le fichier HTML interactif
+  features: string[]
+  technologies: string[]
+  githubLink: string | null
+  liveLink: string | null
+  gallery: string[]
 }
 
 export const projectsData: Record<string, Project> = {
-  'mutuacy': {
+  mutuacy: {
     id: 'mutuacy',
     title: 'Mutuacy',
-    subtitle: 'Plateforme mobile de comparaison et d\'information sur les soins mutuels',
+    subtitle: "Plateforme mobile de comparaison et d'information sur les soins mutuels",
     image: 'images/mutuacy-main.png',
     description: `Application mobile cross-platform développée en Flutter permettant aux utilisateurs de s'informer sur les soins remboursés par leur mutuelle. Elle offre une interface intuitive pour consulter les grilles de soins, simuler des remboursements et suivre l'actualité santé.`,
     creationProcess: `Développé en équipe de 6 personnes avec une approche Agile.
@@ -33,15 +33,13 @@ export const projectsData: Record<string, Project> = {
       'Application Cross-platform (iOS/Android) fluide',
       'Authentification sécurisée (Supabase Auth)',
       'Simulation de remboursements et coûts de soins',
-      'Fil d\'actualité santé en temps réel',
-      'Interface utilisateur Material Design moderne'
+      "Fil d'actualité santé en temps réel",
+      'Interface utilisateur Material Design moderne',
     ],
     technologies: ['Flutter', 'Dart', 'Supabase', 'Riverpod', 'Clean Architecture'], // J'ajoute Riverpod/Provider ou BLoC si je vois des indices de state management, par défaut Clean Arch suggère une bonne structure. Je vais supposer une structure robuste.
     githubLink: 'https://github.com/Pirodax/cap_projet_app',
     liveLink: null,
-    gallery: [
-      'images/mutuacy-main.png'
-    ],
+    gallery: ['images/mutuacy-main.png'],
   },
 
   'inscription-esiea': {
@@ -65,22 +63,19 @@ export const projectsData: Record<string, Project> = {
       'Dashboard Admin : Gestion des inscriptions, documents et comptabilité',
       'Gestion Documentaire : Upload et prévisualisation des pièces',
       'Sécurité : Authentification et rôles (RBAC)',
-      'Tests : Couverture E2E avec Cypress'
+      'Tests : Couverture E2E avec Cypress',
     ],
     technologies: ['Vue.js 3', 'Quasar', 'Supabase', 'Pinia', 'Cypress'],
-    githubLink: 'https://gitlab.esiea.fr/fullstack-2025-paris-fr-doloirjulian-ogowann-fis-postickevin-datouoalain-petilairebelletxavier/fullstack-2025-paris-fr-doloirjulian-ogowannefis-postickevin-datouoalain-petilairebelletxavier.git',
+    githubLink:
+      'https://gitlab.esiea.fr/fullstack-2025-paris-fr-doloirjulian-ogowann-fis-postickevin-datouoalain-petilairebelletxavier/fullstack-2025-paris-fr-doloirjulian-ogowannefis-postickevin-datouoalain-petilairebelletxavier.git',
     liveLink: null,
-    gallery: [
-        'images/esiea-1.jpg',
-        'images/esiea-2.jpg',
-        'images/inscription-esiea-main.jpg'
-    ],
+    gallery: ['images/esiea-1.jpg', 'images/esiea-2.jpg', 'images/inscription-esiea-main.jpg'],
   },
 
   'nasa-python': {
     id: 'nasa-python',
-    title: 'Visualisation 3D d\'Exoplanètes',
-    subtitle: 'Générateur d\'environnements planétaires basés sur les données NASA',
+    title: "Visualisation 3D d'Exoplanètes",
+    subtitle: "Générateur d'environnements planétaires basés sur les données NASA",
     image: 'images/Nasa-main.png',
     description:
       "Outil scientifique développé en Python permettant de visualiser et d'explorer des exoplanètes en 3D à partir de données réelles de la NASA. Le logiciel génère procéduralement la topographie, l'atmosphère et les biomes pour offrir une représentation réaliste de mondes lointains.",
@@ -93,22 +88,48 @@ export const projectsData: Record<string, Project> = {
     - Calculs physiques complexes (Gravité, Pression atmosphérique, Température de surface) avec SciPy.
     - Génération de terrain procédurale via OpenSimplex Noise.
     - Rendu 3D interactif temps réel avec PyVista.`,
-    
+
     interactiveViz: 'exoplanet_viz.html',
     features: [
-      'Connexion API NASA : Importation de données réelles d\'exoplanètes',
+      "Connexion API NASA : Importation de données réelles d'exoplanètes",
       'Génération Procédurale : Topographie réaliste basée sur la masse et le rayon',
       'Simulations Physiques : Calcul des températures, pressions et zones habitables',
       'Biomes Dynamiques : Détermination des paysages (Déserts, Océans, Toundra...)',
-      'Rendu 3D Interactif : Exploration libre avec PyVista'
+      'Rendu 3D Interactif : Exploration libre avec PyVista',
     ],
     technologies: ['Python', 'PyVista', 'SciPy', 'OpenSimplex', 'NASA API'],
-    githubLink: 'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
+    githubLink:
+      'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
     liveLink: null,
-    gallery: [
-      'images/Nasa-main.png',
-        'images/Nasa-1.png',
-        'images/Nasa-2.png'
-    ],
+    gallery: ['images/Nasa-main.png', 'images/Nasa-1.png', 'images/Nasa-2.png'],
   },
-};
+  'trade-copier': {
+    id: 'trade-copier',
+    title: 'TradeCopier',
+    subtitle: 'Application de bureau pour la copie de trades (Work in Progress)',
+    image: 'tradecopier-dashboard.png', // Images placées à la racine de public/
+    description: `Ce projet est né d'un besoin personnel de rassembler plusieurs outils de trading disparates en une seule interface unifiée. Bien qu'encore en cours de développement, cette application permet déjà de copier automatiquement les positions de trading d'un compte maître vers plusieurs comptes esclaves.
+    
+    Conçue pour les traders professionnels gérant plusieurs comptes simultanément, elle offre une latence minimale et une sécurisation locale des données.`,
+    creationProcess: `Projet personnel développé pour répondre à un besoin de performance et de sécurité.
+    
+    L'architecture hybride combine un client lourd (Electron + React) pour l'interface et un Backend hébergé sur AWS pour assurer une exécution ultra-rapide et fiable des ordres.
+    
+    Points techniques :
+    - Infrastructure AWS pour la haute disponibilité et la performance.
+    - Communication WebSocket temps réel pour la réplication des ordres.
+    - Base de données locale (SQLite/NeDB) pour l'historique et la confidentialité.
+    - Architecture modulaire pour ajouter facilement de nouveaux connecteurs (MetaTrader, cTrader, Binance...).`,
+    features: [
+      'Dashboard temps réel : Suivi des positions et du P&L global',
+      'Multi-comptes : Gestion illimitée de comptes esclaves',
+      'Mode "Reverse Copy" : Copier à l\'inverse pour les stratégies de couverture',
+      'Filtres de risque : Gestion de lot size, max drawdown par compte',
+      'Journaling automatique : Historique exportable de tous les trades copiés',
+    ],
+    technologies: ['React', 'Electron', 'Node.js', 'TypeScript', 'Socket.io', 'Recharts'],
+    githubLink: 'https://github.com/xav1312/TradeCopier/',
+    liveLink: null,
+    gallery: ['tradecopier-dashboard.png', 'tradecopier-list.png'],
+  },
+}
