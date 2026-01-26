@@ -45,6 +45,9 @@ export const techLogos: Record<string, string> = {
   Figma: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
   'JavaScript / TypeScript':
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+  Electron: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg',
+  'Socket.io': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg',
+  Recharts: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', // Fallback React
 }
 
 // Fonction helper pour récupérer le logo (ou une icône par défaut si non trouvé)
