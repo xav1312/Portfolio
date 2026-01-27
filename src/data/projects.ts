@@ -10,6 +10,7 @@ export interface Project {
   technologies: string[]
   githubLink: string | null
   liveLink: string | null
+  isPrivate?: boolean
   gallery: string[]
 }
 
@@ -128,7 +129,8 @@ export const projectsData: Record<string, Project> = {
       'Journaling automatique : Historique exportable de tous les trades copiés',
     ],
     technologies: ['React', 'Electron', 'Node.js', 'TypeScript', 'Socket.io', 'Recharts'],
-    githubLink: 'https://github.com/xav1312/TradeCopier/',
+    githubLink: null,
+    isPrivate: true,
     liveLink: null,
     gallery: ['tradecopier-dashboard.png', 'tradecopier-list.png'],
   },

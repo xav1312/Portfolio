@@ -15,6 +15,7 @@ import { useNavigate } from 'react-router-dom'
 import { projectsData } from '../data/projects'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import LockIcon from '@mui/icons-material/Lock'
 import DownloadIcon from '@mui/icons-material/Download'
 import Skills from '../components/Skills'
 import { motion } from 'framer-motion'
@@ -202,7 +203,7 @@ export default function Home() {
                   >
                     Détails
                   </Button>
-                  {project.githubLink && (
+                  {project.githubLink ? (
                     <Button
                       size="large"
                       color="inherit"
@@ -214,6 +215,18 @@ export default function Home() {
                     >
                       Code
                     </Button>
+                  ) : (
+                    project.isPrivate && (
+                      <Button
+                        size="large"
+                        color="inherit"
+                        startIcon={<LockIcon />}
+                        disabled
+                        sx={{ opacity: 0.5 }}
+                      >
+                        Code privé
+                      </Button>
+                    )
                   )}
                 </CardActions>
               </Card>

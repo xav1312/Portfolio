@@ -6,6 +6,7 @@ import CodeIcon from '@mui/icons-material/Code'
 import LaunchIcon from '@mui/icons-material/Launch'
 import EngineeringIcon from '@mui/icons-material/Engineering'
 import PublicIcon from '@mui/icons-material/Public'
+import LockIcon from '@mui/icons-material/Lock'
 import { projectsData } from '../data/projects'
 import ProjectGallery from '../components/ProjectGallery'
 import { getTechLogo } from '../utils/techLogos'
@@ -80,7 +81,7 @@ export default function ProjectDetail() {
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-            {project.githubLink && (
+            {project.githubLink ? (
               <Button
                 variant="outlined"
                 startIcon={<CodeIcon />}
@@ -90,6 +91,12 @@ export default function ProjectDetail() {
               >
                 Voir le code
               </Button>
+            ) : (
+              project.isPrivate && (
+                <Button variant="outlined" startIcon={<LockIcon />} disabled size="large">
+                  Code privé
+                </Button>
+              )
             )}
             {project.liveLink && (
               <Button
