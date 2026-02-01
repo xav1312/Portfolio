@@ -107,28 +107,34 @@ export const projectsData: Record<string, Project> = {
   'trade-copier': {
     id: 'trade-copier',
     title: 'TradeCopier',
-    subtitle: 'Application de bureau pour la copie de trades (Work in Progress)',
-    image: 'tradecopier-dashboard.png', // Images placées à la racine de public/
-    description: `Ce projet est né d'un besoin personnel de rassembler plusieurs outils de trading disparates en une seule interface unifiée. Bien qu'encore en cours de développement, cette application permet déjà de copier automatiquement les positions de trading d'un compte maître vers plusieurs comptes esclaves.
+    subtitle: 'Solution professionnelle de Copy Trading Multi-comptes (En cours de développement)',
+    image: 'tradecopier-dashboard.png',
+    description: `Solution complète de copy trading conçue pour les professionnels, alliant une interface de gestion moderne à un moteur d'exécution haute performance. Ce projet est encore en phase active de développement.
     
-    Conçue pour les traders professionnels gérant plusieurs comptes simultanément, elle offre une latence minimale et une sécurisation locale des données.`,
-    creationProcess: `Projet personnel développé pour répondre à un besoin de performance et de sécurité.
+    L'application permet de fédérer des comptes de trading hétérogènes (MetaTrader 4/5, cTrader) et de piloter des stratégies de réplication complexes en temps réel. L'architecture dissocie l'interface utilisateur (Electron) du moteur de trading (Engine TypeScript) pour garantir une latence d'exécution minimale (< 50ms).`,
+    creationProcess: `Projet personnel d'envergure né de l'exigence de fiabiliser des opérations de trading multi-comptes.
     
-    L'architecture hybride combine un client lourd (Electron + React) pour l'interface et un Backend hébergé sur AWS pour assurer une exécution ultra-rapide et fiable des ordres.
-    
-    Points techniques :
-    - Infrastructure AWS pour la haute disponibilité et la performance.
-    - Communication WebSocket temps réel pour la réplication des ordres.
-    - Base de données locale (SQLite/NeDB) pour l'historique et la confidentialité.
-    - Architecture modulaire pour ajouter facilement de nouveaux connecteurs (MetaTrader, cTrader, Binance...).`,
+    L'architecture a évolué vers un modèle hybride :
+    - Client Lourd (Electron) : Pour la sécurité des clés API et la réactivité de l'interface.
+    - Moteur "Engine" Découplé : Un processus Node.js dédié gère exclusivement les WebSockets et la logique d'ordre, évitant tout blocage par l'UI.
+    - Backend Cloud (AWS) : Assure l'agrégation des analytics et la redondance des connexions.`,
     features: [
-      'Dashboard temps réel : Suivi des positions et du P&L global',
-      'Multi-comptes : Gestion illimitée de comptes esclaves',
-      'Mode "Reverse Copy" : Copier à l\'inverse pour les stratégies de couverture',
-      'Filtres de risque : Gestion de lot size, max drawdown par compte',
-      'Journaling automatique : Historique exportable de tous les trades copiés',
+      "Engine Haute Performance : Exécution asynchrone découplée de l'UI",
+      'Gestionnaire de Comptes : Centralisation des credentials et états de connexion',
+      'Copieurs Configurables : Règles de filtrage, Money Management et "Reverse Copy"',
+      'Dashboard Analytics (Journal) : Visualisation P&L et métriques (Non implémenté)',
+      "Trade Management : Intervention manuelle d'urgence (Non implémenté)",
     ],
-    technologies: ['React', 'Electron', 'Node.js', 'TypeScript', 'Socket.io', 'Recharts'],
+    technologies: [
+      'React',
+      'Electron',
+      'TypeScript',
+      'Node.js',
+      'Socket.io',
+      'NeDB',
+      'Recharts',
+      'Framer Motion',
+    ],
     githubLink: null,
     isPrivate: true,
     liveLink: null,

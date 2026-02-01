@@ -48,6 +48,8 @@ export const techLogos: Record<string, string> = {
   Electron: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg',
   'Socket.io': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg',
   Recharts: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', // Fallback React
+  NeDB: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg', // NeDB is a JS DB, use Node logo
+  'Framer Motion': 'https://cdn.worldvectorlogo.com/logos/framer-motion.svg',
 }
 
 // Fonction helper pour récupérer le logo (ou une icône par défaut si non trouvé)
