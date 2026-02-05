@@ -49,7 +49,13 @@ export const techLogos: Record<string, string> = {
   'Socket.io': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg',
   Recharts: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', // Fallback React
   NeDB: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg', // NeDB is a JS DB, use Node logo
-  'Framer Motion': 'https://cdn.worldvectorlogo.com/logos/framer-motion.svg',
+  Groq: 'https://avatars.githubusercontent.com/u/102423281?s=200&v=4', // GitHub Org Avatar
+  'GitHub Actions':
+    'https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg', // Official Icon
+  Nodemailer:
+    'https://raw.githubusercontent.com/nodemailer/nodemailer/master/assets/nm_logo_200x136.png', // Official Repo Asset
+  'Telegram Bot API': 'https://cdn.worldvectorlogo.com/logos/telegram-1.svg',
+  Telegram: 'https://cdn.worldvectorlogo.com/logos/telegram-1.svg',
 }
 
 // Fonction helper pour récupérer le logo (ou une icône par défaut si non trouvé)

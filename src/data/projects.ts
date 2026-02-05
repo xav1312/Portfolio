@@ -140,4 +140,40 @@ export const projectsData: Record<string, Project> = {
     liveLink: null,
     gallery: ['tradecopier-dashboard.png', 'tradecopier-list.png'],
   },
+  'forex-newsletter': {
+    id: 'forex-newsletter',
+    title: 'Forex Newsletter',
+    subtitle: 'Assistant FX & Newsletter Automatisé par IA',
+    image: 'images/forex-newsletter-preview.png',
+    description: `Un écosystème d'intelligence artificielle complet pour le trader Forex moderne, alliant veille automatique et interaction conversationnelle.
+    
+    Au-delà d'une simple newsletter, ce projet intègre un Bot Telegram interactif capable de répondre aux questions de l'utilisateur sur l'historique des marchés grâce à un système RAG (Retrieval-Augmented Generation). Il surveille plusieurs sources d'actualités en continu, génère des briefings matinaux synthétiques via Llama 3 (Groq), et offre une interface de consultation en temps réel.`,
+    creationProcess: `Évolution majeure du projet initial de newsletter pour devenir un véritable assistant personnel.
+    
+    L'objectif était de dépasser la lecture passive pour permettre une interrogation dynamique des données économiques.
+    
+    Challenges résolus :
+    - Implémentation d'un pipeline RAG performant pour contextualiser les réponses de l'IA avec l'historique des articles.
+    - Architecture événementielle pour gérer simultanément le monitoring de flux RSS et les interactions Telegram.
+    - Optimisation des coûts et de la latence avec Groq.`,
+    features: [
+      'Assistant Telegram Interactif : Commandes vocales/textuelles et notifications push',
+      "RAG (Q&A Historique) : L'IA répond aux questions en citant ses sources passées",
+      'Briefing Matinal : Synthèse automatique des opportunités du jour (Llama 3)',
+      'Multi-Sources : Agrégation intelligente de flux RSS et scrapers divers',
+      'Zero Maintenance : Architecture Serverless auto-hébergée',
+    ],
+    technologies: [
+      'Node.js',
+      'Groq',
+      'Telegram Bot API',
+      'GitHub Actions',
+      'Nodemailer',
+      'JavaScript',
+    ],
+    githubLink: null,
+    isPrivate: true,
+    liveLink: null,
+    gallery: ['images/forex-newsletter-preview.png', 'images/forex-newsletter-detail.png'],
+  },
 }
