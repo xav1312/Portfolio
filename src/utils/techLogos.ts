@@ -56,6 +56,9 @@ export const techLogos: Record<string, string> = {
     'https://raw.githubusercontent.com/nodemailer/nodemailer/master/assets/nm_logo_200x136.png', // Official Repo Asset
   'Telegram Bot API': 'https://cdn.worldvectorlogo.com/logos/telegram-1.svg',
   Telegram: 'https://cdn.worldvectorlogo.com/logos/telegram-1.svg',
+  PostgreSQL:
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+  FastAPI: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',
 }
 
 // Fonction helper pour récupérer le logo (ou une icône par défaut si non trouvé)

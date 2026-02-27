@@ -29,6 +29,8 @@ export const skillsData: Skill[] = [
   { name: 'Supabase', category: 'Back-end', level: 4 },
   { name: 'Firebase', category: 'Back-end', level: 3 },
   { name: 'Socket.io', category: 'Back-end', level: 3 },
+  { name: 'PostgreSQL', category: 'Back-end', level: 4 },
+  { name: 'FastAPI', category: 'Back-end', level: 3 },
 
   // Tools
   { name: 'Git / GitHub', category: 'Tools', level: 4 },
