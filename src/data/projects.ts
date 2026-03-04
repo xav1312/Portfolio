@@ -9,7 +9,8 @@ export interface Project {
   features: string[]
   technologies: string[]
   githubLink: string | null
-  liveLink: string | null
+  liveLink: null | string
+  liveWidget?: string // Champ pour un widget financier embarqué (ex: TradingView)
   isPrivate?: boolean
   gallery: string[]
 }
@@ -139,6 +140,7 @@ export const projectsData: Record<string, Project> = {
     githubLink: null,
     isPrivate: true,
     liveLink: null,
+    liveWidget: 'tradingview-btc', // Activation du widget sur cette page
     gallery: ['tradecopier-dashboard.png', 'tradecopier-list.png'],
   },
   'forex-newsletter': {
