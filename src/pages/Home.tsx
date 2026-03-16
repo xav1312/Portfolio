@@ -31,7 +31,6 @@ export default function Home() {
   return (
     <Container maxWidth="lg">
       {/* Section Introduction (Hero) */}
-      {/* Section Introduction (Hero) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -40,51 +39,54 @@ export default function Home() {
         <Box
           sx={{
             textAlign: 'center',
-            py: 12,
+            py: { xs: 8, md: 12 },
             px: 2,
             background: (theme) =>
               theme.palette.mode === 'light'
-                ? 'linear-gradient(135deg, rgba(239,235,233,0.4) 0%, rgba(215,204,200,0.2) 100%)'
-                : 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
-            borderRadius: 8,
+                ? 'linear-gradient(135deg, #FDFDFD 0%, #F5F5F7 100%)'
+                : 'linear-gradient(135deg, #0A0A0F 0%, #12121A 100%)',
+            border: '1px solid',
+            borderColor: 'divider',
+            borderRadius: 1, // theme.shape.borderRadius (4px)
             mb: 8,
-            boxShadow: 3,
+            position: 'relative',
+            overflow: 'hidden',
           }}
         >
+          {/* Subtitle / Name */}
           <Typography
-            variant="h5"
-            color="secondary"
-            sx={{ fontWeight: 'bold', mb: 2, letterSpacing: 2, textTransform: 'uppercase' }}
+            variant="overline"
+            color="primary"
+            sx={{ display: 'block', mb: 2, opacity: 0.7 }}
           >
-            Xavier Petilaire-Bellet
-          </Typography>
-          <Typography variant="h2" color="primary" sx={{ mb: 3, fontWeight: 800 }}>
-            Bienvenue sur mon Portfolio
-          </Typography>
-          <Typography
-            variant="h5"
-            color="text.secondary"
-            sx={{ maxWidth: '700px', mx: 'auto', lineHeight: 1.6, mb: 4 }}
-          >
-            Ingénieur passionné par le développement web, le design et l'innovation.
+            Xavier Petilaire-Bellet // INGÉNIEUR LOGICIEL
           </Typography>
 
-          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap' }}>
+          <Typography variant="h2" color="text.primary" sx={{ mb: 3, fontWeight: 900, fontSize: { xs: '2.5rem', md: '3.75rem' } }}>
+            CONCEPTION D'INTERFACES <br />
+            <Box component="span" sx={{ color: 'primary.main' }}>
+              & SYSTÈMES
+            </Box>{' '}
+            DE PRÉCISION
+          </Typography>
+
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{ maxWidth: '700px', mx: 'auto', mb: 6, fontSize: '1.1rem' }}
+          >
+            Ingénieur passionné, spécialisé dans l'Architecture Web Hautes Performances, la Visualisation de Données, et les Technologies Financières.
+          </Typography>
+
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3, flexWrap: 'wrap' }}>
             <Button
               variant="contained"
               color="primary"
               size="large"
               onClick={() => navigate('/projects')}
+              sx={{ px: 4 }}
             >
-              Voir mes projets
-            </Button>
-            <Button
-              variant="outlined"
-              color="primary"
-              size="large"
-              onClick={() => navigate('/about')}
-            >
-              Mon parcours
+              Explorer les Projets
             </Button>
             <Button
               variant="outlined"
@@ -92,8 +94,10 @@ export default function Home() {
               size="large"
               href={`${import.meta.env.BASE_URL}cv.pdf`}
               target="_blank"
+              rel="noopener noreferrer"
               download="CV_Xavier_Petilaire-Bellet.pdf"
               startIcon={<DownloadIcon />}
+              sx={{ px: 4, fontWeight: 700 }}
             >
               Télécharger mon CV
             </Button>
@@ -104,7 +108,8 @@ export default function Home() {
       {/* Section Compétences */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <Box sx={{ mb: 8 }}>
@@ -128,13 +133,13 @@ export default function Home() {
           spacing={4}
           component={motion.div}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
           variants={{
             visible: { transition: { staggerChildren: 0.1 } },
           }}
         >
           {recentProjects.map((project) => (
-            // Changement ici : md={6} au lieu de md={4} pour avoir 2 cartes par ligne (plus grandes)
             <Grid
               item
               xs={12}
@@ -159,10 +164,9 @@ export default function Home() {
                   <Box sx={{ position: 'relative', overflow: 'hidden', width: '100%' }}>
                     <CardMedia
                       component="img"
-                      height="300" // J'augmente aussi la hauteur de l'image (était 220)
+                      height="300"
                       image={project.image}
                       alt={project.title}
-                      // La transition et le scale sont gérés par le thème maintenant
                     />
                     <Box
                       sx={{
@@ -172,7 +176,7 @@ export default function Home() {
                         width: '100%',
                         background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
                         color: 'white',
-                        p: 3, // Plus de padding
+                        p: 3,
                         pt: 8,
                       }}
                     >
@@ -210,6 +214,7 @@ export default function Home() {
                       startIcon={<GitHubIcon />}
                       href={project.githubLink}
                       target="_blank"
+                      rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       sx={{ opacity: 0.7, '&:hover': { opacity: 1 } }}
                     >

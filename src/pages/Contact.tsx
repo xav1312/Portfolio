@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {
   Box,
   Typography,
@@ -9,82 +8,26 @@ import {
   Paper,
   Snackbar,
   Alert,
+  useTheme,
 } from '@mui/material'
 import SendIcon from '@mui/icons-material/Send'
 import { motion } from 'framer-motion'
-import emailjs from '@emailjs/browser'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { useContactForm } from '../hooks/useContactForm'
 
 export default function Contact() {
+  const theme = useTheme()
   useDocumentTitle('Contact | Xavier Petilaire-Bellet')
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
-  const [openSnackbar, setOpenSnackbar] = useState(false)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
-
-  /*
-   * CONFIGURATION EMAILJS
-   * Remplace ces valeurs par les tiennes après avoir créé ton compte sur https://www.emailjs.com/
-   */
-  const SERVICE_ID = 'service_zg1eul5'
-  const TEMPLATE_ID = 'template_5tzxrzl'
-  const PUBLIC_KEY = 'jkNsqHSvO0DKnc0tv'
-
-  const [loading, setLoading] = useState(false)
-  const [feedback, setFeedback] = useState<{ type: 'success' | 'error'; message: string } | null>(
-    null,
-  )
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setFeedback(null)
-
-    try {
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        PUBLIC_KEY,
-      )
-
-      setFeedback({ type: 'success', message: 'Merci ! Votre message a bien été envoyé.' })
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    } catch (error) {
-      console.error('Erreur EmailJS:', error)
-      setFeedback({
-        type: 'error',
-        message: "Une erreur est survenue lors de l'envoi. Veuillez réessayer plus tard.",
-      })
-    } finally {
-      setLoading(false)
-      setOpenSnackbar(true)
-    }
-  }
-
-  const handleCloseSnackbar = (_event?: React.SyntheticEvent | Event, reason?: string) => {
-    if (reason === 'clickaway') {
-      return
-    }
-    setOpenSnackbar(false)
-  }
+  const {
+    formData,
+    loading,
+    feedback,
+    openSnackbar,
+    handleChange,
+    handleSubmit,
+    closeSnackbar,
+  } = useContactForm()
 
   return (
     <Container maxWidth="md">
@@ -93,12 +36,16 @@ export default function Contact() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <Box sx={{ my: 6, textAlign: 'center' }}>
-          <Typography variant="h3" color="primary" sx={{ mb: 2, fontWeight: 'bold' }}>
-            Me Contacter
+        <Box sx={{ my: 8, textAlign: 'center' }}>
+          <Typography
+            variant="overline"
+            color="primary"
+            sx={{ mb: 1, display: 'block', opacity: 0.7 }}
+          >
+            // CANAL_COMMUNICATION_SÉCURISÉ
           </Typography>
-          <Typography variant="h6" color="text.secondary" sx={{ mb: 6 }}>
-            Un projet ? Une question ? N'hésitez pas à m'écrire !
+          <Typography variant="h2" color="text.primary" sx={{ mb: 8, fontWeight: 900 }}>
+            Établir le Contact
           </Typography>
 
           <Paper elevation={3} sx={{ p: 4, borderRadius: 4 }}>
@@ -113,6 +60,17 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     variant="outlined"
+                    sx={{
+                      '& .MuiInputLabel-root': {
+                        color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'inherit',
+                        fontFamily: '"Geist Mono", monospace',
+                      },
+                      '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                          borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'inherit',
+                        },
+                      },
+                    }}
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -125,6 +83,17 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     variant="outlined"
+                    sx={{
+                      '& .MuiInputLabel-root': {
+                        color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'inherit',
+                        fontFamily: '"Geist Mono", monospace',
+                      },
+                      '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                          borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'inherit',
+                        },
+                      },
+                    }}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -136,6 +105,17 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     variant="outlined"
+                    sx={{
+                      '& .MuiInputLabel-root': {
+                        color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'inherit',
+                        fontFamily: '"Geist Mono", monospace',
+                      },
+                      '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                          borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'inherit',
+                        },
+                      },
+                    }}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -149,6 +129,17 @@ export default function Contact() {
                     multiline
                     rows={6}
                     variant="outlined"
+                    sx={{
+                      '& .MuiInputLabel-root': {
+                        color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'inherit',
+                        fontFamily: '"Geist Mono", monospace',
+                      },
+                      '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                          borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'inherit',
+                        },
+                      },
+                    }}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -170,9 +161,9 @@ export default function Contact() {
         </Box>
       </motion.div>
 
-      <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+      <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={closeSnackbar}>
         <Alert
-          onClose={handleCloseSnackbar}
+          onClose={closeSnackbar}
           severity={feedback?.type || 'success'}
           sx={{ width: '100%' }}
         >

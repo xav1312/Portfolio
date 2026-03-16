@@ -43,6 +43,44 @@ export const projectsData: Record<string, Project> = {
     liveLink: null,
     gallery: ['images/mutuacy-main.png'],
   },
+  'trade-copier': {
+    id: 'trade-copier',
+    title: 'TradeCopier',
+    subtitle: 'Solution professionnelle de Copy Trading Multi-comptes (v2.0 Performance)',
+    image: 'tradecopier-dashboard.png',
+    description: `Solution complète de copy trading conçue pour les professionnels, alliant une interface de gestion moderne daim un moteur d'exécution haute performance.
+    
+    L'application (version 2.0) permet de fédérer des comptes de trading hétérogènes (MetaTrader 4/5, cTrader, TradeLocker) et de piloter des stratégies de réplication avec une latence d'exécution ultra-faible (75ms). L'architecture métier a évolué pour supporter l'exécution parallèle, la persistance robuste sous PostgreSQL et un backend analytique sous Python/FastAPI.`,
+    creationProcess: `Projet personnel d'envergure né de l'exigence de fiabiliser des opérations de trading multi-comptes.
+    
+    L'architecture a évolué vers un écosystème hybride avancé :
+    - Client Lourd (Electron + React) : Pour la sécurité locale des clés API et la réactivité de l'interface.
+    - Moteur "Engine" Découplé (Node.js) : Exécute la logique de réplication asynchrone (max 3 ordres en parallèle) avec gestion de limite de taux limiteur (bottleneck).
+    - Backend Microservices (Python/FastAPI) : Intègre une Gateway, un service d'Analytics propulsés par PostgreSQL, et un moteur RAG d'agrégation d'actualités.`,
+    features: [
+      "Exécution Parallèle (Burst) : Latence réduite à 75ms pour le routage d'ordres simultanés",
+      'Gestion Avancée des Positions : Support natif de la fermeture partielle proportionnelle',
+      'Money Management Dynamique : Calcul des lots indexé sur les balances respectives',
+      'Veille Économique Intégrée : Moteur Python/IA (Groq) agrégeant et résumant les actualités (Reuters, ING)',
+      'Architecture Résiliente : Base de données PostgreSQL remplaçant les stockages locaux',
+      "Dashboard & Analytics : Backend Python/FastAPI dédié au traitement de l'historique",
+    ],
+    technologies: [
+      'React',
+      'Electron',
+      'TypeScript',
+      'Node.js',
+      'Python',
+      'FastAPI',
+      'PostgreSQL',
+      'Framer Motion',
+    ],
+    githubLink: null,
+    isPrivate: true,
+    liveLink: null,
+    liveWidget: 'tradingview-btc', // Activation du widget sur cette page
+    gallery: ['tradecopier-dashboard.png', 'tradecopier-list.png'],
+  },
 
   'inscription-esiea': {
     id: 'inscription-esiea',
@@ -104,44 +142,6 @@ export const projectsData: Record<string, Project> = {
       'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
     liveLink: null,
     gallery: ['images/Nasa-main.png', 'images/Nasa-1.png', 'images/Nasa-2.png'],
-  },
-  'trade-copier': {
-    id: 'trade-copier',
-    title: 'TradeCopier',
-    subtitle: 'Solution professionnelle de Copy Trading Multi-comptes (v2.0 Performance)',
-    image: 'tradecopier-dashboard.png',
-    description: `Solution complète de copy trading conçue pour les professionnels, alliant une interface de gestion moderne daim un moteur d'exécution haute performance.
-    
-    L'application (version 2.0) permet de fédérer des comptes de trading hétérogènes (MetaTrader 4/5, cTrader, TradeLocker) et de piloter des stratégies de réplication avec une latence d'exécution ultra-faible (75ms). L'architecture métier a évolué pour supporter l'exécution parallèle, la persistance robuste sous PostgreSQL et un backend analytique sous Python/FastAPI.`,
-    creationProcess: `Projet personnel d'envergure né de l'exigence de fiabiliser des opérations de trading multi-comptes.
-    
-    L'architecture a évolué vers un écosystème hybride avancé :
-    - Client Lourd (Electron + React) : Pour la sécurité locale des clés API et la réactivité de l'interface.
-    - Moteur "Engine" Découplé (Node.js) : Exécute la logique de réplication asynchrone (max 3 ordres en parallèle) avec gestion de limite de taux limiteur (bottleneck).
-    - Backend Microservices (Python/FastAPI) : Intègre une Gateway, un service d'Analytics propulsés par PostgreSQL, et un moteur RAG d'agrégation d'actualités.`,
-    features: [
-      "Exécution Parallèle (Burst) : Latence réduite à 75ms pour le routage d'ordres simultanés",
-      'Gestion Avancée des Positions : Support natif de la fermeture partielle proportionnelle',
-      'Money Management Dynamique : Calcul des lots indexé sur les balances respectives',
-      'Veille Économique Intégrée : Moteur Python/IA (Groq) agrégeant et résumant les actualités (Reuters, ING)',
-      'Architecture Résiliente : Base de données PostgreSQL remplaçant les stockages locaux',
-      "Dashboard & Analytics : Backend Python/FastAPI dédié au traitement de l'historique",
-    ],
-    technologies: [
-      'React',
-      'Electron',
-      'TypeScript',
-      'Node.js',
-      'Python',
-      'FastAPI',
-      'PostgreSQL',
-      'Framer Motion',
-    ],
-    githubLink: null,
-    isPrivate: true,
-    liveLink: null,
-    liveWidget: 'tradingview-btc', // Activation du widget sur cette page
-    gallery: ['tradecopier-dashboard.png', 'tradecopier-list.png'],
   },
   'forex-newsletter': {
     id: 'forex-newsletter',

@@ -14,35 +14,25 @@ import {
   ListItemText,
   Toolbar,
   Typography,
-  useMediaQuery,
   useTheme,
   Avatar,
   Fab,
   Tooltip,
+  Button,
+  Container,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import HomeIcon from '@mui/icons-material/Home'
-import WorkIcon from '@mui/icons-material/Work'
-import HistoryIcon from '@mui/icons-material/History'
 import MailIcon from '@mui/icons-material/Mail'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { useColorMode } from '../context/ColorModeContext'
 import Footer from '../components/Footer'
-
-const drawerWidth = 240
-
-const menuItems = [
-  { text: 'Accueil', icon: <HomeIcon />, path: '/' },
-  { text: 'Mes Projets', icon: <WorkIcon />, path: '/projects' },
-  { text: 'Mon Parcours', icon: <HistoryIcon />, path: '/about' },
-]
+import { NAV_ITEMS } from '../config/nav'
 
 export default function MainLayout() {
   const theme = useTheme()
   const colorMode = useColorMode()
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -64,24 +54,20 @@ export default function MainLayout() {
   }
 
   const drawer = (
-    <div>
-      <Toolbar />
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2, fontFamily: '"Geist Mono", monospace', fontWeight: 700 }}>
+        XPB.
+      </Typography>
       <List>
-        <ListItem>
-          <ListItemText
-            primary="Navigation"
-            primaryTypographyProps={{ color: 'textSecondary', variant: 'overline' }}
-          />
-        </ListItem>
-        {menuItems.map((item) => (
+        {NAV_ITEMS.map((item) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton
               component={RouterLink}
               to={item.path}
               selected={location.pathname === item.path}
-              onClick={() => isMobile && setMobileOpen(false)}
+              sx={{ justifyContent: 'center' }}
             >
-              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemIcon sx={{ minWidth: 'auto', mr: 2 }}>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
@@ -91,113 +77,155 @@ export default function MainLayout() {
             component={RouterLink}
             to="/contact"
             selected={location.pathname === '/contact'}
-            onClick={() => isMobile && setMobileOpen(false)}
+            sx={{ justifyContent: 'center' }}
           >
-            <ListItemIcon>
+            <ListItemIcon sx={{ minWidth: 'auto', mr: 2 }}>
               <MailIcon />
             </ListItemIcon>
-            <ListItemText primary="Contact" secondary="Me contacter" />
+            <ListItemText primary="Contact" />
           </ListItemButton>
         </ListItem>
       </List>
-    </div>
+    </Box>
   )
 
   return (
-    <Box sx={{ display: 'flex', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <CssBaseline />
+      
+      {/* Top Navigation (Glassmorphism) */}
       <AppBar
         position="fixed"
+        elevation={0}
         sx={{
-          zIndex: (theme) => theme.zIndex.drawer + 1,
-          bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#181818' : 'primary.main'), // Noir doux en dark mode
+          backdropFilter: 'blur(10px)',
+          backgroundColor: theme.palette.mode === 'dark' ? 'rgba(10, 10, 15, 0.8)' : 'rgba(253, 253, 253, 0.8)',
+          borderBottom: `1px solid ${theme.palette.divider}`,
+          color: theme.palette.text.primary,
         }}
       >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
+            {/* Logo Section */}
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Avatar
+                src={`${import.meta.env.BASE_URL}flavicon.png`}
+                alt="Logo"
+                sx={{ width: 40, height: 40, cursor: 'pointer', mr: 2 }}
+                variant="rounded"
+                component={RouterLink}
+                to="/"
+              />
+              <Typography
+                variant="h6"
+                noWrap
+                component={RouterLink}
+                to="/"
+                sx={{
+                  fontFamily: '"Geist Mono", monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.1rem',
+                  color: 'inherit',
+                  textDecoration: 'none',
+                  display: { xs: 'none', sm: 'block' }
+                }}
+              >
+                XPB.
+              </Typography>
+            </Box>
 
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            Mon Portfolio
-          </Typography>
+            {/* Desktop Navigation */}
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 2 }}>
+              {NAV_ITEMS.map((item) => (
+                <Button
+                  key={item.text}
+                  component={RouterLink}
+                  to={item.path}
+                  sx={{
+                    color: location.pathname === item.path ? 'primary.main' : 'text.primary',
+                    fontWeight: location.pathname === item.path ? 700 : 500,
+                  }}
+                >
+                  {item.text}
+                </Button>
+              ))}
+              <Button
+                variant="outlined"
+                component={RouterLink}
+                to="/contact"
+                sx={{ ml: 1 }}
+              >
+                Contact
+              </Button>
+              
+              <IconButton
+                sx={{ ml: 1 }}
+                onClick={colorMode.toggleColorMode}
+                color="inherit"
+                aria-label="Changer le thème"
+              >
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.div
+                    key={theme.palette.mode}
+                    initial={{ y: -20, opacity: 0, rotate: -90 }}
+                    animate={{ y: 0, opacity: 1, rotate: 0 }}
+                    exit={{ y: 20, opacity: 0, rotate: 90 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                  </motion.div>
+                </AnimatePresence>
+              </IconButton>
+            </Box>
 
-          <IconButton sx={{ ml: 1, mr: 2 }} onClick={colorMode.toggleColorMode} color="inherit">
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div
-                key={theme.palette.mode}
-                initial={{ y: -20, opacity: 0, rotate: -90 }}
-                animate={{ y: 0, opacity: 1, rotate: 0 }}
-                exit={{ y: 20, opacity: 0, rotate: 90 }}
-                transition={{ duration: 0.3 }}
+            {/* Mobile Navigation Toggle */}
+            <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center' }}>
+              <IconButton
+                onClick={colorMode.toggleColorMode}
+                color="inherit"
+                sx={{ mr: 1 }}
+                aria-label="Changer le thème"
               >
                 {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-              </motion.div>
-            </AnimatePresence>
-          </IconButton>
-
-          <Avatar
-            src={`${import.meta.env.BASE_URL}flavicon.png`}
-            alt="Logo"
-            sx={{ width: 40, height: 40, cursor: 'pointer' }}
-            variant="rounded"
-            component={RouterLink}
-            to="/"
-          />
-        </Toolbar>
+              </IconButton>
+              <IconButton
+                color="inherit"
+                aria-label="Menu principal"
+                edge="start"
+                onClick={handleDrawerToggle}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </Container>
       </AppBar>
 
-      <Box
-        component="nav"
-        sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
-        aria-label="mailbox folders"
+      {/* Mobile Drawer */}
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{ keepMounted: true }}
+        sx={{
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+        }}
       >
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
-          sx={{
-            display: { xs: 'block', md: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
+        {drawer}
+      </Drawer>
 
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', md: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-          open
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-
+      {/* Main Content */}
       <Box
         component="main"
         sx={{
           flexGrow: 1,
-          width: { md: `calc(100% - ${drawerWidth}px)` },
           display: 'flex',
           flexDirection: 'column',
-          minHeight: '100vh',
+          pt: { xs: 8, sm: 9, md: 10 }, // Espacement pour passer en dessous de la Topbar fixée
         }}
       >
-        <Toolbar />
-
-        <Box sx={{ flexGrow: 1, p: 3 }}>
+        <Box sx={{ flexGrow: 1, p: { xs: 2, sm: 3 } }}>
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
@@ -232,7 +260,7 @@ export default function MainLayout() {
                   color="primary"
                   onClick={handleScrollTop}
                   aria-label="scroll back to top"
-                  sx={{ boxShadow: 3 }}
+                  sx={{ boxShadow: 3 }} // Ombre douce cohérente
                 >
                   <KeyboardArrowUpIcon />
                 </Fab>
@@ -253,24 +281,24 @@ export default function MainLayout() {
             component={motion.div}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             <Tooltip title="Me contacter" arrow placement="left">
               <Fab
                 component={RouterLink}
                 to="/contact"
                 color="secondary"
-                size="large" // Taille standard 'large'
+                size="large"
                 aria-label="contact"
                 sx={{
-                  width: 72, // Plus grand que le default (56px)
-                  height: 72,
+                  width: 64,
+                  height: 64,
                   color: 'white',
-                  boxShadow: '0px 6px 24px rgba(0, 0, 0, 0.3)', // Ombre un peu plus prononcée
+                  boxShadow: 4, // Ombre plus douce et élégante que l'ancienne noire agressive
                 }}
               >
-                <MailIcon sx={{ fontSize: 32 }} /> {/* Icône plus grande aussi */}
+                <MailIcon sx={{ fontSize: 28 }} />
               </Fab>
             </Tooltip>
           </Box>

@@ -1,43 +1,12 @@
-import { Box, Typography, Container, Chip, Grid, Paper, Avatar, Button } from '@mui/material'
+import { Box, Typography, Container, Grid, Paper, Button } from '@mui/material'
 import SchoolIcon from '@mui/icons-material/School'
 import PublicIcon from '@mui/icons-material/Public'
 import DownloadIcon from '@mui/icons-material/Download'
-import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects' // Pour les soft skills
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { skillsData, Skill } from '../data/skills'
 
-// Mapping des compétences vers leurs logos (URLs CDN Devicon)
-const skills = [
-  {
-    name: 'JavaScript',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-  },
-  {
-    name: 'React',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-  },
-  {
-    name: 'TypeScript',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-  },
-  {
-    name: 'Vue.js',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
-  },
-  {
-    name: 'Python',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-  },
-  {
-    name: 'Java',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-  },
-  {
-    name: 'SQL',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-  },
-  { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-  { name: 'C', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
-]
+// Grouping logic for skills
+const categories = ['Langages', 'Front-end', 'Back-end', 'Mobile & Desktop', 'Tools'] as const
 
 const softSkills = [
   "Travail d'équipe",
@@ -48,167 +17,243 @@ const softSkills = [
   'Autonomie',
 ]
 
+const SkillModule = ({ skill }: { skill: Skill }) => {
+  return (
+    <Box
+      sx={{
+        mb: 1.5,
+        p: 1.5,
+        border: '1px solid',
+        borderColor: 'divider',
+        borderRadius: 0.5,
+        display: 'flex',
+        alignItems: 'center',
+        '&::before': {
+          content: '">"',
+          mr: 1.5,
+          color: 'primary.main',
+          fontFamily: '"Geist Mono", monospace',
+          fontWeight: 700,
+        },
+      }}
+    >
+      <Typography variant="body2" sx={{ fontFamily: '"Geist Mono", monospace', fontWeight: 700 }}>
+        {skill.name}
+      </Typography>
+    </Box>
+  )
+}
+
 export default function About() {
   useDocumentTitle('Mon Parcours | Xavier Petilaire-Bellet')
 
   return (
-    <Container maxWidth="md">
-      <Box sx={{ textAlign: 'center', my: 6 }}>
+    <Container maxWidth="md" sx={{ pb: 10 }}>
+      <Box sx={{ my: 8 }}>
+        {/* Section Header - Terminal Design */}
         <Box
           sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: 2,
-            mb: 6,
-            flexWrap: 'wrap',
+            p: 4,
+            mb: 8,
+            border: '1px solid',
+            borderColor: 'divider',
+            borderRadius: 1,
+            position: 'relative',
+            background: (theme) =>
+              theme.palette.mode === 'dark'
+                ? 'linear-gradient(135deg, #0A0A0F 0%, #12121A 100%)'
+                : 'linear-gradient(135deg, #FDFDFD 0%, #F5F5F7 100%)',
+            '&::before': {
+              content: '"[ NOEUD_SYSTEME: A_PROPOS ]"',
+              position: 'absolute',
+              top: -10,
+              left: 20,
+              bgcolor: 'background.default',
+              px: 1,
+              fontFamily: '"Geist Mono", monospace',
+              fontSize: '0.7rem',
+              color: 'primary.main',
+              fontWeight: 700,
+            },
           }}
         >
-          <Typography variant="h3" color="primary">
-            Mon Parcours
-          </Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            size="medium"
-            href={`${import.meta.env.BASE_URL}cv.pdf`}
-            target="_blank"
-            download="CV_Xavier_Petilaire-Bellet.pdf"
-            startIcon={<DownloadIcon />}
-          >
-            Télécharger CV
-          </Button>
+          <Grid container alignItems="center" spacing={4}>
+            <Grid item xs={12} md={8}>
+              <Typography variant="h2" sx={{ fontWeight: 900, mb: 1 }}>
+                Xavier Petilaire-Bellet
+              </Typography>
+              <Typography variant="h6" color="text.secondary" sx={{ fontWeight: 500, mb: 3 }}>
+                Étudiant Ingénieur & Développeur Full-Stack
+              </Typography>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                href={`${import.meta.env.BASE_URL}cv.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="CV_Xavier_Petilaire-Bellet.pdf"
+                startIcon={<DownloadIcon />}
+              >
+                Télécharger la Documentation (CV)
+              </Button>
+            </Grid>
+          </Grid>
         </Box>
 
         {/* Formation & Expériences */}
-        <Typography variant="h5" color="secondary" sx={{ mb: 4 }}>
-          Formation & Expériences
+        <Typography variant="overline" color="primary" sx={{ mb: 2, display: 'block' }}>
+          // TRAJECTOIRE_CARRIÈRE
         </Typography>
-
-        <Box sx={{ mb: 6 }}>
-          {/* ESIEA */}
-          <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2, textAlign: 'left' }}>
-            <Box sx={{ color: 'primary.main', mt: 0.5 }}>
-              <SchoolIcon fontSize="large" />
-            </Box>
-            <Box>
-              <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                Étudiant ingénieur Majeure Software Engineering
+        <Box sx={{ mb: 10 }}>
+          {[
+            {
+              title: 'Étudiant ingénieur Majeure Software Engineering',
+              sub: 'ESIEA',
+              date: '2023 - PRESENT',
+              icon: <SchoolIcon />,
+            },
+            {
+              title: "Semestre d'études en Écosse",
+              sub: 'Heriot-Watt University',
+              date: '01/2024 - 06/2024',
+              icon: <PublicIcon />,
+            },
+            {
+              title: 'Classe préparatoire MP Option Informatique',
+              sub: 'Lycée Baimbridge',
+              date: '2021 - 2023',
+              icon: <SchoolIcon />,
+            },
+            {
+              title: 'Bac Général (Spécialités : Maths & Physique)',
+              sub: 'Lycée Baimbridge',
+              date: '2021',
+              icon: <SchoolIcon />,
+            },
+          ].map((item, idx) => (
+            <Paper
+              key={idx}
+              elevation={0}
+              sx={{
+                p: 3,
+                mb: 2,
+                display: 'flex',
+                gap: 3,
+                textAlign: 'left',
+                border: '1px solid',
+                borderColor: 'divider',
+                borderRadius: 1,
+                '&:hover': {
+                  borderColor: 'primary.main',
+                  bgcolor: (theme) =>
+                    theme.palette.mode === 'dark'
+                      ? 'rgba(0, 255, 157, 0.02)'
+                      : 'rgba(0, 0, 0, 0.02)',
+                },
+              }}
+            >
+              <Box sx={{ color: 'primary.main', display: 'flex', alignItems: 'center' }}>
+                {item.icon}
+              </Box>
+              <Box sx={{ flexGrow: 1 }}>
+                <Typography variant="h6" sx={{ fontWeight: 900, mb: 0.5 }}>
+                  {item.title}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ fontFamily: '"Geist Mono", monospace', opacity: 0.8 }}
+                >
+                  [ {item.sub} ]
+                </Typography>
+              </Box>
+              <Typography
+                variant="caption"
+                sx={{
+                  fontFamily: '"Geist Mono", monospace',
+                  fontWeight: 700,
+                  alignSelf: 'center',
+                  bgcolor: 'divider',
+                  px: 1.5,
+                  py: 0.5,
+                  borderRadius: 0.5,
+                }}
+              >
+                {item.date}
               </Typography>
-              <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 500 }}>
-                ESIEA
-              </Typography>
-              <Typography variant="subtitle2" color="text.secondary">
-                2023 - Aujourd'hui
-              </Typography>
-            </Box>
-          </Paper>
-
-          {/* Heriot-Watt */}
-          <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2, textAlign: 'left' }}>
-            <Box sx={{ color: 'secondary.main', mt: 0.5 }}>
-              <PublicIcon fontSize="large" />
-            </Box>
-            <Box>
-              <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                Semestre d'études en Écosse
-              </Typography>
-              <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 500 }}>
-                Heriot-Watt University
-              </Typography>
-              <Typography variant="subtitle2" color="text.secondary">
-                01/2024 - 06/2024
-              </Typography>
-            </Box>
-          </Paper>
-
-          {/* Prépa */}
-          <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2, textAlign: 'left' }}>
-            <Box sx={{ color: 'primary.main', mt: 0.5 }}>
-              <SchoolIcon fontSize="large" />
-            </Box>
-            <Box>
-              <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                Classe préparatoire MP Option Informatique
-              </Typography>
-              <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 500 }}>
-                Lycée Général et Technologique de Baimbridge
-              </Typography>
-              <Typography variant="subtitle2" color="text.secondary">
-                2021 - 2023
-              </Typography>
-            </Box>
-          </Paper>
-
-          {/* Bac */}
-          <Paper elevation={2} sx={{ p: 3, mb: 3, display: 'flex', gap: 2, textAlign: 'left' }}>
-            <Box sx={{ color: 'primary.main', mt: 0.5 }}>
-              <SchoolIcon fontSize="large" />
-            </Box>
-            <Box>
-              <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                Bac Général (Spécialités : Maths et Physique-Chimie)
-              </Typography>
-              <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 500 }}>
-                Lycée Général et Technologique de Baimbridge
-              </Typography>
-              <Typography variant="subtitle2" color="text.secondary">
-                2021
-              </Typography>
-            </Box>
-          </Paper>
+            </Paper>
+          ))}
         </Box>
 
-        {/* Compétences Techniques */}
-        <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
-          Compétences Techniques
+        {/* Compétences Techniques - Categorized Grid */}
+        <Typography variant="overline" color="primary" sx={{ mb: 2, display: 'block' }}>
+          // TECHNICAL_MODULES_STATUS
         </Typography>
-        <Grid container spacing={2} justifyContent="center" sx={{ mb: 8 }}>
-          {skills.map((skill) => (
-            <Grid item key={skill.name}>
-              <Chip
-                label={skill.name}
-                variant="outlined"
+
+        <Grid container spacing={4} sx={{ mb: 10 }}>
+          {categories.map((cat) => (
+            <Grid item xs={12} md={6} key={cat}>
+              <Box
                 sx={{
-                  fontSize: '1.1rem',
-                  py: 3,
-                  px: 1,
-                  borderRadius: 3,
-                  border: '1px solid #e0e0e0',
-                  backgroundColor: 'white',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
-                  '& .MuiChip-avatar': { width: 28, height: 28 },
+                  p: 3,
+                  border: '1px solid',
+                  borderColor: 'divider',
+                  borderRadius: 1,
+                  height: '100%',
+                  bgcolor: 'background.paper',
                 }}
-                avatar={
-                  <Avatar src={skill.logo} alt={skill.name} sx={{ bgcolor: 'transparent' }} />
-                }
-              />
+              >
+                <Typography
+                  variant="h6"
+                  sx={{ mb: 3, textTransform: 'uppercase', fontStyle: 'italic', fontWeight: 900 }}
+                >
+                  {cat}
+                </Typography>
+                {skillsData
+                  .filter((s) => s.category === cat)
+                  .map((skill) => (
+                    <SkillModule key={skill.name} skill={skill} />
+                  ))}
+              </Box>
             </Grid>
           ))}
         </Grid>
 
         {/* Soft Skills */}
-        <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
-          Soft Skills
+        <Typography variant="overline" color="primary" sx={{ mb: 2, display: 'block' }}>
+          // CORE_CAPABILITIES
         </Typography>
-        <Grid container spacing={2} justifyContent="center">
-          {softSkills.map((skill) => (
-            <Grid item key={skill}>
-              <Chip
-                label={skill}
-                color="secondary"
-                icon={<EmojiObjectsIcon />}
-                sx={{
-                  fontSize: '1rem',
-                  py: 2.5,
-                  px: 2,
-                  borderRadius: 8,
-                  fontWeight: 500,
-                }}
-              />
-            </Grid>
-          ))}
-        </Grid>
+        <Paper
+          elevation={0}
+          sx={{
+            p: 4,
+            border: '1px solid',
+            borderColor: 'divider',
+            borderRadius: 1,
+            bgcolor: (theme) =>
+              theme.palette.mode === 'dark' ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.02)',
+          }}
+        >
+          <Grid container spacing={2}>
+            {softSkills.map((skill) => (
+              <Grid item xs={6} md={4} key={skill}>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    fontFamily: '"Geist Mono", monospace',
+                  }}
+                >
+                  <Box component="span" sx={{ color: 'primary.main', mr: 1 }}>
+                    [ OK ]
+                  </Box>{' '}
+                  {skill}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Paper>
       </Box>
     </Container>
   )

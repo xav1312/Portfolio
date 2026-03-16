@@ -1,28 +1,18 @@
-import { useState } from 'react';
 import { Box, Typography, Grid, Dialog, IconButton, CardMedia } from '@mui/material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import CloseIcon from '@mui/icons-material/Close';
+import { useImageGallery } from '../hooks/useImageGallery';
 
 interface ProjectGalleryProps {
   images: string[];
 }
 
 export default function ProjectGallery({ images }: ProjectGalleryProps) {
-  const [open, setOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
+  const { open, selectedImage, handleOpen, handleClose } = useImageGallery();
 
   if (!images || images.length === 0) {
     return null;
   }
-
-  const handleOpen = (img: string) => {
-    setSelectedImage(img);
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   return (
     <Box sx={{ mt: 6 }}>

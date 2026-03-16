@@ -4,8 +4,6 @@ import { Box, Typography, Button, Grid, Chip, Container, Paper, Avatar } from '@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import CodeIcon from '@mui/icons-material/Code'
 import LaunchIcon from '@mui/icons-material/Launch'
-import EngineeringIcon from '@mui/icons-material/Engineering'
-import PublicIcon from '@mui/icons-material/Public'
 import LockIcon from '@mui/icons-material/Lock'
 import { projectsData } from '../data/projects'
 import ProjectGallery from '../components/ProjectGallery'
@@ -142,6 +140,7 @@ export default function ProjectDetail() {
                     startIcon={<CodeIcon />}
                     href={project.githubLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     size="large"
                   >
                     Voir le code
@@ -159,6 +158,7 @@ export default function ProjectDetail() {
                     startIcon={<LaunchIcon />}
                     href={project.liveLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     disableElevation
                     size="large"
                   >
@@ -176,17 +176,27 @@ export default function ProjectDetail() {
         <Grid container spacing={6}>
           <Grid item xs={12} md={8}>
             {/* Description Principale */}
-            <Typography variant="h5" color="primary" sx={{ mb: 3, fontWeight: 'bold' }}>
-              À propos du projet
+            <Typography
+              variant="overline"
+              color="primary"
+              sx={{ mb: 1, display: 'block', opacity: 0.8 }}
+            >
+              // TECHNICAL_OVERVIEW
+            </Typography>
+            <Typography variant="h4" color="text.primary" sx={{ mb: 3, fontWeight: 900 }}>
+              Project Architecture
             </Typography>
             <Typography
               variant="body1"
               sx={{
                 whiteSpace: 'pre-line',
                 mb: 6,
-                fontSize: '1.1rem',
+                fontSize: '1.05rem',
                 lineHeight: 1.8,
                 color: 'text.primary',
+                borderLeft: '2px solid',
+                borderColor: 'divider',
+                pl: 4,
               }}
             >
               {project.description}
@@ -196,20 +206,20 @@ export default function ProjectDetail() {
             {project.interactiveViz && (
               <Box sx={{ mb: 6 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 1 }}>
-                  <PublicIcon color="primary" />
-                  <Typography variant="h5" color="primary" sx={{ fontWeight: 'bold' }}>
-                    Visualisation 3D Interactive de l'exoplanète GJ 3470b
+                  <Typography variant="overline" color="primary" sx={{ fontWeight: 700 }}>
+                    // INTERACTIVE_SIMULATION
                   </Typography>
                 </Box>
                 <Paper
-                  elevation={3}
+                  elevation={0}
                   sx={{
                     width: '100%',
                     height: '500px',
                     overflow: 'hidden',
-                    borderRadius: 4,
+                    borderRadius: 1,
                     border: '1px solid',
                     borderColor: 'divider',
+                    position: 'relative',
                   }}
                 >
                   <iframe
@@ -223,9 +233,14 @@ export default function ProjectDetail() {
                 <Typography
                   variant="caption"
                   color="text.secondary"
-                  sx={{ mt: 1, display: 'block', textAlign: 'center' }}
+                  sx={{
+                    mt: 1,
+                    display: 'block',
+                    textAlign: 'center',
+                    fontFamily: '"Geist Mono", monospace',
+                  }}
                 >
-                  Utilisez votre souris pour tourner, zoomer et explorer la scène.
+                  [ INPUT_REQUIRED: MOUSE_OR_TOUCH_TO_ORBIT ]
                 </Typography>
               </Box>
             )}
@@ -235,19 +250,28 @@ export default function ProjectDetail() {
               <Box
                 sx={{
                   mb: 6,
-                  p: 3,
-                  bgcolor: 'background.default',
-                  borderRadius: 4,
-                  borderLeft: '4px solid',
-                  borderColor: 'secondary.main',
+                  p: 4,
+                  bgcolor: (theme) =>
+                    theme.palette.mode === 'dark'
+                      ? 'rgba(0, 255, 157, 0.02)'
+                      : 'rgba(0, 0, 0, 0.02)',
+                  borderRadius: 1,
+                  border: '1px solid',
+                  borderColor: 'divider',
+                  position: 'relative',
+                  '&::before': {
+                    content: '"[ CREATION_LOG ]"',
+                    position: 'absolute',
+                    top: -10,
+                    left: 20,
+                    bgcolor: 'background.default',
+                    px: 1,
+                    fontFamily: '"Geist Mono", monospace',
+                    fontSize: '0.7rem',
+                    color: 'primary.main',
+                  },
                 }}
               >
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 1 }}>
-                  <EngineeringIcon color="secondary" />
-                  <Typography variant="h5" color="secondary" sx={{ fontWeight: 'bold' }}>
-                    Processus de création
-                  </Typography>
-                </Box>
                 <Typography
                   variant="body1"
                   sx={{
@@ -262,13 +286,31 @@ export default function ProjectDetail() {
               </Box>
             )}
 
-            <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'bold' }}>
-              Fonctionnalités clés
+            <Typography variant="overline" color="primary" sx={{ mb: 1, display: 'block' }}>
+              // CORE_FEATURES
             </Typography>
-            <Box component="ul" sx={{ pl: 2 }}>
+            <Box component="ul" sx={{ pl: 2, mb: 6 }}>
               {project.features.map((feature, index) => (
-                <li key={index} style={{ marginBottom: '8px' }}>
-                  <Typography variant="body1">{feature}</Typography>
+                <li
+                  key={index}
+                  style={{ marginBottom: '12px', listStyleType: 'none', position: 'relative' }}
+                >
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'baseline',
+                      '&::before': {
+                        content: '">"',
+                        mr: 2,
+                        color: 'primary.main',
+                        fontFamily: '"Geist Mono", monospace',
+                        fontWeight: 700,
+                      },
+                    }}
+                  >
+                    {feature}
+                  </Typography>
                 </li>
               ))}
             </Box>
@@ -278,17 +320,19 @@ export default function ProjectDetail() {
             <Paper
               elevation={0}
               sx={{
-                p: 3,
+                p: 4,
                 bgcolor: 'background.paper',
-                borderRadius: 4,
+                borderRadius: 1,
                 border: '1px solid',
                 borderColor: 'divider',
+                position: 'sticky',
+                top: 100,
               }}
             >
-              <Typography variant="h6" color="primary" sx={{ mb: 2, fontWeight: 'bold' }}>
-                Technologies
+              <Typography variant="overline" color="primary" sx={{ mb: 2, display: 'block' }}>
+                // DÉTAILS_TECHNOLOGIES
               </Typography>
-              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
                 {project.technologies.map((tech) => {
                   const logo = getTechLogo(tech)
                   return (
@@ -296,21 +340,44 @@ export default function ProjectDetail() {
                       key={tech}
                       label={tech}
                       variant="outlined"
-                      sx={{
-                        borderRadius: 2,
-                        bgcolor: 'white',
-                        '& .MuiChip-avatar': { width: 20, height: 20 },
-                      }}
                       avatar={
                         logo ? (
-                          <Avatar src={logo} alt={tech} sx={{ bgcolor: 'transparent' }} />
-                        ) : (
-                          <CodeIcon />
-                        )
+                          <Avatar
+                            src={logo}
+                            alt={tech}
+                            sx={{
+                              width: 24,
+                              height: 24,
+                              bgcolor: 'transparent',
+                              borderRadius: 0,
+                            }}
+                          />
+                        ) : undefined
                       }
+                      sx={{
+                        borderRadius: 0.5,
+                        bgcolor: 'background.default',
+                        height: 32,
+                        '& .MuiChip-label': { px: 1.5 },
+                        ...(logo && { '& .MuiChip-avatar': { ml: 1 } }),
+                      }}
                     />
                   )
                 })}
+              </Box>
+
+              <Box sx={{ mt: 6 }}>
+                <Typography variant="overline" color="primary" sx={{ mb: 2, display: 'block' }}>
+                  // DÉPÔT
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ fontFamily: '"Geist Mono", monospace', fontSize: '0.8rem' }}
+                >
+                  STATUT : {project.isPrivate ? 'ACCÈS_PRIVÉ' : 'PUBLICATION_PUBLIQUE'} <br />
+                  ID: {project.id.toUpperCase()}
+                </Typography>
               </Box>
             </Paper>
           </Grid>

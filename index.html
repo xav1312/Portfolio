@@ -7,8 +7,26 @@
     <title>Portfolio - Xavier Petilaire-Bellet</title>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Montserrat:400,600,700,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Geist+Mono:wght@400;700&display=swap"
     />
+    <style>
+      :root {
+        --noise-url: url('https://grainy-gradients.vercel.app/noise.svg');
+      }
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 9999;
+        background-image: var(--noise-url);
+        filter: contrast(150%) brightness(100%);
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

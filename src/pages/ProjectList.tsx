@@ -25,9 +25,16 @@ export default function ProjectList() {
 
   return (
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: 'center', my: 6 }}>
-        <Typography variant="h3" color="primary" sx={{ mb: 6 }}>
-          Tous mes Projets
+      <Box sx={{ textAlign: 'center', my: 8 }}>
+        <Typography
+          variant="overline"
+          color="primary"
+          sx={{ mb: 1, display: 'block', opacity: 0.7 }}
+        >
+          // PROJECT_INDEX
+        </Typography>
+        <Typography variant="h2" color="text.primary" sx={{ mb: 8, fontWeight: 900 }}>
+          Technical Portfolio
         </Typography>
 
         <Grid container spacing={4}>
@@ -98,6 +105,7 @@ export default function ProjectList() {
                       startIcon={<GitHubIcon />}
                       href={project.githubLink}
                       target="_blank"
+                      rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       sx={{ opacity: 0.7, '&:hover': { opacity: 1 } }}
                     >
