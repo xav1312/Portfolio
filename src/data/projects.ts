@@ -46,33 +46,33 @@ export const projectsData: Record<string, Project> = {
   'trade-copier': {
     id: 'trade-copier',
     title: 'TradeCopier',
-    subtitle: 'Solution professionnelle de Copy Trading Multi-comptes (v2.0 Performance)',
+    subtitle: 'Écosystème de Trading Professionnel (v2.0 High-Precision)',
     image: 'tradecopier-dashboard.png',
-    description: `Solution complète de copy trading conçue pour les professionnels, alliant une interface de gestion moderne daim un moteur d'exécution haute performance.
+    description: `Solution de Copy Trading institutionnelle conçue pour la haute performance, capable de fédérer des comptes complexes (MetaTrader, cTrader, TradeLocker) via une architecture distribuée multi-langages.
     
-    L'application (version 2.0) permet de fédérer des comptes de trading hétérogènes (MetaTrader 4/5, cTrader, TradeLocker) et de piloter des stratégies de réplication avec une latence d'exécution ultra-faible (75ms). L'architecture métier a évolué pour supporter l'exécution parallèle, la persistance robuste sous PostgreSQL et un backend analytique sous Python/FastAPI.`,
-    creationProcess: `Projet personnel d'envergure né de l'exigence de fiabiliser des opérations de trading multi-comptes.
+    Le système garantit une exécution ultra-rapide (latence < 75ms) grâce à un moteur de réplication asynchrone découplé, tout en offrant une suite analytique quantitative avancée. L'interface (React 19) permet un monitoring temps-réel granulaire des flux financiers et des métriques de risque.`,
+    creationProcess: `Ce projet illustre une maîtrise de l'ingénierie logicielle appliquée à la finance de marché.
     
-    L'architecture a évolué vers un écosystème hybride avancé :
-    - Client Lourd (Electron + React) : Pour la sécurité locale des clés API et la réactivité de l'interface.
-    - Moteur "Engine" Découplé (Node.js) : Exécute la logique de réplication asynchrone (max 3 ordres en parallèle) avec gestion de limite de taux limiteur (bottleneck).
-    - Backend Microservices (Python/FastAPI) : Intègre une Gateway, un service d'Analytics propulsés par PostgreSQL, et un moteur RAG d'agrégation d'actualités.`,
+    L'architecture repose sur trois piliers technologiques :
+    - **Interface de Contrôle (React 19 / Electron)** : Pilotage local sécurisé des clés API avec gestion d'état complexe via Zustand et TanStack Query.
+    - **Moteur d'Exécution (Node.js/TypeScript)** : Gestion de la réplication via WebSockets avec système de file d'attente "Bottleneck" pour respecter les limites de taux (Rate-Limiting) des brokers.
+    - **Suite Analytique (Python/FastAPI/Pandas)** : Microservice dédié au calcul de la performance (Drawdown Max, Profit Factor, Courbe d'équité) et à l'agrégation de news économiques via un pipeline RAG intelligent.`,
     features: [
-      "Exécution Parallèle (Burst) : Latence réduite à 75ms pour le routage d'ordres simultanés",
-      'Gestion Avancée des Positions : Support natif de la fermeture partielle proportionnelle',
-      'Money Management Dynamique : Calcul des lots indexé sur les balances respectives',
-      'Veille Économique Intégrée : Moteur Python/IA (Groq) agrégeant et résumant les actualités (Reuters, ING)',
-      'Architecture Résiliente : Base de données PostgreSQL remplaçant les stockages locaux',
-      "Dashboard & Analytics : Backend Python/FastAPI dédié au traitement de l'historique",
+      'Exécution Low-Latency : Routage d\'ordres simultanés avec une latence moyenne de 75ms',
+      'Moteur Quantitatif (Pandas) : Analyse statistique avancée de l\'historique de trading',
+      'Architecture Microservices : Séparation du flux de commande (FastAPI) et du moteur (Node.js)',
+      'Veille Économique RAG : Agent IA analysant les sources ING/Reuters pour contextualiser les trades',
+      'Dashboard Temps-Réel : Visualisation klines (Yahoo Finance Proxy) et monitoring d\'activité',
+      'Stockage Hybride : Configuration locale SQLite et Big Data Trade History sur MongoDB Atlas',
     ],
     technologies: [
-      'React',
+      'React 19',
+      'FastAPI (Python)',
+      'Node.js',
+      'MongoDB',
+      'Pandas',
       'Electron',
       'TypeScript',
-      'Node.js',
-      'Python',
-      'FastAPI',
-      'PostgreSQL',
       'Framer Motion',
     ],
     githubLink: null,
