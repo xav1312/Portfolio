@@ -16,9 +16,9 @@ export interface Project {
 }
 
 export const projectsData: Record<string, Project> = {
-  mutuacy: {
-    id: 'mutuacy',
-    title: 'Mutuacy',
+  mutuelio: {
+    id: 'mutuelio',
+    title: 'Mutuelio',
     subtitle: "Plateforme mobile de comparaison et d'information sur les soins mutuels",
     image: 'images/mutuacy-main.png',
     description: `Application mobile cross-platform développée en Flutter permettant aux utilisateurs de s'informer sur les soins remboursés par leur mutuelle. Elle offre une interface intuitive pour consulter les grilles de soins, simuler des remboursements et suivre l'actualité santé.`,
@@ -46,23 +46,23 @@ export const projectsData: Record<string, Project> = {
   'trade-copier': {
     id: 'trade-copier',
     title: 'TradeCopier',
-    subtitle: 'Écosystème de Trading Professionnel (v2.0 High-Precision)',
+    subtitle: 'Écosystème de Trading Professionnel [EN DÉVELOPPEMENT]',
     image: 'tradecopier-dashboard.png',
-    description: `Solution de Copy Trading institutionnelle conçue pour la haute performance, capable de fédérer des comptes complexes (MetaTrader, cTrader, TradeLocker) via une architecture distribuée multi-langages.
+    description: `Solution de Copy Trading institutionnelle en phase de développement Alpha, conçue pour la haute performance et le passage d'ordres ultra-rapide (< 75ms). 
     
-    Le système garantit une exécution ultra-rapide (latence < 75ms) grâce à un moteur de réplication asynchrone découplé, tout en offrant une suite analytique quantitative avancée. L'interface (React 19) permet un monitoring temps-réel granulaire des flux financiers et des métriques de risque.`,
-    creationProcess: `Ce projet illustre une maîtrise de l'ingénierie logicielle appliquée à la finance de marché.
+    L'écosystème se concentre exclusivement sur l'intégration native de TradeLocker via une architecture distribuée multi-langages, offrant une suite analytique quantitative avancée. L'interface (React 19) permet un monitoring temps-réel granulaire des flux financiers et des métriques de risque.`,
+    creationProcess: `Ce projet illustre une maîtrise de l'ingénierie logicielle appliquée à la finance de marché (Travail en cours).
     
     L'architecture repose sur trois piliers technologiques :
     - **Interface de Contrôle (React 19 / Electron)** : Pilotage local sécurisé des clés API avec gestion d'état complexe via Zustand et TanStack Query.
     - **Moteur d'Exécution (Node.js/TypeScript)** : Gestion de la réplication via WebSockets avec système de file d'attente "Bottleneck" pour respecter les limites de taux (Rate-Limiting) des brokers.
     - **Suite Analytique (Python/FastAPI/Pandas)** : Microservice dédié au calcul de la performance (Drawdown Max, Profit Factor, Courbe d'équité) et à l'agrégation de news économiques via un pipeline RAG intelligent.`,
     features: [
-      'Exécution Low-Latency : Routage d\'ordres simultanés avec une latence moyenne de 75ms',
-      'Moteur Quantitatif (Pandas) : Analyse statistique avancée de l\'historique de trading',
-      'Architecture Microservices : Séparation du flux de commande (FastAPI) et du moteur (Node.js)',
+      "Exécution Low-Latency : Routage d'ordres simultanés avec une latence moyenne de 250ms",
+      "Moteur Quantitatif (Pandas) : Analyse statistique avancée de l'historique de trading",
+      'Intégration Exclusive TradeLocker : Support complet des comptes TradeLocker uniquement',
       'Veille Économique RAG : Agent IA analysant les sources ING/Reuters pour contextualiser les trades',
-      'Dashboard Temps-Réel : Visualisation klines (Yahoo Finance Proxy) et monitoring d\'activité',
+      "Dashboard Temps-Réel : Visualisation klines (Yahoo Finance Proxy) et monitoring d'activité",
       'Stockage Hybride : Configuration locale SQLite et Big Data Trade History sur MongoDB Atlas',
     ],
     technologies: [
@@ -79,37 +79,12 @@ export const projectsData: Record<string, Project> = {
     isPrivate: true,
     liveLink: null,
     liveWidget: 'tradingview-btc', // Activation du widget sur cette page
-    gallery: ['tradecopier-dashboard.png', 'tradecopier-list.png'],
-  },
-
-  'inscription-esiea': {
-    id: 'inscription-esiea',
-    title: 'Inscription ESIEA',
-    subtitle: 'Plateforme de gestion des inscriptions',
-    image: 'images/inscription-esiea-main.jpg',
-    description:
-      "Application Fullstack web complexe permettant de digitaliser entièrement le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle propose une interface double : un portail étudiant pour la soumission des dossiers (documents, informations financières, bourse) et un dashboard complet pour l'administration (validation, suivi, comptabilité).",
-    creationProcess: `Ce projet académique ambitieux a été réalisé en méthode Agile sous forme de sprint.
-    
-    L'architecture repose sur une séparation des rôles (Admin/Étudiant) via Supabase Auth.
-    
-    Points clés :
-    - Formulaire Wizard en 6 étapes pour l'étudiant.
-    - Gestion de documents (Stockage sécurisé).
-    - Tests E2E avec Cypress.
-    - Interface avec Quasar Framework (Vue.js).`,
-    features: [
-      'Portail Étudiant : Wizard 6 étapes (Infos, Tuteurs, Documents, Bourse...)',
-      'Dashboard Admin : Gestion des inscriptions, documents et comptabilité',
-      'Gestion Documentaire : Upload et prévisualisation des pièces',
-      'Sécurité : Authentification et rôles (RBAC)',
-      'Tests : Couverture E2E avec Cypress',
+    gallery: [
+      'tradecopier-dashboard.png',
+      'tradecopier-list.png',
+      'tradecopier-news.png',
+      'tradecopier-analytics.png',
     ],
-    technologies: ['Vue.js 3', 'Quasar', 'Supabase', 'Pinia', 'Cypress'],
-    githubLink:
-      'https://gitlab.esiea.fr/fullstack-2025-paris-fr-doloirjulian-ogowann-fis-postickevin-datouoalain-petilairebelletxavier/fullstack-2025-paris-fr-doloirjulian-ogowannefis-postickevin-datouoalain-petilairebelletxavier.git',
-    liveLink: null,
-    gallery: ['images/esiea-1.jpg', 'images/esiea-2.jpg', 'images/inscription-esiea-main.jpg'],
   },
 
   'nasa-python': {
@@ -142,6 +117,36 @@ export const projectsData: Record<string, Project> = {
       'https://gitlab.esiea.fr/petilaire-bell/challenges-techniques2-petilaire-bouabdellah',
     liveLink: null,
     gallery: ['images/Nasa-main.png', 'images/Nasa-1.png', 'images/Nasa-2.png'],
+  },
+
+  'inscription-esiea': {
+    id: 'inscription-esiea',
+    title: 'Inscription ESIEA',
+    subtitle: 'Plateforme de gestion des inscriptions',
+    image: 'images/inscription-esiea-main.jpg',
+    description:
+      "Application Fullstack web complexe permettant de digitaliser entièrement le processus d'inscription des nouveaux étudiants à l'ESIEA. Elle propose une interface double : un portail étudiant pour la soumission des dossiers (documents, informations financières, bourse) et un dashboard complet pour l'administration (validation, suivi, comptabilité).",
+    creationProcess: `Ce projet académique ambitieux a été réalisé en méthode Agile sous forme de sprint.
+    
+    L'architecture repose sur une séparation des rôles (Admin/Étudiant) via Supabase Auth.
+    
+    Points clés :
+    - Formulaire Wizard en 6 étapes pour l'étudiant.
+    - Gestion de documents (Stockage sécurisé).
+    - Tests E2E avec Cypress.
+    - Interface avec Quasar Framework (Vue.js).`,
+    features: [
+      'Portail Étudiant : Wizard 6 étapes (Infos, Tuteurs, Documents, Bourse...)',
+      'Dashboard Admin : Gestion des inscriptions, documents et comptabilité',
+      'Gestion Documentaire : Upload et prévisualisation des pièces',
+      'Sécurité : Authentification et rôles (RBAC)',
+      'Tests : Couverture E2E avec Cypress',
+    ],
+    technologies: ['Vue.js 3', 'Quasar', 'Supabase', 'Pinia', 'Cypress'],
+    githubLink:
+      'https://gitlab.esiea.fr/fullstack-2025-paris-fr-doloirjulian-ogowann-fis-postickevin-datouoalain-petilairebelletxavier/fullstack-2025-paris-fr-doloirjulian-ogowannefis-postickevin-datouoalain-petilairebelletxavier.git',
+    liveLink: null,
+    gallery: ['images/esiea-1.jpg', 'images/esiea-2.jpg', 'images/inscription-esiea-main.jpg'],
   },
   'forex-newsletter': {
     id: 'forex-newsletter',

@@ -114,9 +114,11 @@ export default function ProjectDetail() {
                   width: '100%',
                   height: '100%',
                   maxHeight: 400,
-                  objectFit: 'cover',
+                  objectFit: 'contain',
                   borderRadius: 4,
                   boxShadow: 3,
+                  bgcolor: (theme) =>
+                    theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)',
                 }}
               />
             </Grid>

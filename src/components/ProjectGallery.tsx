@@ -39,7 +39,11 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                 component="img"
                 image={img}
                 alt={`Gallery image ${index + 1}`}
-                sx={{ aspectRatio: '16/9', objectFit: 'cover' }}
+                sx={{
+                  aspectRatio: '16/9',
+                  objectFit: 'contain',
+                  bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)'
+                }}
               />
               <Box
                 className="overlay"
@@ -77,7 +81,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                     <CloseIcon />
                 </IconButton>
             </Box>
-            <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2 }}>
+            <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2, overflow: 'hidden', minHeight: 0 }}>
                 <img
                     src={selectedImage}
                     alt="Full screen"
