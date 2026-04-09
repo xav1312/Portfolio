@@ -11,6 +11,7 @@ import { getTechLogo } from '../utils/techLogos'
 import TradingViewWidget from '../components/TradingViewWidget'
 import { ColorModeContext } from '../context/ColorModeContext'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { BorderBeam } from '../components/ui/BorderBeam'
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>()
@@ -163,7 +164,9 @@ export default function ProjectDetail() {
                     rel="noopener noreferrer"
                     disableElevation
                     size="large"
+                    sx={{ position: 'relative' }}
                   >
+                    <BorderBeam colorFrom="#88CCFF" duration={8} />  
                     Voir le site
                   </Button>
                 )}
