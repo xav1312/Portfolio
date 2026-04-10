@@ -15,13 +15,13 @@ export function TextScramble({ text, duration = 2000, ...props }: TextScramblePr
   useEffect(() => {
     let iteration = 0;
     const maxIterations = text.length;
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval>;
 
     const tick = () => {
       setDisplayText((prev) =>
         prev
           .split("")
-          .map((char, index) => {
+          .map((_, index) => {
             if (index < iteration) {
               return text[index];
             }

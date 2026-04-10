@@ -22,7 +22,6 @@ import { motion } from 'framer-motion'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import { RetroGrid } from '../components/ui/RetroGrid'
 import { TextScramble } from '../components/ui/TextScramble'
-import { AnimatedCounter } from '../components/ui/AnimatedCounter'
 import { BorderBeam } from '../components/ui/BorderBeam'
 
 export default function Home() {

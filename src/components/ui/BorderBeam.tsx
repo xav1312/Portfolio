@@ -31,9 +31,7 @@ export function BorderBeam({
           padding: '2px', // border width
           borderRadius: 'inherit',
           opacity: 0.6,
-          // Webkit fallback masks
           WebkitMaskImage: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-          WebkitMaskComposite: 'xor',
         },
         '@keyframes shimmer': {
           '0%': { transform: 'translateX(-100%)' },
