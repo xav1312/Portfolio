@@ -46,34 +46,37 @@ export const projectsData: Record<string, Project> = {
   'trade-copier': {
     id: 'trade-copier',
     title: 'TradeCopier',
-    subtitle: 'Écosystème de Trading Professionnel [EN DÉVELOPPEMENT]',
+    subtitle: 'Écosystème de Trading Professionnel [V2.0 OPTIMISÉ]',
     image: 'tradecopier-dashboard.png',
-    description: `Solution de Copy Trading institutionnelle en phase de développement Alpha, conçue pour la haute performance et le passage d'ordres ultra-rapide (< 75ms). 
+    description: `Solution de Copy Trading institutionnelle (V2.0), optimisée pour la haute performance et l'exécution parallélisée ultra-rapide (~75ms). 
     
-    L'écosystème se concentre exclusivement sur l'intégration native de TradeLocker via une architecture distribuée multi-langages, offrant une suite analytique quantitative avancée. L'interface (React 19) permet un monitoring temps-réel granulaire des flux financiers et des métriques de risque.`,
-    creationProcess: `Ce projet illustre une maîtrise de l'ingénierie logicielle appliquée à la finance de marché (Travail en cours).
+    L'écosystème arbore une esthétique "Editorial Fintech" et repose sur une architecture distribuée multi-langages, offrant une gestion de risques granulaire et une synchronisation Master/Slave multi-comptes. L'interface (React 19) permet un monitoring temps-réel avec des graphiques financiers avancés (Lightweight Charts).`,
+    creationProcess: `Ce projet a fait l'objet d'une refonte majeure (V2.0) pour paralléliser les flux d'exécution et renforcer la sécurité.
     
-    L'architecture repose sur trois piliers technologiques :
-    - **Interface de Contrôle (React 19 / Electron)** : Pilotage local sécurisé des clés API avec gestion d'état complexe via Zustand et TanStack Query.
-    - **Moteur d'Exécution (Node.js/TypeScript)** : Gestion de la réplication via WebSockets avec système de file d'attente "Bottleneck" pour respecter les limites de taux (Rate-Limiting) des brokers.
-    - **Suite Analytique (Python/FastAPI/Pandas)** : Microservice dédié au calcul de la performance (Drawdown Max, Profit Factor, Courbe d'équité) et à l'agrégation de news économiques via un pipeline RAG intelligent.`,
+    Points clés de l'ingénierie :
+    - **Optimisation de Latence (Node.js/TS)** : Passage d'une exécution séquentielle (~225ms pour 3 trades) à une exécution parallèle (~75ms), soit un gain de performance de 3x via Bottleneck.
+    - **Intelligence Quantitative (FastAPI/Pandas)** : Moteur analytique calculant le P&L, le Drawdown Max et la courbe d'équité en temps réel via MongoDB Atlas.
+    - **Sécurité et Audit** : Architecture "Security-First" auditée selon les standards OWASP 2025, incluant la protection contre les injections et la sécurisation des secrets de configuration.
+    - **Gestion de Volume Proportonnelle** : Algorithme de calcul intelligent ajustant les lots des Slaves en fonction du ratio de balance (Equity-based Scaling).`,
     features: [
-      "Exécution Low-Latency : Routage d'ordres simultanés avec une latence moyenne de 250ms",
-      "Moteur Quantitatif (Pandas) : Analyse statistique avancée de l'historique de trading",
-      'Intégration Exclusive TradeLocker : Support complet des comptes TradeLocker uniquement',
-      'Veille Économique RAG : Agent IA analysant les sources ING/Reuters pour contextualiser les trades',
-      "Dashboard Temps-Réel : Visualisation klines (Yahoo Finance Proxy) et monitoring d'activité",
-      'Stockage Hybride : Configuration locale SQLite et Big Data Trade History sur MongoDB Atlas',
+      "Parallélisation API (3 flux simultanés) : Latence réduite à 75ms pour les rafales d'ordres",
+      "Fermeture Partielle Proportionnelle : Synchronisation exacte des réductions de position entre Master et Slaves",
+      "Volume Multiplier Interactif : Calcul automatique des lots basé sur le ratio de balance (Balance-Based Scaling)",
+      "Moteur Analytique (Pandas) : Suite complète de métriques institutionnelles (Sharpe, Drawdown, Profit Factor)",
+      "Audit OWASP 2025 : Sécurisation avancée des endpoints et gestion cryptographique des secrets",
+      "Dashboard Temps-Réel : Intégration de Lightweight Charts pour une visualisation haute fidélité",
+      'Système de Quarantaine : Pattern Circuit Breaker isolant les comptes défaillants en cas de pic de volatilité',
     ],
     technologies: [
       'React 19',
+      'Node.js (TypeScript)',
       'FastAPI (Python)',
-      'Node.js',
-      'MongoDB',
-      'Pandas',
+      'MongoDB Atlas',
       'Electron',
-      'TypeScript',
-      'Framer Motion',
+      'Zustand',
+      'TanStack Query',
+      'Lightweight Charts',
+      'Bottleneck (Rate Limiting)',
     ],
     githubLink: null,
     isPrivate: true,

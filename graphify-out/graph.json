@@ -1,0 +1,1572 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "tradecopier_ui_components",
+        "label": "TradeCopier App Screens",
+        "nodes": [
+          "file_tc_analytics",
+          "file_tc_news",
+          "file_tc_dashboard",
+          "file_tc_list"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "public/tradecopier-dashboard.png"
+      },
+      {
+        "id": "favicon_set",
+        "label": "Favicon Set",
+        "nodes": [
+          "favicon_128x128",
+          "favicon_96x96",
+          "favicon_32x32"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "public/icons/favicon-128x128.png"
+      },
+      {
+        "id": "nasa_media_collection",
+        "label": "Nasa Media Collection",
+        "nodes": [
+          "nasa_2",
+          "nasa_main"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "public/images/Nasa-main.png"
+      },
+      {
+        "id": "esiea_media_collection",
+        "label": "Esiea Media Collection",
+        "nodes": [
+          "esiea_1",
+          "esiea_2"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9,
+        "source_file": "public/images/esiea-1.jpg"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "vite.config.ts",
+      "source_location": "L1",
+      "id": "vite_config",
+      "community": 10
+    },
+    {
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": "L1",
+      "id": "app",
+      "community": 1
+    },
+    {
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "src/main.tsx",
+      "source_location": "L1",
+      "id": "main",
+      "community": 11
+    },
+    {
+      "label": "vite-env.d.ts",
+      "file_type": "code",
+      "source_file": "src/vite-env.d.ts",
+      "source_location": "L1",
+      "id": "vite_env_d",
+      "community": 12
+    },
+    {
+      "label": "theme.ts",
+      "file_type": "code",
+      "source_file": "src/theme.ts",
+      "source_location": "L1",
+      "id": "theme",
+      "community": 1
+    },
+    {
+      "label": "getTheme()",
+      "file_type": "code",
+      "source_file": "src/theme.ts",
+      "source_location": "L45",
+      "id": "theme_gettheme",
+      "community": 1
+    },
+    {
+      "label": "ColorModeContext.tsx",
+      "file_type": "code",
+      "source_file": "src/context/ColorModeContext.tsx",
+      "source_location": "L1",
+      "id": "colormodecontext",
+      "community": 1
+    },
+    {
+      "label": "useColorMode()",
+      "file_type": "code",
+      "source_file": "src/context/ColorModeContext.tsx",
+      "source_location": "L8",
+      "id": "colormodecontext_usecolormode",
+      "community": 1
+    },
+    {
+      "label": "setup.ts",
+      "file_type": "code",
+      "source_file": "src/test/setup.ts",
+      "source_location": "L1",
+      "id": "setup",
+      "community": 13
+    },
+    {
+      "label": "nav.tsx",
+      "file_type": "code",
+      "source_file": "src/config/nav.tsx",
+      "source_location": "L1",
+      "id": "nav",
+      "community": 0
+    },
+    {
+      "label": "techLogos.ts",
+      "file_type": "code",
+      "source_file": "src/utils/techLogos.ts",
+      "source_location": "L1",
+      "id": "techlogos",
+      "community": 5
+    },
+    {
+      "label": "getTechLogo()",
+      "file_type": "code",
+      "source_file": "src/utils/techLogos.ts",
+      "source_location": "L65",
+      "id": "techlogos_gettechlogo",
+      "community": 5
+    },
+    {
+      "label": "ProjectGallery.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ProjectGallery.tsx",
+      "source_location": "L1",
+      "id": "projectgallery",
+      "community": 4
+    },
+    {
+      "label": "TradingViewWidget.tsx",
+      "file_type": "code",
+      "source_file": "src/components/TradingViewWidget.tsx",
+      "source_location": "L1",
+      "id": "tradingviewwidget",
+      "community": 0
+    },
+    {
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L1",
+      "id": "footer",
+      "community": 1
+    },
+    {
+      "label": "handleCopyEmail()",
+      "file_type": "code",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L11",
+      "id": "footer_handlecopyemail",
+      "community": 1
+    },
+    {
+      "label": "ProjectGallery.test.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ProjectGallery.test.tsx",
+      "source_location": "L1",
+      "id": "projectgallery_test",
+      "community": 4
+    },
+    {
+      "label": "skills.ts",
+      "file_type": "code",
+      "source_file": "src/data/skills.ts",
+      "source_location": "L1",
+      "id": "skills",
+      "community": 5
+    },
+    {
+      "label": "AnimatedCounter.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/AnimatedCounter.tsx",
+      "source_location": "L1",
+      "id": "animatedcounter",
+      "community": 7
+    },
+    {
+      "label": "AnimatedCounter()",
+      "file_type": "code",
+      "source_file": "src/components/ui/AnimatedCounter.tsx",
+      "source_location": "L12",
+      "id": "animatedcounter_animatedcounter",
+      "community": 7
+    },
+    {
+      "label": "TextScramble.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/TextScramble.tsx",
+      "source_location": "L1",
+      "id": "textscramble",
+      "community": 0
+    },
+    {
+      "label": "TextScramble()",
+      "file_type": "code",
+      "source_file": "src/components/ui/TextScramble.tsx",
+      "source_location": "L12",
+      "id": "textscramble_textscramble",
+      "community": 0
+    },
+    {
+      "label": "RetroGrid.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/RetroGrid.tsx",
+      "source_location": "L1",
+      "id": "retrogrid",
+      "community": 0
+    },
+    {
+      "label": "BorderBeam.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/BorderBeam.tsx",
+      "source_location": "L1",
+      "id": "borderbeam",
+      "community": 0
+    },
+    {
+      "label": "MainLayout.test.tsx",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L1",
+      "id": "mainlayout_test",
+      "community": 1
+    },
+    {
+      "label": "renderWithProviders()",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L13",
+      "id": "mainlayout_test_renderwithproviders",
+      "community": 1
+    },
+    {
+      "label": "MainLayout.tsx",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L1",
+      "id": "mainlayout",
+      "community": 1
+    },
+    {
+      "label": "handleScroll()",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L41",
+      "id": "mainlayout_handlescroll",
+      "community": 1
+    },
+    {
+      "label": "handleScrollTop()",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L48",
+      "id": "mainlayout_handlescrolltop",
+      "community": 1
+    },
+    {
+      "label": "handleDrawerToggle()",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L52",
+      "id": "mainlayout_handledrawertoggle",
+      "community": 1
+    },
+    {
+      "label": "useImageGallery.test.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useImageGallery.test.ts",
+      "source_location": "L1",
+      "id": "useimagegallery_test",
+      "community": 4
+    },
+    {
+      "label": "useImageGallery.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useImageGallery.ts",
+      "source_location": "L1",
+      "id": "useimagegallery",
+      "community": 4
+    },
+    {
+      "label": "useImageGallery()",
+      "file_type": "code",
+      "source_file": "src/hooks/useImageGallery.ts",
+      "source_location": "L3",
+      "id": "useimagegallery_useimagegallery",
+      "community": 4
+    },
+    {
+      "label": "useDocumentTitle.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useDocumentTitle.ts",
+      "source_location": "L1",
+      "id": "usedocumenttitle",
+      "community": 0
+    },
+    {
+      "label": "useDocumentTitle()",
+      "file_type": "code",
+      "source_file": "src/hooks/useDocumentTitle.ts",
+      "source_location": "L3",
+      "id": "usedocumenttitle_usedocumenttitle",
+      "community": 0
+    },
+    {
+      "label": "useContactForm.test.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useContactForm.test.ts",
+      "source_location": "L1",
+      "id": "usecontactform_test",
+      "community": 0
+    },
+    {
+      "label": "useContactForm.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useContactForm.ts",
+      "source_location": "L1",
+      "id": "usecontactform",
+      "community": 0
+    },
+    {
+      "label": "useContactForm()",
+      "file_type": "code",
+      "source_file": "src/hooks/useContactForm.ts",
+      "source_location": "L16",
+      "id": "usecontactform_usecontactform",
+      "community": 0
+    },
+    {
+      "label": "projects.ts",
+      "file_type": "code",
+      "source_file": "src/data/projects.ts",
+      "source_location": "L1",
+      "id": "projects",
+      "community": 0
+    },
+    {
+      "label": "ProjectList.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L1",
+      "id": "projectlist",
+      "community": 0
+    },
+    {
+      "label": "Home.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L1",
+      "id": "home",
+      "community": 0
+    },
+    {
+      "label": "Contact.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/Contact.tsx",
+      "source_location": "L1",
+      "id": "contact",
+      "community": 0
+    },
+    {
+      "label": "ProjectDetail.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L1",
+      "id": "projectdetail",
+      "community": 0
+    },
+    {
+      "label": "About.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L1",
+      "id": "about",
+      "community": 5
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_readme",
+      "community": 2
+    },
+    {
+      "label": "Xavier Petilaire-Bellet CV",
+      "file_type": "document",
+      "source_file": "public/cv.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_cv",
+      "community": 2
+    },
+    {
+      "label": "TradeCopier Analytics UI",
+      "file_type": "image",
+      "source_file": "public/tradecopier-analytics.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_tc_analytics",
+      "community": 3
+    },
+    {
+      "label": "TradeCopier News UI",
+      "file_type": "image",
+      "source_file": "public/tradecopier-news.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_tc_news",
+      "community": 3
+    },
+    {
+      "label": "Portfolio Favicon",
+      "file_type": "image",
+      "source_file": "public/flavicon.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_flavicon",
+      "community": 2
+    },
+    {
+      "label": "TradeCopier Dashboard UI",
+      "file_type": "image",
+      "source_file": "public/tradecopier-dashboard.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_tc_dashboard",
+      "community": 3
+    },
+    {
+      "label": "TradeCopier List UI",
+      "file_type": "image",
+      "source_file": "public/tradecopier-list.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_tc_list",
+      "community": 3
+    },
+    {
+      "label": "Forex Newsletter Preview",
+      "file_type": "image",
+      "source_file": "public/images/forex-newsletter-preview.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_forex_news",
+      "community": 3
+    },
+    {
+      "label": "ESIEA Inscription View",
+      "file_type": "image",
+      "source_file": "public/images/inscription-esiea-main.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_esiea",
+      "community": 14
+    },
+    {
+      "label": "NASA App UI",
+      "file_type": "image",
+      "source_file": "public/images/Nasa-1.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "file_nasa",
+      "community": 15
+    },
+    {
+      "label": "Xavier Petilaire-Bellet",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "person_xavier",
+      "community": 2
+    },
+    {
+      "label": "React",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_react",
+      "community": 2
+    },
+    {
+      "label": "TypeScript",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_typescript",
+      "community": 2
+    },
+    {
+      "label": "Vite",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_vite",
+      "community": 2
+    },
+    {
+      "label": "Material UI",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_mui",
+      "community": 2
+    },
+    {
+      "label": "TradeCopier Platform",
+      "file_type": "document",
+      "source_file": "public/tradecopier-dashboard.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_tradecopier",
+      "community": 3
+    },
+    {
+      "label": "Forex/Trading Domain",
+      "file_type": "document",
+      "source_file": "public/images/forex-newsletter-preview.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_forex_trading",
+      "community": 3
+    },
+    {
+      "label": "Nasa 2",
+      "file_type": "image",
+      "source_file": "public/images/Nasa-2.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nasa_2",
+      "community": 9
+    },
+    {
+      "label": "Forex Newsletter Detail",
+      "file_type": "image",
+      "source_file": "public/images/forex-newsletter-detail.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "forex_newsletter_detail",
+      "community": 16
+    },
+    {
+      "label": "Esiea 1",
+      "file_type": "image",
+      "source_file": "public/images/esiea-1.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "esiea_1",
+      "community": 8
+    },
+    {
+      "label": "Esiea 2",
+      "file_type": "image",
+      "source_file": "public/images/esiea-2.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "esiea_2",
+      "community": 8
+    },
+    {
+      "label": "Mutuacy Main",
+      "file_type": "image",
+      "source_file": "public/images/mutuacy-main.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "mutuacy_main",
+      "community": 17
+    },
+    {
+      "label": "Nasa Main",
+      "file_type": "image",
+      "source_file": "public/images/Nasa-main.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "nasa_main",
+      "community": 9
+    },
+    {
+      "label": "Favicon 128x128",
+      "file_type": "image",
+      "source_file": "public/icons/favicon-128x128.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "favicon_128x128",
+      "community": 6
+    },
+    {
+      "label": "Favicon 96x96",
+      "file_type": "image",
+      "source_file": "public/icons/favicon-96x96.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "favicon_96x96",
+      "community": 6
+    },
+    {
+      "label": "Favicon 32x32",
+      "file_type": "image",
+      "source_file": "public/icons/favicon-32x32.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "favicon_32x32",
+      "community": 6
+    },
+    {
+      "label": "Quasar Logo Vertical",
+      "file_type": "image",
+      "source_file": "src/assets/quasar-logo-vertical.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "quasar_logo_vertical",
+      "community": 18
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "app",
+      "_tgt": "theme",
+      "source": "app",
+      "target": "theme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "app",
+      "_tgt": "colormodecontext",
+      "source": "app",
+      "target": "colormodecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "app",
+      "_tgt": "mainlayout",
+      "source": "app",
+      "target": "mainlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/theme.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_src": "theme",
+      "_tgt": "theme_gettheme",
+      "source": "theme",
+      "target": "theme_gettheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ColorModeContext.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "colormodecontext",
+      "_tgt": "colormodecontext_usecolormode",
+      "source": "colormodecontext",
+      "target": "colormodecontext_usecolormode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "mainlayout_test",
+      "_tgt": "colormodecontext",
+      "source": "colormodecontext",
+      "target": "mainlayout_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "mainlayout",
+      "_tgt": "colormodecontext",
+      "source": "colormodecontext",
+      "target": "mainlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "projectdetail",
+      "_tgt": "colormodecontext",
+      "source": "colormodecontext",
+      "target": "projectdetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config/nav.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_src": "nav",
+      "_tgt": "home",
+      "source": "nav",
+      "target": "home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "mainlayout",
+      "_tgt": "nav",
+      "source": "nav",
+      "target": "mainlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/techLogos.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_src": "techlogos",
+      "_tgt": "techlogos_gettechlogo",
+      "source": "techlogos",
+      "target": "techlogos_gettechlogo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Skills.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "skills",
+      "_tgt": "techlogos",
+      "source": "techlogos",
+      "target": "skills",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_src": "projectdetail",
+      "_tgt": "techlogos",
+      "source": "techlogos",
+      "target": "projectdetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "projectgallery",
+      "_tgt": "useimagegallery",
+      "source": "projectgallery",
+      "target": "useimagegallery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "projectgallery_test",
+      "_tgt": "projectgallery",
+      "source": "projectgallery",
+      "target": "projectgallery_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "projectdetail",
+      "_tgt": "projectgallery",
+      "source": "projectgallery",
+      "target": "projectdetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "projectdetail",
+      "_tgt": "tradingviewwidget",
+      "source": "tradingviewwidget",
+      "target": "projectdetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "footer",
+      "_tgt": "footer_handlecopyemail",
+      "source": "footer",
+      "target": "footer_handlecopyemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "mainlayout",
+      "_tgt": "footer",
+      "source": "footer",
+      "target": "mainlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Skills.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_src": "skills",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "skills",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "home",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "about",
+      "_tgt": "skills",
+      "source": "skills",
+      "target": "about",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/AnimatedCounter.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "animatedcounter",
+      "_tgt": "animatedcounter_animatedcounter",
+      "source": "animatedcounter",
+      "target": "animatedcounter_animatedcounter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/TextScramble.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "textscramble",
+      "_tgt": "textscramble_textscramble",
+      "source": "textscramble",
+      "target": "textscramble_textscramble",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "home",
+      "_tgt": "textscramble",
+      "source": "textscramble",
+      "target": "home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "home",
+      "_tgt": "retrogrid",
+      "source": "retrogrid",
+      "target": "home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "home",
+      "_tgt": "borderbeam",
+      "source": "borderbeam",
+      "target": "home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "projectdetail",
+      "_tgt": "borderbeam",
+      "source": "borderbeam",
+      "target": "projectdetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "mainlayout_test",
+      "_tgt": "mainlayout",
+      "source": "mainlayout_test",
+      "target": "mainlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "mainlayout_test",
+      "_tgt": "mainlayout_test_renderwithproviders",
+      "source": "mainlayout_test",
+      "target": "mainlayout_test_renderwithproviders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_src": "mainlayout",
+      "_tgt": "mainlayout_handlescroll",
+      "source": "mainlayout",
+      "target": "mainlayout_handlescroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_src": "mainlayout",
+      "_tgt": "mainlayout_handlescrolltop",
+      "source": "mainlayout",
+      "target": "mainlayout_handlescrolltop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_src": "mainlayout",
+      "_tgt": "mainlayout_handledrawertoggle",
+      "source": "mainlayout",
+      "target": "mainlayout_handledrawertoggle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useImageGallery.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "useimagegallery_test",
+      "_tgt": "useimagegallery",
+      "source": "useimagegallery_test",
+      "target": "useimagegallery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useImageGallery.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "useimagegallery",
+      "_tgt": "useimagegallery_useimagegallery",
+      "source": "useimagegallery",
+      "target": "useimagegallery_useimagegallery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useDocumentTitle.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "usedocumenttitle",
+      "_tgt": "usedocumenttitle_usedocumenttitle",
+      "source": "usedocumenttitle",
+      "target": "usedocumenttitle_usedocumenttitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_src": "projectlist",
+      "_tgt": "usedocumenttitle",
+      "source": "usedocumenttitle",
+      "target": "projectlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "home",
+      "_tgt": "usedocumenttitle",
+      "source": "usedocumenttitle",
+      "target": "home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Contact.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "contact",
+      "_tgt": "usedocumenttitle",
+      "source": "usedocumenttitle",
+      "target": "contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "projectdetail",
+      "_tgt": "usedocumenttitle",
+      "source": "usedocumenttitle",
+      "target": "projectdetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "about",
+      "_tgt": "usedocumenttitle",
+      "source": "usedocumenttitle",
+      "target": "about",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useContactForm.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "usecontactform_test",
+      "_tgt": "usecontactform",
+      "source": "usecontactform_test",
+      "target": "usecontactform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useContactForm.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "usecontactform",
+      "_tgt": "usecontactform_usecontactform",
+      "source": "usecontactform",
+      "target": "usecontactform_usecontactform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Contact.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "contact",
+      "_tgt": "usecontactform",
+      "source": "usecontactform",
+      "target": "contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "projectlist",
+      "_tgt": "projects",
+      "source": "projects",
+      "target": "projectlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "home",
+      "_tgt": "projects",
+      "source": "projects",
+      "target": "home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "projectdetail",
+      "_tgt": "projects",
+      "source": "projects",
+      "target": "projectdetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_readme",
+      "_tgt": "person_xavier",
+      "source": "file_readme",
+      "target": "person_xavier"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_readme",
+      "_tgt": "concept_react",
+      "source": "file_readme",
+      "target": "concept_react"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_readme",
+      "_tgt": "concept_typescript",
+      "source": "file_readme",
+      "target": "concept_typescript"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_readme",
+      "_tgt": "concept_vite",
+      "source": "file_readme",
+      "target": "concept_vite"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_readme",
+      "_tgt": "concept_mui",
+      "source": "file_readme",
+      "target": "concept_mui"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/cv.pdf",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_cv",
+      "_tgt": "person_xavier",
+      "source": "file_cv",
+      "target": "person_xavier"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/tradecopier-analytics.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_tc_analytics",
+      "_tgt": "concept_tradecopier",
+      "source": "file_tc_analytics",
+      "target": "concept_tradecopier"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/tradecopier-news.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_tc_news",
+      "_tgt": "concept_tradecopier",
+      "source": "file_tc_news",
+      "target": "concept_tradecopier"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "public/flavicon.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_flavicon",
+      "_tgt": "person_xavier",
+      "source": "file_flavicon",
+      "target": "person_xavier"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/tradecopier-dashboard.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_tc_dashboard",
+      "_tgt": "concept_tradecopier",
+      "source": "file_tc_dashboard",
+      "target": "concept_tradecopier"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/tradecopier-list.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_tc_list",
+      "_tgt": "concept_tradecopier",
+      "source": "file_tc_list",
+      "target": "concept_tradecopier"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/images/forex-newsletter-preview.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_forex_news",
+      "_tgt": "concept_forex_trading",
+      "source": "file_forex_news",
+      "target": "concept_forex_trading"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "public/images/forex-newsletter-preview.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "file_forex_news",
+      "_tgt": "concept_tradecopier",
+      "source": "file_forex_news",
+      "target": "concept_tradecopier"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "public/tradecopier-dashboard.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_tradecopier",
+      "_tgt": "concept_forex_trading",
+      "source": "concept_tradecopier",
+      "target": "concept_forex_trading"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/images/Nasa-2.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "nasa_2",
+      "_tgt": "nasa_main",
+      "source": "nasa_2",
+      "target": "nasa_main"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/images/esiea-1.jpg",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "esiea_1",
+      "_tgt": "esiea_2",
+      "source": "esiea_1",
+      "target": "esiea_2"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/icons/favicon-128x128.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "favicon_128x128",
+      "_tgt": "favicon_96x96",
+      "source": "favicon_128x128",
+      "target": "favicon_96x96"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/icons/favicon-96x96.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "favicon_96x96",
+      "_tgt": "favicon_32x32",
+      "source": "favicon_96x96",
+      "target": "favicon_32x32"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "tradecopier_ui_components",
+      "label": "TradeCopier App Screens",
+      "nodes": [
+        "file_tc_analytics",
+        "file_tc_news",
+        "file_tc_dashboard",
+        "file_tc_list"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/tradecopier-dashboard.png"
+    },
+    {
+      "id": "favicon_set",
+      "label": "Favicon Set",
+      "nodes": [
+        "favicon_128x128",
+        "favicon_96x96",
+        "favicon_32x32"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/icons/favicon-128x128.png"
+    },
+    {
+      "id": "nasa_media_collection",
+      "label": "Nasa Media Collection",
+      "nodes": [
+        "nasa_2",
+        "nasa_main"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/images/Nasa-main.png"
+    },
+    {
+      "id": "esiea_media_collection",
+      "label": "Esiea Media Collection",
+      "nodes": [
+        "esiea_1",
+        "esiea_2"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/images/esiea-1.jpg"
+    }
+  ]
+}

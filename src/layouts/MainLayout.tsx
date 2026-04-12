@@ -30,6 +30,46 @@ import { useColorMode } from '../context/ColorModeContext'
 import Footer from '../components/Footer'
 import { NAV_ITEMS } from '../config/nav'
 
+function StatusIndicator() {
+  const [latency, setLatency] = useState(24)
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLatency(Math.floor(Math.random() * (32 - 18) + 18))
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
+  return (
+    <Box sx={{ 
+      display: { xs: 'none', lg: 'flex' }, 
+      alignItems: 'center', 
+      gap: 1, 
+      px: 2,
+      borderLeft: '1px solid',
+      borderColor: 'divider',
+      ml: 2
+    }}>
+      <Box sx={{
+        width: 8,
+        height: 8,
+        borderRadius: '50%',
+        bgcolor: '#00FF9D',
+        boxShadow: '0 0 8px #00FF9D',
+        animation: 'pulse 2s infinite',
+        '@keyframes pulse': {
+          '0%': { opacity: 1, transform: 'scale(1)' },
+          '50%': { opacity: 0.4, transform: 'scale(0.8)' },
+          '100%': { opacity: 1, transform: 'scale(1)' },
+        }
+      }} />
+      <Typography variant="caption" sx={{ fontFamily: '"Geist Mono", monospace', fontWeight: 700, opacity: 0.8 }}>
+        SYSTEM: READY // LATENCY: {latency}MS
+      </Typography>
+    </Box>
+  )
+}
+
 export default function MainLayout() {
   const theme = useTheme()
   const colorMode = useColorMode()
@@ -98,8 +138,8 @@ export default function MainLayout() {
         position="fixed"
         elevation={0}
         sx={{
-          backdropFilter: 'blur(10px)',
-          backgroundColor: theme.palette.mode === 'dark' ? 'rgba(10, 10, 15, 0.8)' : 'rgba(253, 253, 253, 0.8)',
+          backdropFilter: 'blur(16px)',
+          backgroundColor: theme.palette.mode === 'dark' ? 'rgba(10, 10, 15, 0.9)' : 'rgba(253, 253, 253, 0.95)',
           borderBottom: `1px solid ${theme.palette.divider}`,
           color: theme.palette.text.primary,
         }}
@@ -132,6 +172,7 @@ export default function MainLayout() {
               >
                 XPB.
               </Typography>
+              <StatusIndicator />
             </Box>
 
             {/* Desktop Navigation */}

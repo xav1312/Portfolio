@@ -145,6 +145,9 @@ export default function Home() {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <Box sx={{ mb: 8 }}>
+          <Typography variant="overline" color="primary" sx={{ mb: 2, display: 'block', fontWeight: 800 }}>
+            // CORE_STACK
+          </Typography>
           <Skills />
         </Box>
       </motion.div>
@@ -152,8 +155,8 @@ export default function Home() {
       {/* Section Projets Récents */}
       <Box sx={{ my: 8 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
-          <Typography variant="h4" color="primary">
-            Mes Projets Récents
+          <Typography variant="overline" color="primary" sx={{ fontWeight: 800 }}>
+            // RECENT_OPERATIONS
           </Typography>
           <Button endIcon={<ArrowForwardIcon />} onClick={() => navigate('/projects')}>
             Tout voir
@@ -183,7 +186,8 @@ export default function Home() {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
+                {index === 0 && <BorderBeam colorFrom="#00FF9D" duration={10} />}
                 <CardActionArea
                   onClick={() => navigate(`/project/${project.id}`)}
                   sx={{

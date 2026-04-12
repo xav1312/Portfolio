@@ -1,0 +1,1543 @@
+{
+  "nodes": [
+    {
+      "id": "vite_config",
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "vite.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app",
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_pageskeleton",
+      "label": "PageSkeleton()",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "app_app",
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "main",
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "src/main.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "vite_env_d",
+      "label": "vite-env.d.ts",
+      "file_type": "code",
+      "source_file": "src/vite-env.d.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "theme",
+      "label": "theme.ts",
+      "file_type": "code",
+      "source_file": "src/theme.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "theme_gettheme",
+      "label": "getTheme()",
+      "file_type": "code",
+      "source_file": "src/theme.ts",
+      "source_location": "L45"
+    },
+    {
+      "id": "colormodecontext",
+      "label": "ColorModeContext.tsx",
+      "file_type": "code",
+      "source_file": "src/context/ColorModeContext.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "colormodecontext_usecolormode",
+      "label": "useColorMode()",
+      "file_type": "code",
+      "source_file": "src/context/ColorModeContext.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "setup",
+      "label": "setup.ts",
+      "file_type": "code",
+      "source_file": "src/test/setup.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "nav",
+      "label": "nav.tsx",
+      "file_type": "code",
+      "source_file": "src/config/nav.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "techlogos",
+      "label": "techLogos.ts",
+      "file_type": "code",
+      "source_file": "src/utils/techLogos.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "techlogos_gettechlogo",
+      "label": "getTechLogo()",
+      "file_type": "code",
+      "source_file": "src/utils/techLogos.ts",
+      "source_location": "L65"
+    },
+    {
+      "id": "projectgallery",
+      "label": "ProjectGallery.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ProjectGallery.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "tradingviewwidget",
+      "label": "TradingViewWidget.tsx",
+      "file_type": "code",
+      "source_file": "src/components/TradingViewWidget.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "footer",
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "footer_handlecopyemail",
+      "label": "handleCopyEmail()",
+      "file_type": "code",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "projectgallery_test",
+      "label": "ProjectGallery.test.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ProjectGallery.test.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "skills",
+      "label": "Skills.tsx",
+      "file_type": "code",
+      "source_file": "src/components/Skills.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "animatedcounter",
+      "label": "AnimatedCounter.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/AnimatedCounter.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "animatedcounter_animatedcounter",
+      "label": "AnimatedCounter()",
+      "file_type": "code",
+      "source_file": "src/components/ui/AnimatedCounter.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "textscramble",
+      "label": "TextScramble.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/TextScramble.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "textscramble_textscramble",
+      "label": "TextScramble()",
+      "file_type": "code",
+      "source_file": "src/components/ui/TextScramble.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "retrogrid",
+      "label": "RetroGrid.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/RetroGrid.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "borderbeam",
+      "label": "BorderBeam.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/BorderBeam.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "mainlayout_test",
+      "label": "MainLayout.test.tsx",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "mainlayout_test_renderwithproviders",
+      "label": "renderWithProviders()",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "mainlayout",
+      "label": "MainLayout.tsx",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "mainlayout_handlescroll",
+      "label": "handleScroll()",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L81"
+    },
+    {
+      "id": "mainlayout_handlescrolltop",
+      "label": "handleScrollTop()",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L88"
+    },
+    {
+      "id": "mainlayout_handledrawertoggle",
+      "label": "handleDrawerToggle()",
+      "file_type": "code",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L92"
+    },
+    {
+      "id": "useimagegallery_test",
+      "label": "useImageGallery.test.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useImageGallery.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "useimagegallery",
+      "label": "useImageGallery.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useImageGallery.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "useimagegallery_useimagegallery",
+      "label": "useImageGallery()",
+      "file_type": "code",
+      "source_file": "src/hooks/useImageGallery.ts",
+      "source_location": "L3"
+    },
+    {
+      "id": "usedocumenttitle",
+      "label": "useDocumentTitle.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useDocumentTitle.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "usedocumenttitle_usedocumenttitle",
+      "label": "useDocumentTitle()",
+      "file_type": "code",
+      "source_file": "src/hooks/useDocumentTitle.ts",
+      "source_location": "L3"
+    },
+    {
+      "id": "usecontactform_test",
+      "label": "useContactForm.test.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useContactForm.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "usecontactform",
+      "label": "useContactForm.ts",
+      "file_type": "code",
+      "source_file": "src/hooks/useContactForm.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "usecontactform_usecontactform",
+      "label": "useContactForm()",
+      "file_type": "code",
+      "source_file": "src/hooks/useContactForm.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "projects",
+      "label": "projects.ts",
+      "file_type": "code",
+      "source_file": "src/data/projects.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "skills",
+      "label": "skills.ts",
+      "file_type": "code",
+      "source_file": "src/data/skills.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "projectlist",
+      "label": "ProjectList.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "home",
+      "label": "Home.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "contact",
+      "label": "Contact.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/Contact.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "projectdetail",
+      "label": "ProjectDetail.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "about",
+      "label": "About.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "vite_config",
+      "target": "vite",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "vite.config.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "vite_config",
+      "target": "plugin_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "vite.config.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "theme",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "colormodecontext",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "mainlayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_pageskeleton",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "main",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "main",
+      "target": "client",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "main",
+      "target": "app_tsx",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "main",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "theme",
+      "target": "styles",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/theme.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "theme",
+      "target": "theme_gettheme",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/theme.ts",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "colormodecontext",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ColorModeContext.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "colormodecontext",
+      "target": "colormodecontext_usecolormode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ColorModeContext.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "setup",
+      "target": "jest_dom",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/setup.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "nav",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config/nav.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "nav",
+      "target": "home",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config/nav.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "nav",
+      "target": "work",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config/nav.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "nav",
+      "target": "history",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config/nav.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "techlogos",
+      "target": "techlogos_gettechlogo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/techLogos.ts",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "projectgallery",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "projectgallery",
+      "target": "visibility",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "projectgallery",
+      "target": "close",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "projectgallery",
+      "target": "useimagegallery",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tradingviewwidget",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TradingViewWidget.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tradingviewwidget",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TradingViewWidget.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "footer",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "footer",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "footer",
+      "target": "github",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "footer",
+      "target": "linkedin",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "footer",
+      "target": "email",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "footer",
+      "target": "footer_handlecopyemail",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "projectgallery_test",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.test.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "projectgallery_test",
+      "target": "user_event",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.test.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "projectgallery_test",
+      "target": "vitest",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "projectgallery_test",
+      "target": "projectgallery",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectGallery.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "skills",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Skills.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "skills",
+      "target": "skills",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Skills.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "skills",
+      "target": "techlogos",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Skills.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "skills",
+      "target": "code",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Skills.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "animatedcounter",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/AnimatedCounter.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "animatedcounter",
+      "target": "framer_motion",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/AnimatedCounter.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "animatedcounter",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/AnimatedCounter.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "animatedcounter",
+      "target": "animatedcounter_animatedcounter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/AnimatedCounter.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "textscramble",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/TextScramble.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "textscramble",
+      "target": "framer_motion",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/TextScramble.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "textscramble",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/TextScramble.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "textscramble",
+      "target": "textscramble_textscramble",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/TextScramble.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "retrogrid",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/RetroGrid.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "borderbeam",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/BorderBeam.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout_test",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout_test",
+      "target": "vitest",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout_test",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout_test",
+      "target": "mainlayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout_test",
+      "target": "colormodecontext",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout_test",
+      "target": "mainlayout_test_renderwithproviders",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.test.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "framer_motion",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "menu",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "mail",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "keyboardarrowup",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "brightness4",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "brightness7",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "colormodecontext",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "footer",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "nav",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "mainlayout_handlescroll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "mainlayout_handlescrolltop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "mainlayout",
+      "target": "mainlayout_handledrawertoggle",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/MainLayout.tsx",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "useimagegallery_test",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useImageGallery.test.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "useimagegallery_test",
+      "target": "vitest",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useImageGallery.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "useimagegallery_test",
+      "target": "useimagegallery",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useImageGallery.test.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "useimagegallery",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useImageGallery.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "useimagegallery",
+      "target": "useimagegallery_useimagegallery",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useImageGallery.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "usedocumenttitle",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useDocumentTitle.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "usedocumenttitle",
+      "target": "usedocumenttitle_usedocumenttitle",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useDocumentTitle.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "usecontactform_test",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useContactForm.test.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "usecontactform_test",
+      "target": "vitest",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useContactForm.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "usecontactform_test",
+      "target": "usecontactform",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useContactForm.test.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "usecontactform_test",
+      "target": "browser",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useContactForm.test.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "usecontactform",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useContactForm.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "usecontactform",
+      "target": "browser",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useContactForm.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "usecontactform",
+      "target": "usecontactform_usecontactform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useContactForm.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "projectlist",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "projectlist",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "projectlist",
+      "target": "projects",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "projectlist",
+      "target": "arrowforward",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "projectlist",
+      "target": "github",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "projectlist",
+      "target": "lock",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "projectlist",
+      "target": "usedocumenttitle",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectList.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "projects",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "arrowforward",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "github",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "lock",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "download",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "skills",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "framer_motion",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "usedocumenttitle",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "retrogrid",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "textscramble",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "home",
+      "target": "borderbeam",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "contact",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Contact.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "contact",
+      "target": "send",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Contact.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "contact",
+      "target": "framer_motion",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Contact.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "contact",
+      "target": "usedocumenttitle",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Contact.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "contact",
+      "target": "usecontactform",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Contact.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "react_router_dom",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "arrowback",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "code",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "launch",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "lock",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "projects",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "projectgallery",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "techlogos",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "tradingviewwidget",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "colormodecontext",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "usedocumenttitle",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "projectdetail",
+      "target": "borderbeam",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ProjectDetail.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "about",
+      "target": "material",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "about",
+      "target": "school",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "about",
+      "target": "public",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "about",
+      "target": "download",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "about",
+      "target": "usedocumenttitle",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "about",
+      "target": "skills",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/About.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

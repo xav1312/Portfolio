@@ -85,13 +85,13 @@ export const getTheme = (mode: 'light' | 'dark') =>
             border: '1px solid',
             borderColor: mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)',
             boxShadow: 'none',
-            transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+            transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
             '&:hover': {
               borderColor: mode === 'dark' ? '#00FF9D' : '#0A0A0F',
               transform: 'translateY(-4px)',
               boxShadow:
                 mode === 'dark'
-                  ? '0 20px 40px rgba(0,255,157,0.05)'
+                  ? '0 20px 40px rgba(0,255,157,0.08)'
                   : '0 20px 40px rgba(0,0,0,0.05)',
             },
           },
