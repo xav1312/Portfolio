@@ -1,6 +1,6 @@
 import { useState, useMemo, lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { ThemeProvider, CssBaseline, Box, Skeleton, Container, Grid } from '@mui/material'
+import { ThemeProvider, CssBaseline, Skeleton, Container, Grid } from '@mui/material'
 import { getTheme } from './theme'
 import { ColorModeContext } from './context/ColorModeContext'
 import MainLayout from './layouts/MainLayout'
