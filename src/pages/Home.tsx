@@ -112,28 +112,7 @@ export default function Home() {
           </Box>
         </Box>
         
-        {/* Animated Metrics (Masqué temporairement) 
-        <Box sx={{ display: 'flex', justifyContent: 'center', gap: { xs: 4, md: 8 }, mb: 8, flexWrap: 'wrap' }}>
-            <Box sx={{ textAlign: 'center' }}>
-                <Typography variant="h3" color="primary" sx={{ mb: 1 }}>
-                     <AnimatedCounter value={75} prefix="< " suffix="ms" />
-                </Typography>
-                <Typography variant="overline" color="text.secondary" sx={{ letterSpacing: 2 }}>Latence de routage</Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center' }}>
-                <Typography variant="h3" color="primary" sx={{ mb: 1 }}>
-                     <AnimatedCounter value={100} suffix="%" />
-                </Typography>
-                <Typography variant="overline" color="text.secondary" sx={{ letterSpacing: 2 }}>Haute Disponibilité</Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center' }}>
-                <Typography variant="h3" color="primary" sx={{ mb: 1 }}>
-                     <AnimatedCounter value={3} prefix="+ " />
-                </Typography>
-                <Typography variant="overline" color="text.secondary" sx={{ letterSpacing: 2 }}>Projets Industriels</Typography>
-            </Box>
-        </Box>
-        */}
+
 
       </motion.div>
 

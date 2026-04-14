@@ -11,8 +11,10 @@ export interface Project {
   githubLink: string | null
   liveLink: null | string
   liveWidget?: string // Champ pour un widget financier embarqué (ex: TradingView)
+  videoUrl?: string // Champ pour une vidéo (mp4 ou URL externe)
   isPrivate?: boolean
   gallery: string[]
+  shortSummary?: string // Résumé percutant d'une ligne pour le scannage
 }
 
 export const projectsData: Record<string, Project> = {
@@ -20,7 +22,9 @@ export const projectsData: Record<string, Project> = {
     id: 'mutuelio',
     title: 'Mutuelio',
     subtitle: "Plateforme mobile de comparaison et d'information sur les soins mutuels",
-    image: 'images/mutuacy-main.png',
+    shortSummary:
+      'Simplifier la compréhension des remboursements mutuels via une interface Clean Architecture.',
+    image: 'images/simulation.png',
     description: `Application mobile cross-platform développée en Flutter permettant aux utilisateurs de s'informer sur les soins remboursés par leur mutuelle. Elle offre une interface intuitive pour consulter les grilles de soins, simuler des remboursements et suivre l'actualité santé.`,
     creationProcess: `Développé en équipe de 6 personnes avec une approche Agile.
     
@@ -41,30 +45,39 @@ export const projectsData: Record<string, Project> = {
     technologies: ['Flutter', 'Dart', 'Supabase', 'Riverpod', 'Clean Architecture'], // J'ajoute Riverpod/Provider ou BLoC si je vois des indices de state management, par défaut Clean Arch suggère une bonne structure. Je vais supposer une structure robuste.
     githubLink: 'https://github.com/Pirodax/cap_projet_app',
     liveLink: null,
-    gallery: ['images/mutuacy-main.png'],
+    gallery: [
+      'images/history_detail.png',
+      'images/history.png',
+      'images/simulation.png',
+      'images/profile.png',
+      'images/details_main.png',
+    ],
   },
   'trade-copier': {
     id: 'trade-copier',
     title: 'TradeCopier',
     subtitle: 'Écosystème de Trading Professionnel [V2.0 OPTIMISÉ]',
+    shortSummary:
+      "Exécution institutionnelle parallélisée avec une latence de 75ms et IA d'analyse quantitative.",
     image: 'tradecopier-dashboard.png',
     description: `Solution de Copy Trading institutionnelle (V2.0), optimisée pour la haute performance et l'exécution parallélisée ultra-rapide (~75ms). 
     
-    L'écosystème arbore une esthétique "Editorial Fintech" et repose sur une architecture distribuée multi-langages, offrant une gestion de risques granulaire et une synchronisation Master/Slave multi-comptes. L'interface (React 19) permet un monitoring temps-réel avec des graphiques financiers avancés (Lightweight Charts).`,
-    creationProcess: `Ce projet a fait l'objet d'une refonte majeure (V2.0) pour paralléliser les flux d'exécution et renforcer la sécurité.
+    Proposition de Valeur Unique (UVP) : "L'exécution institutionnelle pour les traders de détail."
+    TradeCopier résout le problème de la latence et de la fragmentation des comptes dans l'écosystème des Prop Firms, en offrant une synchronisation fluide avec une interface de gestion moderne et une IA d'analyse intégrée. L'interface (React 19) permet un monitoring temps-réel avec des graphiques financiers (Lightweight Charts).`,
+    creationProcess: `Ce projet a fait l'objet d'une refonte majeure (V2.0) pour paralléliser les flux d'exécution.
     
     Points clés de l'ingénierie :
-    - **Optimisation de Latence (Node.js/TS)** : Passage d'une exécution séquentielle (~225ms pour 3 trades) à une exécution parallèle (~75ms), soit un gain de performance de 3x via Bottleneck.
+    - **Optimisation de Latence (Node.js/TS)** : Passage d'une exécution séquentielle à une exécution parallèle (~75ms), soit un gain de performance de 3x via Bottleneck.
     - **Intelligence Quantitative (FastAPI/Pandas)** : Moteur analytique calculant le P&L, le Drawdown Max et la courbe d'équité en temps réel via MongoDB Atlas.
-    - **Sécurité et Audit** : Architecture "Security-First" auditée selon les standards OWASP 2025, incluant la protection contre les injections et la sécurisation des secrets de configuration.
-    - **Gestion de Volume Proportonnelle** : Algorithme de calcul intelligent ajustant les lots des Slaves en fonction du ratio de balance (Equity-based Scaling).`,
+    - **Architecture Scalable SaaS** : Modèle économique pensé pour l'expansion (Starter, Pro, Elite), compatible TradeLocker et extensible multi-broker.
+    - **Gestion de Volume Proportionnelle** : Algorithme de calcul intelligent ajustant les lots des Slaves en fonction du ratio de balance (Equity-based Scaling).`,
     features: [
       "Parallélisation API (3 flux simultanés) : Latence réduite à 75ms pour les rafales d'ordres",
-      "Fermeture Partielle Proportionnelle : Synchronisation exacte des réductions de position entre Master et Slaves",
-      "Volume Multiplier Interactif : Calcul automatique des lots basé sur le ratio de balance (Balance-Based Scaling)",
-      "Moteur Analytique (Pandas) : Suite complète de métriques institutionnelles (Sharpe, Drawdown, Profit Factor)",
-      "Audit OWASP 2025 : Sécurisation avancée des endpoints et gestion cryptographique des secrets",
-      "Dashboard Temps-Réel : Intégration de Lightweight Charts pour une visualisation haute fidélité",
+      'Fermeture Partielle Proportionnelle : Synchronisation exacte des réductions de position entre Master et Slaves',
+      'Volume Multiplier Interactif : Calcul automatique des lots basé sur le ratio de balance (Balance-Based Scaling)',
+      'Moteur Analytique (Pandas) : Suite complète de métriques institutionnelles (Sharpe, Drawdown, Profit Factor)',
+      'Intégration Modèle SaaS : Architecture prévue pour la gestion multi-tiers (Gratuit, Pro, Elite)',
+      'Dashboard Temps-Réel : Intégration de Lightweight Charts pour une visualisation haute fidélité',
       'Système de Quarantaine : Pattern Circuit Breaker isolant les comptes défaillants en cas de pic de volatilité',
     ],
     technologies: [

@@ -33,7 +33,7 @@ const darkPalette = {
   },
   background: {
     default: '#0A0A0F', // Ink Black
-    paper: '#12121A', // Deep Navy Surface
+    paper: '#16161F', // Deep Navy Surface (Légèrement éclairci pour contraste brutaliste)
   },
   text: {
     primary: '#E0E0E6',

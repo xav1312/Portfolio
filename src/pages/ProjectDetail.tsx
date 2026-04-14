@@ -388,6 +388,34 @@ export default function ProjectDetail() {
           </Grid>
         </Grid>
 
+        {project.videoUrl && (
+          <Box sx={{ mt: 8, mb: 4 }}>
+            <Typography variant="overline" color="primary" sx={{ mb: 2, display: 'block' }}>
+              // DEMO_VIDEO
+            </Typography>
+            <Paper
+              elevation={0}
+              sx={{
+                width: '100%',
+                overflow: 'hidden',
+                borderRadius: 2,
+                border: '1px solid',
+                borderColor: 'divider',
+                bgcolor: 'background.paper',
+              }}
+            >
+              <video
+                src={project.videoUrl}
+                controls
+                muted
+                loop
+                playsInline
+                style={{ width: '100%', display: 'block', maxHeight: '70vh', objectFit: 'contain' }}
+              />
+            </Paper>
+          </Box>
+        )}
+
         <ProjectGallery images={project.gallery} />
       </Container>
     </Box>
