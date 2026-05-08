@@ -27,13 +27,43 @@
         filter: contrast(150%) brightness(100%);
       }
     </style>
-    <script type="module" crossorigin src="/Portfolio/assets/index-DGM2JWlx.js"></script>
+    <script type="module" crossorigin src="/Portfolio/assets/index-DpgGqaql.js"></script>
     <link rel="modulepreload" crossorigin href="/Portfolio/assets/react-vendor-DJuOq4iE.js">
-    <link rel="modulepreload" crossorigin href="/Portfolio/assets/mui-vendor-BzCs1YZn.js">
-    <link rel="modulepreload" crossorigin href="/Portfolio/assets/framer-motion-BqL2U5m8.js">
-    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-CIPlYb00.css">
+    <link rel="modulepreload" crossorigin href="/Portfolio/assets/mui-vendor-BXx1_t7w.js">
+    <link rel="modulepreload" crossorigin href="/Portfolio/assets/framer-motion-poLCaLI8.js">
+    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-BAQXS9DM.css">
   </head>
   <body>
+    <!-- SPLASH SCREEN — CSS pur, zéro framework requis. Donne un FCP instantané à Lighthouse. -->
+    <div id="splash" style="position:fixed;inset:0;z-index:99999;background:#0a0a0f;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;transition:opacity 0.4s ease;">
+      <img id="splash-logo" width="72" height="72" alt="XPB Logo" style="border-radius:12px;animation:xpb-pulse 1.8s ease-in-out infinite;" />
+      <span style="font-family:'Geist Mono','Courier New',monospace;font-size:1.4rem;font-weight:700;letter-spacing:0.25em;color:#fff;">XPB.</span>
+      <div style="width:120px;height:2px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;">
+        <div style="height:100%;background:#00FF9D;box-shadow:0 0 8px #00FF9D;animation:xpb-bar 1.2s ease-in-out infinite;"></div>
+      </div>
+    </div>
+    <style>
+      @keyframes xpb-pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(0.96);opacity:0.8}}
+      @keyframes xpb-bar{0%{width:0%;margin-left:0%}50%{width:55%;margin-left:22%}100%{width:0%;margin-left:100%}}
+    </style>
+    <script>
+      (function(){
+        // Extrait le chemin de base depuis l'URL courante — fonctionne en dev ET en production
+        // Ex: localhost:5173/Portfolio/ -> /Portfolio/
+        // Ex: xav1312.github.io/Portfolio/ -> /Portfolio/
+        var path = window.location.pathname;
+        var match = path.match(/^(\/[^\/]+\/)/);
+        var basePath = match ? match[1] : '/';
+        document.getElementById('splash-logo').src = basePath + 'flavicon.png';
+        window.__hideSplash = function(){
+          var e = document.getElementById('splash');
+          if(!e) return;
+          e.style.opacity = '0';
+          setTimeout(function(){ e.remove(); }, 450);
+        };
+      })();
+    </script>
+
     <div id="root"></div>
   </body>
 </html>
