@@ -1,4 +1,4 @@
-import{j as e,C as c,B as i,G as t,T as o,l as p,P as s}from"./mui-vendor-BXx1_t7w.js";import{u as m}from"./useDocumentTitle-BMfoxsK7.js";import{D as x,s as b}from"./skills-CfuQlg0w.js";import{c as l}from"./index-DpgGqaql.js";import"./react-vendor-DJuOq4iE.js";import"./framer-motion-poLCaLI8.js";/**
+import{j as e,C as c,B as i,G as t,T as o,l as p,P as s}from"./mui-vendor-BXx1_t7w.js";import{u as m}from"./useDocumentTitle-BMfoxsK7.js";import{D as x,s as b}from"./skills-BJBe-kCT.js";import{c as l}from"./index-CHhu18w4.js";import"./react-vendor-DJuOq4iE.js";import"./framer-motion-poLCaLI8.js";/**
  * @license lucide-react v1.8.0 - ISC
  *
  * This source code is licensed under the ISC license.
