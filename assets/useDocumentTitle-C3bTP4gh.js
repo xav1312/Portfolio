@@ -1,1 +1,0 @@
-import{r as e}from"./react-vendor-CMknPLHz.js";function o(t,u=!1){const c=e.useRef(document.title);e.useEffect(()=>{document.title=t},[t]),e.useEffect(()=>()=>{u||(document.title=c.current)},[u])}export{o as u};
